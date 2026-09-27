@@ -26,7 +26,7 @@ from adapters.mia_business_activation import (
 from adapters.mia_execution_port import MiaExecutionPort
 
 EXPECTED_MIA_ZIP_SHA256 = "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a"
-EXPECTED_SNAPSHOT = "snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95"
+EXPECTED_SNAPSHOT = "snapshot:sha256:9813c2667dcb92ff7b594e07a18b9c64a53d24035e633f8dd0d9a7c739d13c93"
 
 
 def sha256_file(path: Path) -> str:
