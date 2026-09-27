@@ -12,15 +12,13 @@
 - [x] PHASE 9 — MIA API inspection
 - [x] PHASE 10 — MiaExecutionPort
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
-- [ ] PHASE 12 — Receipt / Restart Proof — NEXT
+- [~] PHASE 12 — Receipt / Restart Proof — IMPLEMENTED / VALIDATION PENDING
 - [ ] PHASE 13 — Static deployment
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
 
 ## Current control
 
-The first governed business activation operation has passed against exact frozen MIA v1.0.0.
+Phase 12 introduces a World Runtime receipt class without relabeling or replacing MIA receipts.
 
-Phase 12 must prove combined persistence/restart reconstruction and preserve:
-
-`WORLD RUNTIME RECEIPT ≠ MIA EXECUTION RECEIPT`
+No production durability or crash-atomicity claim is authorized.
