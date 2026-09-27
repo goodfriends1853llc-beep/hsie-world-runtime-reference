@@ -1,8 +1,8 @@
-import { ReferenceDataStore } from './data-store.js';
-import { TopologyResolver } from './topology-resolver.js';
-import { InteractionExecutor } from './interaction-executor.js';
-import { PannellumRendererAdapter } from './pannellum-adapter.js';
-import { resolveAssetUrl } from './config.js';
+import { ReferenceDataStore } from './data-store.js?v=20260927-3';
+import { TopologyResolver } from './topology-resolver.js?v=20260927-3';
+import { InteractionExecutor } from './interaction-executor.js?v=20260927-3';
+import { PannellumRendererAdapter } from './pannellum-adapter.js?v=20260927-3';
+import { resolveAssetUrl } from './config.js?v=20260927-3';
 
 const $ = (id) => document.getElementById(id);
 const entryOverlay = $('entryOverlay');
@@ -10,7 +10,6 @@ const enableMotionButton = $('enableMotion');
 const useTouchButton = $('useTouch');
 const motionToggle = $('motionToggle');
 const entryStatus = $('entryStatus');
-const sceneLabel = $('sceneLabel');
 const modal = $('modal');
 const modalType = $('modalType');
 const modalTitle = $('modalTitle');
@@ -37,15 +36,10 @@ function closeModal() {
   modalActions.replaceChildren();
 }
 
-function updateHud() {
-  sceneLabel.textContent = store.displayLabel(currentLocation.placeRef, currentLocation.spaceRef);
-}
-
 function navigate(target) {
   currentLocation = { placeRef: target.placeRef, spaceRef: target.spaceRef };
   const representation = store.representationFor(currentLocation.placeRef, currentLocation.spaceRef);
   renderer.transitionRepresentation(representation.representation_id);
-  updateHud();
   closeModal();
 }
 
@@ -90,7 +84,7 @@ function showServices(business) {
 }
 
 function openExternal(action) {
-  showToast(`Opening ${action.label || 'external destination'}…`);
+  showToast(`Opening ${action.label || 'destination'}…`);
   const opened = window.open(action.destination, '_blank', 'noopener,noreferrer');
   if (!opened) window.location.assign(action.destination);
 }
@@ -179,16 +173,15 @@ async function boot() {
       onSceneChange: () => closeModal(),
       onError: (message) => {
         console.error('Pannellum error:', message);
-        showToast('Viewer error. Check the console for details.');
+        showToast('Viewer error. Please reload and try again.');
       }
     });
 
     renderer.initialize([...store.representations.values()], firstRepresentation.representation_id);
-    updateHud();
-    entryStatus.textContent = 'Reference reconstruction ready.';
+    entryStatus.textContent = 'Ready.';
   } catch (error) {
     console.error(error);
-    entryStatus.textContent = `Reference reconstruction failed: ${error.message}`;
+    entryStatus.textContent = 'Explore Brevard could not load. Please refresh and try again.';
     enableMotionButton.disabled = true;
     useTouchButton.disabled = true;
   }
