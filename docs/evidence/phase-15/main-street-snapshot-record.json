@@ -1,0 +1,13 @@
+{
+  "artifact_id": "WRB-001-PHASE-15-MAIN-STREET-SNAPSHOT-001",
+  "status": "PASS",
+  "semantic_source_commit": "37ee9ef4292ab86ca18dd0966c8b673c3c286ce1",
+  "phase6_workflow_run": 36357245632,
+  "snapshot_id": "snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95",
+  "content_digest": "sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95",
+  "public_pages_workflow_run": 36357245086,
+  "public_pages_result": "SUCCESS",
+  "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+  "route": "place:hsa-arrival-hub → connection:hsa-arrival-to-explore-brevard-main-street → place:explore-brevard-main-street / space:arrival-plaza",
+  "note": "Phase 11 regression failure on the semantic-source commit was caused by the previous snapshot constant becoming stale after intentional semantic changes. Current tests are synchronized to this new deterministic snapshot."
+}

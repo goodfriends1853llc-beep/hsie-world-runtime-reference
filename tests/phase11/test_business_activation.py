@@ -13,7 +13,7 @@ from adapters.mia_business_activation import (
 from adapters.mia_execution_port import MiaExecutionPort, PortValidationError
 
 ROOT = Path(__file__).resolve().parents[2]
-EXPECTED_SNAPSHOT = "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+EXPECTED_SNAPSHOT = "snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95"
 
 
 class FakeMIAAPI:

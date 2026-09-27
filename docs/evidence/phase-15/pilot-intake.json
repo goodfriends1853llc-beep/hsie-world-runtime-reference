@@ -1,6 +1,6 @@
 {
   "artifact_id": "WRB-001-PHASE-15-PILOT-INTAKE-001",
-  "status": "MAIN_STREET_SECOND_NODE_DEPLOYMENT_CANDIDATE",
+  "status": "MAIN_STREET_SECOND_NODE_DEPLOYED",
   "business": {
     "display_name": "Tommie Bellamy — Human Systems Architect™",
     "stable_business_id": "business:tommie-bellamy-hsa",
@@ -80,7 +80,7 @@
     "performance_guarantee": false
   },
   "activation": {
-    "status": "MAIN_STREET_NODE_WIRED_PRE_PUBLIC_QC",
+    "status": "MAIN_STREET_NODE_DEPLOYED_PRE_OWNER_QC",
     "request_ref": null,
     "mia_execution_ref": null,
     "mia_receipt_ref": null,

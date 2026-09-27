@@ -11,8 +11,8 @@ const client = fs.readFileSync('client/index.html', 'utf8');
 assert(deployment.deployment_id === 'WRB-001-STATIC-DEPLOYMENT-001', 'deployment id mismatch');
 assert(deployment.deployment_class === 'STATIC_REFERENCE_ONLY', 'deployment class mismatch');
 assert(deployment.public_url === 'https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/', 'public URL mismatch');
-assert(deployment.semantic_state.snapshot_id === 'snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991', 'snapshot mismatch');
-assert(deployment.semantic_state.content_digest === 'sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991', 'content digest mismatch');
+assert(deployment.semantic_state.snapshot_id === 'snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95', 'snapshot mismatch');
+assert(deployment.semantic_state.content_digest === 'sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95', 'content digest mismatch');
 
 for (const key of ['mia_service_hosted','world_runtime_service_hosted','local_runtime_hosted','dynamic_write_api_hosted','production_ready']) {
   assert(deployment.boundaries[key] === false, key + ' must be false');

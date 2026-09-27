@@ -1,7 +1,7 @@
 # HSIE World Runtime Reference
 
 **Identifier:** WRB-001  
-**Status:** REFERENCE IMPLEMENTATION — ENGINEERING CANDIDATE  
+**Status:** REFERENCE IMPLEMENTATION — PHASE 15 PUBLIC PILOT  
 **Production status:** NOT PRODUCTION
 
 ## Current cursor
@@ -21,16 +21,30 @@
 - Phase 12 — **PASS**
 - Phase 13 — **PASS**
 - Phase 14 — **PASS — OWNER-RELAYED EXTERNAL MOBILE TEST**
-- Phase 15 — **OPEN — REAL AUTHORIZED BUSINESS REQUIRED**
+- Phase 15 — **ACTIVE — TOMMIE BELLAMY OWNER PILOT**
 
-## Phase 14
+## Current public flow
 
-A friend of the owner who did not build WRB-001 successfully used the public spatial experience on another phone according to the owner's relayed report.
+`Human Systems Architect arrival hub → Explore Brevard → Main Street Arrival Plaza`
 
-This establishes only external mobile-experience acceptance within the narrowed Phase-14 scope.
+The Explore Brevard hotspot now resolves through Topology to a separate Main Street Place / Space / Representation and renders an 8192×4096 WebP panorama through the Pannellum renderer adapter.
 
-## Phase 15
+Current deterministic semantic snapshot:
 
-The next stage is the first real authorized business pilot.
+`snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95`
 
-Before activation, the pilot requires a named real business and authorization from a representative allowed to approve the business's participation and public representation.
+Current content digest:
+
+`sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95`
+
+## Public URL
+
+`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/`
+
+## Boundary
+
+The public GitHub Pages surface is a static spatial reference experience.
+
+`STATIC PUBLIC SURFACE ≠ HOSTED MIA SERVICE ≠ HOSTED WORLD RUNTIME SERVICE`
+
+Private architecture/runtime behavior is not represented as being executed by GitHub Pages.
