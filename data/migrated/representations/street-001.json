@@ -7,7 +7,7 @@
   "asset_ref": "scenes/street.jpg",
   "projection": "equirectangular",
   "renderer_adapter": "pannellum-360",
-  "version": 1,
+  "version": 2,
   "status": "POC_PLACEHOLDER",
   "integrity_digest": "git-blob-sha1:773fb1cb300a0e171be916334aca8fa010269c48",
   "legacy_refs": [
@@ -35,6 +35,16 @@
         "legacy_refs": [
           "move-street-to-exterior"
         ]
+      },
+      {
+        "anchor_id": "move-street-to-hsa-arrival",
+        "interaction_kind": "MOVE",
+        "label": "Return to Arrival Hub",
+        "pitch": -8,
+        "yaw": -42,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:street-001-to-hsa-arrival",
+        "legacy_refs": []
       }
     ]
   }
