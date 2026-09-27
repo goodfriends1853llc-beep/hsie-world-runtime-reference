@@ -1,0 +1,14 @@
+{
+  "artifact_id": "WRB-001-IF-001-READBACK-VALIDATION-001",
+  "status": "PASS",
+  "commit": "13cbc04a9bf44bc0688e27de9e3cce7184fe9c12",
+  "top_level_contract_count": 7,
+  "changed_contracts": [
+    "Business",
+    "Representation"
+  ],
+  "changed_records_valid": 4,
+  "behaviorally_critical_unresolved": 0,
+  "architecture_version_changed": false,
+  "pass_10_authorized": false
+}

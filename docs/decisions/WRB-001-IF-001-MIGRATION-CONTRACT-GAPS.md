@@ -1,23 +1,50 @@
 # WRB-001-IF-001 — Phase 3 Migration Contract Gaps
 
-**Status:** RESOLUTION IMPLEMENTED / VALIDATION PENDING  
+**Status:** RESOLVED  
+**Discovered in:** WRB-001 Phase 3  
 **Resolution:** REFERENCE-CONTRACT NORMALIZATION  
+**Resolution commit:** `13cbc04a9bf44bc0688e27de9e3cce7184fe9c12`  
 **Architecture expansion:** NONE  
 **Top-level contract count:** 7 / UNCHANGED  
 **Pass 10:** NOT AUTHORIZED
 
-The candidate Representation contract now supports renderer-neutral presentation metadata, initial view state, and interaction anchors. The candidate Business contract now supports structured public-profile copy and explicit external-action environment classification.
+## Resolution
 
-No eighth top-level contract was introduced.
+The candidate Representation contract now carries:
 
-The rerun source map contains 110 predecessor leaf fields:
-- MIGRATED: 98
-- DERIVED: 6
-- DEPRECATED: 5
-- UNRESOLVED: 1
-- behaviorally critical unresolved: 0
+- coverage;
+- aspect ratio;
+- initial view;
+- renderer-neutral interaction anchors.
 
-The only remaining unresolved field is the noncritical legacy district label `Melbourne District`, because Slice 001 has no registered District Entity/reference.
+The candidate Business contract now carries:
+
+- public purpose;
+- ABOUT title/body;
+- Services title;
+- external-action environment classification.
+
+Interaction anchors reference the existing object that owns meaning:
+
+- MOVE → Topology connection;
+- ABOUT → Business public profile;
+- SERVICES → Business service collection;
+- BOOK → Business external action.
+
+The anchor does not become the action or authority.
+
+## Rerun result
+
+Source leaf accounting:
+
+- total: 110
+- migrated: 98
+- derived: 6
+- deprecated: 5
+- unresolved: 1
+- **behaviorally critical unresolved: 0**
+
+The only remaining unresolved source field is the legacy `Melbourne District` label because no District Entity/reference exists in Slice 001.
 
 ## Laws preserved
 
@@ -26,4 +53,4 @@ REPRESENTATION ≠ PLACE.
 BUSINESS CONTENT ≠ PANORAMA.  
 TOPOLOGY ≠ HOTSPOT POSITION.
 
-Phase 3 remains validation-pending until committed files are read back and machine-validated.
+**WRB-001-IF-001 = RESOLVED**

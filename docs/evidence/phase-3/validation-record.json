@@ -1,25 +1,46 @@
 {
-  "artifact_id": "WRB-001-PHASE-3-VALIDATION-001",
+  "artifact_id": "WRB-001-PHASE-3-VALIDATION-002",
   "phase": "WRB-001 / PHASE 3",
-  "validator": "python-jsonschema 4.26.0",
-  "draft": "2020-12",
-  "records_checked": 11,
-  "records_valid": 11,
-  "records_invalid": 0,
-  "validated_types": {
-    "World": 1,
-    "Place": 2,
-    "Business": 1,
-    "Representation": 3,
-    "Topology": 4
+  "status": "PASS",
+  "validated_commit": "13cbc04a9bf44bc0688e27de9e3cce7184fe9c12",
+  "validation_scope": {
+    "prior_valid_unchanged_records": 7,
+    "changed_records_read_back_and_validated": 4,
+    "total_core_records": 11,
+    "changed_contracts": [
+      "Business",
+      "Representation"
+    ]
   },
-  "source_leaf_fields": 110,
-  "mapping_counts": {
-    "MIGRATED": 47,
-    "DEPRECATED": 5,
-    "UNRESOLVED": 46,
-    "DERIVED": 12
+  "changed_record_validation": [
+    {
+      "record": "business:lagoon-cuts",
+      "valid": true
+    },
+    {
+      "record": "representation:street-001-360-v1",
+      "valid": true
+    },
+    {
+      "record": "representation:lagoon-exterior-360-v1",
+      "valid": true
+    },
+    {
+      "record": "representation:lagoon-interior-360-v1",
+      "valid": true
+    }
+  ],
+  "validator": "WRB-001 structural JSON-Schema-subset readback validator",
+  "validator_note": "The validator checked the schema features exercised by the changed Business and Representation records: type, required, additionalProperties, properties, oneOf, items, const, pattern, minLength, numeric minimum/exclusiveMinimum, uniqueItems, and URI/date-time shape. This is not represented as independent security validation or a full external JSON Schema certification.",
+  "source_map": {
+    "total_leaf_fields": 110,
+    "migrated": 98,
+    "derived": 6,
+    "deprecated": 5,
+    "unresolved": 1,
+    "behaviorally_critical_unresolved": 0,
+    "remaining_unresolved_path": "/entities/business:lagoon-cuts/district",
+    "remaining_unresolved_reason": "No registered District Entity/reference exists in Slice 001."
   },
-  "result": "CORE_RECORDS_VALID / MIGRATION_INCOMPLETE",
-  "claim_ceiling": "Eleven migrated core records validate against the Phase 2 contracts. This does not prove complete predecessor behavior migration because critical presentation/interaction/public-copy fields remain UNRESOLVED."
+  "result_claim": "The predecessor core migration now contains no behaviorally critical unresolved source fields under the current WRB-001 Slice 001 contract boundary."
 }
