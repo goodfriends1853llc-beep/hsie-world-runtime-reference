@@ -14,20 +14,19 @@
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [x] PHASE 12 — Receipt / Restart Proof
 - [x] PHASE 13 — Static deployment
-- [~] PHASE 14 — Independent acceptance — PROTOCOL READY / EXTERNAL TESTER REQUIRED
+- [~] PHASE 14 — Independent Mobile Experience Acceptance — TESTER INVITED / RESULT PENDING
 - [ ] PHASE 15 — Authorized business pilot
 
-## Current blocker
+## Current Phase 14 scope
 
-Phase 14 cannot be self-certified.
+Owner-authorized acceptance scope is now public-mobile experience only.
 
-Full Phase 14 PASS requires an independent human tester to complete both:
+The external tester receives only the public Pages URL.
 
-- Lane A — public experience acceptance;
-- Lane B — clean-environment technical reproduction.
+GitHub/runtime/MIA technical reproduction is **not required** for Phase 14.
 
-Until that evidence exists:
+## Gate
 
-`PHASE 14 = PENDING`
+Phase 15 remains execution-locked until the external mobile tester result is recorded.
 
-Phase 15 is not authorized.
+Planning for Phase 15 may be prepared, but no real-business activation is authorized before Phase 14 PASS.

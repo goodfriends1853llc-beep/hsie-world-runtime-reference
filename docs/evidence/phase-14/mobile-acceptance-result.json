@@ -1,0 +1,54 @@
+{
+  "artifact_id": "WRB-001-PHASE-14-MOBILE-RESULT-001",
+  "phase": "WRB-001 / PHASE 14 — Independent Mobile Experience Acceptance",
+  "status": "PENDING_EXTERNAL_REPORT",
+  "tester": {
+    "identifier": "OWNER-FRIEND-EXTERNAL-TESTER-001",
+    "builder_role": false,
+    "public_url_only": true,
+    "tested_at": null,
+    "device": null,
+    "browser": null
+  },
+  "checks": [
+    {
+      "id": "M01",
+      "name": "Public URL opens",
+      "status": "PENDING",
+      "notes": null
+    },
+    {
+      "id": "M02",
+      "name": "360 scene renders",
+      "status": "PENDING",
+      "notes": null
+    },
+    {
+      "id": "M03",
+      "name": "Touch/finger look works",
+      "status": "PENDING",
+      "notes": null
+    },
+    {
+      "id": "M04",
+      "name": "Motion look works when supported",
+      "status": "PENDING",
+      "notes": null
+    },
+    {
+      "id": "M05",
+      "name": "Scene-to-scene movement works",
+      "status": "PENDING",
+      "notes": null
+    },
+    {
+      "id": "M06",
+      "name": "Return path works without blank/broken scene",
+      "status": "PENDING",
+      "notes": null
+    }
+  ],
+  "final_result": "PENDING",
+  "raw_tester_report": null,
+  "claim_ceiling": "External mobile experience only; no independent technical/runtime verification."
+}

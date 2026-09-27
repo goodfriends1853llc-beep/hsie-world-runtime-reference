@@ -20,19 +20,23 @@
 - Phase 11 — **PASS**
 - Phase 12 — **PASS**
 - Phase 13 — **PASS**
-- Phase 14 — **PENDING — INDEPENDENT TESTER REQUIRED**
-- Phase 15 — **NOT AUTHORIZED**
+- Phase 14 — **PENDING EXTERNAL MOBILE TEST**
+- Phase 15 — **NOT YET AUTHORIZED**
 
-## Independent acceptance
+## Phase 14 owner scope revision
 
-Protocol:
+The active Phase-14 acceptance target is now **Independent Mobile Experience Acceptance**.
 
-`docs/evidence/phase-14/independent-acceptance-protocol.md`
+The external tester receives only the public Pages URL and checks loading, 360 rendering, touch look, motion when supported, scene movement, and return navigation.
 
-Blank evidence form:
+External GitHub/MIA/runtime reproduction is not required for this acceptance gate.
 
-`docs/evidence/phase-14/independent-acceptance-result.json`
+The earlier broad technical-reproduction protocol remains preserved in Git history but is superseded by the owner's current scope decision.
 
-Full Phase 14 PASS requires both independent public-experience testing and clean-environment technical reproduction.
+## Public test URL
 
-Builder/owner observations and assistant-generated verification do not count as independent acceptance.
+`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/`
+
+## Next event
+
+Record the external tester's actual phone result. If the six mobile checks pass, Phase 14 may close and Phase 15 may open.
