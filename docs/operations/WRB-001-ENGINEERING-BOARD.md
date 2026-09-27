@@ -6,8 +6,8 @@
 - [x] PHASE 3 — Migrate POC
 - [x] PHASE 4 — Reconstruct through governed semantics
 - [x] PHASE 5 — Mobile regression proof
-- [~] PHASE 6 — Deterministic publisher — IMPLEMENTED / VALIDATION PENDING
-- [ ] PHASE 7 — Local Runtime / Request / Event
+- [x] PHASE 6 — Deterministic publisher
+- [ ] PHASE 7 — Local Runtime / Request / Event — NEXT
 - [ ] PHASE 8 — Frozen MIA verification
 - [ ] PHASE 9 — MIA API inspection
 - [ ] PHASE 10 — MiaExecutionPort
@@ -17,6 +17,10 @@
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
 
-MIA remains untouched.
+## Current control
+
+MIA has not been integrated.
 
 Pass 10 remains unauthorized.
+
+Phase 7 may introduce only the local reference Runtime / Request / Event path. It may not impersonate MIA execution or MIA receipts.

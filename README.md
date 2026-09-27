@@ -12,20 +12,27 @@
 - Phase 3 — **PASS**
 - Phase 4 — **PASS**
 - Phase 5 — **PASS — OWNER TESTED**
-- Phase 6 — **NEXT / NOT YET STARTED**
+- Phase 6 — **PASS**
+- Phase 7 — **NEXT / NOT YET STARTED**
 
-Architecture expansion remains on HOLD. Pass 10 remains unauthorized.
+Architecture expansion remains on HOLD. Pass 10 remains unauthorized. MIA has not been integrated.
 
-The Phase 5 hard gate is satisfied by owner-tested iPhone/Safari/public-HTTPS regression evidence.
+## Phase 6 deterministic publisher
+
+Current deterministic semantic identity:
+
+`sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991`
+
+Snapshot:
+
+`snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991`
+
+Validated by successful GitHub Actions run `36338426367`.
+
+The publisher separates semantic content identity from volatile generation metadata.
 
 ## Next work
 
-`PHASE 6 — Deterministic Publisher`
+`PHASE 7 — Local Runtime / Request / Event`
 
-The publisher must preserve:
-
-`source → schema validation → cross-record integrity → canonical semantic payload → content digest → snapshot metadata`
-
-Volatile generation metadata must not alter the semantic content digest.
-
-MIA remains untouched until its later authorized phases.
+The next phase may prove a local reference Request → Event path only. It must not call itself MIA and must not issue anything labeled as a MIA execution receipt.

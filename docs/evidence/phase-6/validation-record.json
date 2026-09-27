@@ -1,0 +1,37 @@
+{
+  "artifact_id": "WRB-001-PHASE-6-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 6",
+  "status": "PASS",
+  "validated_commit": "1ffff338e1eaab7a47dc43bf11a207d0682ace61",
+  "github_actions": {
+    "workflow": "WRB-001 Phase 6 Deterministic Publisher",
+    "run_id": 36338426367,
+    "conclusion": "success",
+    "job_id": 108673638744
+  },
+  "checks": {
+    "schema_validation": true,
+    "cross_record_integrity": true,
+    "canonical_order_independence": true,
+    "volatile_metadata_excluded_from_digest": true,
+    "semantic_mutation_changes_digest": true,
+    "bootstrap_resolves_entry": true
+  },
+  "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+  "content_digest": "sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+  "published_content_schema": "hsie-world-publish/0.1",
+  "generated_artifact": {
+    "artifact_id": 10937892250,
+    "name": "wrb001-phase6-publish",
+    "zip_sha256": "081a8efd2bb89696bf9acb1be56b6f3052d2185d0d254dc5b6a558870a6ab191",
+    "semantic_canonical_file_sha256": "7674f72580db7424e3661ef9db9634b6d5d2296498e16ca8e389fbba18722638",
+    "semantic_content_sha256_without_trailing_newline": "c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+  },
+  "entry": {
+    "world_ref": "BREVARD-COM-DEMO-001",
+    "entry_place_ref": "place:brevard-demo-street",
+    "entry_space_ref": null,
+    "entry_representation_ref": "representation:street-001-360-v1"
+  },
+  "claim_ceiling": "Phase 6 proves deterministic semantic publication for the current WRB-001 Slice 001 source under the implemented validator/integrity rules. It does not establish runtime Event processing, MIA execution, production deployment, independent acceptance, or scale."
+}
