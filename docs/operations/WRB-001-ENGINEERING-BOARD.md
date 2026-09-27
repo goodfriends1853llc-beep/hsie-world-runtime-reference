@@ -6,12 +6,7 @@
 - [x] PHASE 3 — Migrate POC
 - [x] PHASE 4 — Reconstruct through governed semantics
 - [x] PHASE 5 — Mobile regression proof
-
-## HARD GATE
-
-**SATISFIED by Phase 5 owner-tested iPhone/Safari/public-HTTPS regression evidence.**
-
-- [ ] PHASE 6 — Deterministic publisher — NEXT
+- [~] PHASE 6 — Deterministic publisher — IMPLEMENTED / VALIDATION PENDING
 - [ ] PHASE 7 — Local Runtime / Request / Event
 - [ ] PHASE 8 — Frozen MIA verification
 - [ ] PHASE 9 — MIA API inspection
@@ -22,10 +17,6 @@
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
 
-## Current control
-
-MIA has not been integrated.
+MIA remains untouched.
 
 Pass 10 remains unauthorized.
-
-Phase 6 may proceed without changing the frozen architecture.

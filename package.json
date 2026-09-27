@@ -4,7 +4,9 @@
   "private": true,
   "description": "WRB-001 reference implementation. Not production and not canonical.",
   "scripts": {
-    "test:phase4": "node tests/phase4/verify-structure.mjs"
+    "test:phase4": "node tests/phase4/verify-structure.mjs",
+    "publish:deterministic": "node publisher/publish.mjs",
+    "test:phase6": "node tests/phase6/verify-determinism.mjs"
   },
   "engines": {
     "node": ">=20"
