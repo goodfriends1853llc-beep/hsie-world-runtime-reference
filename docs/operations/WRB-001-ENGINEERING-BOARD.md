@@ -13,14 +13,14 @@
 - [x] PHASE 10 — MiaExecutionPort
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [x] PHASE 12 — Receipt / Restart Proof
-- [~] PHASE 13 — Static deployment — VERIFICATION PENDING
-- [ ] PHASE 14 — Independent acceptance
+- [x] PHASE 13 — Static deployment
+- [ ] PHASE 14 — Independent acceptance — NEXT
 - [ ] PHASE 15 — Authorized business pilot
 
 ## Current control
 
+The static reference surface is deployed.
+
 `STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
 
-Phase 13 deploys only the static public reference surface.
-
-Independent acceptance remains Phase 14.
+Phase 14 requires an independent tester. Builder/owner testing and assistant validation cannot be promoted into independent acceptance.

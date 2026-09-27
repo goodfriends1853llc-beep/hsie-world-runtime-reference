@@ -19,22 +19,27 @@
 - Phase 10 — **PASS**
 - Phase 11 — **PASS**
 - Phase 12 — **PASS**
-- Phase 13 — **NEXT / NOT YET STARTED**
+- Phase 13 — **PASS**
+- Phase 14 — **NEXT / INDEPENDENT TESTER REQUIRED**
 
-## Phase 12
+## Phase 13 static deployment
 
-The combined local activation path passed graceful restart verification.
+Public reference URL:
 
-MIA receipt/proof/replay, activation state, World Runtime receipt, and MIA store integrity remained verifiable after restart.
+`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/`
 
-The first Phase-12 workflow failure remains preserved; the corrected run passed.
+Exact deployment commit:
 
-This is not crash-atomicity or distributed failover proof.
+`5481662d40eba540584067c194bb022c4fd93d04`
+
+GitHub Pages deployment run `36340794274` completed successfully for that exact commit.
+
+The public surface is static only.
+
+`STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
 
 ## Next work
 
-`PHASE 13 — Static Deployment`
+`PHASE 14 — Independent Acceptance`
 
-Static deployment must remain clearly separated from the local governed runtime:
-
-`STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
+The next PASS must come from an independent tester rather than the builder/owner or assistant.

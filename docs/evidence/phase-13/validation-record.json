@@ -1,0 +1,38 @@
+{
+  "artifact_id": "WRB-001-PHASE-13-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 13",
+  "status": "PASS",
+  "deployment": {
+    "deployment_id": "WRB-001-STATIC-DEPLOYMENT-001",
+    "deployment_commit": "5481662d40eba540584067c194bb022c4fd93d04",
+    "source_baseline_commit": "814787e38a0710ad10c344f2290c2a195933fa7c",
+    "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+    "deployment_class": "STATIC_REFERENCE_ONLY"
+  },
+  "static_verification": {
+    "workflow": "WRB-001 Phase 13 Static Deployment",
+    "run_id": 36340794651,
+    "conclusion": "success",
+    "artifact_id": 10938772729,
+    "artifact_sha256": "35e24abae993db276edb8f33f06f6ff243dfcc3a62caf489028119ac2f33fb7c"
+  },
+  "pages_deployment": {
+    "workflow": "pages build and deployment",
+    "run_id": 36340794274,
+    "head_sha": "5481662d40eba540584067c194bb022c4fd93d04",
+    "conclusion": "success"
+  },
+  "semantic_binding": {
+    "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+    "content_digest": "sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+  },
+  "boundaries": {
+    "static_reference_only": true,
+    "mia_service_hosted": false,
+    "world_runtime_service_hosted": false,
+    "local_runtime_hosted": false,
+    "dynamic_write_api_hosted": false,
+    "production_ready": false
+  },
+  "claim_ceiling": "Phase 13 proves successful GitHub Pages deployment of the declared static WRB-001 reference surface at the exact deployment commit. It does not prove that MIA or the World Runtime is hosted, production readiness, dynamic write capability, or independent acceptance."
+}
