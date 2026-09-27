@@ -1,0 +1,26 @@
+{
+  "artifact_id": "WRB-001-PHASE-4-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 4",
+  "status": "PASS",
+  "validated_commit": "c697fe298477d5feaed92007903ccf7a2155944f",
+  "validation_mode": "REMOTE_COMMIT_READBACK_STRUCTURAL_VERIFICATION",
+  "counts": {
+    "places": 2,
+    "businesses": 1,
+    "representations": 3,
+    "topology_connections": 4,
+    "interaction_anchors": 7
+  },
+  "verified": [
+    "Three migrated Representations carry presentation.initial_view.",
+    "MOVE anchors reference the four expected Topology connection IDs.",
+    "BOOK anchor references the structured Business external action.",
+    "Business public ABOUT and Services copy are structured outside the panorama.",
+    "BOOK retains DEMO environment classification.",
+    "Pannellum loadScene is owned by client/src/pannellum-adapter.js.",
+    "Application, InteractionExecutor, and TopologyResolver do not directly call loadScene or instantiate Pannellum.",
+    "MOVE resolves Topology first, then target Place/Space, then target Representation, then renderer transition."
+  ],
+  "semantic_path": "MOVE anchor → Topology resolver → target Place/Space → Representation resolver → RendererAdapter.transitionRepresentation → Pannellum loadScene",
+  "claim_ceiling": "This proves structural reconstruction in the committed reference implementation. It does not prove touch, motion, browser, iPhone, HTTPS, or end-user behavioral regression; those belong to Phase 5."
+}
