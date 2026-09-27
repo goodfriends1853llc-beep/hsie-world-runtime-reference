@@ -39,9 +39,11 @@ export class InteractionExecutor {
         return;
       }
 
-      case 'BOOK': {
+      case 'BOOK':
+      case 'FOUNDING':
+      case 'MESSAGE': {
         if (anchor.target_type !== 'BUSINESS_EXTERNAL_ACTION') {
-          throw new Error('BOOK anchor does not reference a Business external action.');
+          throw new Error(`${anchor.interaction_kind} anchor does not reference a Business external action.`);
         }
         this.openExternal(this.store.externalAction(anchor.target_ref));
         return;
