@@ -1,0 +1,25 @@
+{
+  "artifact_id": "WRB-001-PHASE-3-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 3",
+  "validator": "python-jsonschema 4.26.0",
+  "draft": "2020-12",
+  "records_checked": 11,
+  "records_valid": 11,
+  "records_invalid": 0,
+  "validated_types": {
+    "World": 1,
+    "Place": 2,
+    "Business": 1,
+    "Representation": 3,
+    "Topology": 4
+  },
+  "source_leaf_fields": 110,
+  "mapping_counts": {
+    "MIGRATED": 47,
+    "DEPRECATED": 5,
+    "UNRESOLVED": 46,
+    "DERIVED": 12
+  },
+  "result": "CORE_RECORDS_VALID / MIGRATION_INCOMPLETE",
+  "claim_ceiling": "Eleven migrated core records validate against the Phase 2 contracts. This does not prove complete predecessor behavior migration because critical presentation/interaction/public-copy fields remain UNRESOLVED."
+}

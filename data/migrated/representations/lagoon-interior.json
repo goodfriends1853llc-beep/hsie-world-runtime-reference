@@ -1,0 +1,17 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:lagoon-interior-360-v1",
+  "place_ref": "place:lagoon-cuts-demo",
+  "space_ref": "interior",
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "scenes/lagoon-interior.jpg",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "POC_PLACEHOLDER",
+  "integrity_digest": "git-blob-sha1:da4422059f779acd7c7c475e0b7f537fc4b58538",
+  "legacy_refs": [
+    "lagoon-interior",
+    "scenes/lagoon-interior.jpg"
+  ]
+}

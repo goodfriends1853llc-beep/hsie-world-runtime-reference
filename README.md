@@ -6,22 +6,24 @@
 **Canonical World status:** NOT CANONICAL  
 **Public World name:** TBD
 
-This repository is the candidate reference implementation environment for **WRB-001 — WORLD REFERENCE BUILD 001**.
+## Current cursor
 
-It exists to test a narrow implementation boundary derived from the current candidate architecture baseline:
+- Phase 0 — **PASS**
+- Phase 1 — **PASS**
+- Phase 2 — **PASS**
+- Phase 3 — **PARTIAL / IMPLEMENTATION FINDING OPEN**
+- Phase 4 — **BLOCKED**
+- Architecture expansion — **HOLD**
+- Pass 10 — **NOT AUTHORIZED**
+- MIA integration — **LOCKED BEHIND PHASE 5**
 
-- Master Integration Candidate v0.9 / Pass 9
-- N-001 — seven initial schemas
-- N-002 — `ACTIVATE_BUSINESS_PLACE`
-- N-003 — receipt-class separation
+## Phase 3 finding
 
-## What this repository is
+The core predecessor semantics now migrate into 11 machine-valid records, and every source leaf is accounted for.
 
-A controlled engineering environment for proving selected contracts.
+However, `WRB-001-IF-001` shows that current contracts do not yet encode enough renderer presentation, hotspot/interaction anchor, and public business copy data to reproduce the accepted POC without consulting legacy data.
 
-## What this repository is not
-
-It is not the production World, MIA, a production Walker implementation, a production identity system, a production economy, a property market, NFC/card infrastructure, multiplayer, or a production financial system.
+No schema normalization has been performed silently.
 
 ## Engineering control law
 
@@ -31,34 +33,12 @@ It is not the production World, MIA, a production Walker implementation, a produ
 `PASSED LOCALLY ≠ INDEPENDENTLY VALIDATED`  
 `DEPLOYED ≠ PRODUCTION READY`
 
-## Current cursor
-
-- WRB-001 Phase 0 — **PASS**
-- WRB-001 Phase 1 — **PASS**
-- WRB-001 Phase 2 — **PASS**
-- WRB-001 Phase 3 — **NEXT / NOT YET STARTED**
-- Architecture expansion — **HOLD**
-- Pass 10 — **NOT AUTHORIZED**
-- MIA integration — **LOCKED BEHIND PHASE 5**
-
-## Phase 2 contracts
-
-Exactly seven top-level contracts are established under `contracts/`:
-
-World, Place, Business, Representation, Topology, Request, and Event.
-
-`Space` remains subordinate inside Place for Slice 001.
-
 ## Predecessor
 
-`BREVARD-COM-DEMO-001`
+`BREVARD-COM-DEMO-001` at `29326120dffa33a94a9489ed41874ce9d5163328`.
 
-Accepted predecessor commit:
-
-`29326120dffa33a94a9489ed41874ce9d5163328`
-
-The predecessor remains separate and must not be rewritten as part of WRB-001.
+The predecessor remains separate and unchanged.
 
 ## Licensing
 
-No open-source license is granted by this scaffold. See `LICENSE-DECISION.md`.
+No open-source license is granted by this repository. See `LICENSE-DECISION.md`.

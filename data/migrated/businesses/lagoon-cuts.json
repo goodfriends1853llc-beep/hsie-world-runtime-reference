@@ -1,0 +1,78 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "business_id": "business:lagoon-cuts",
+  "status": "CANDIDATE",
+  "display_name": "Lagoon Cuts",
+  "representation_authority_state": "PLATFORM_DEMO_FICTIONAL",
+  "physical_relationship_state": "FICTIONAL_SAMPLE_BUSINESS",
+  "world_place_refs": [
+    "place:lagoon-cuts-demo"
+  ],
+  "services": [
+    {
+      "service_id": "service:lagoon-cuts:01",
+      "name": "Haircuts",
+      "description": "",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "book-lagoon-cuts",
+      "version": 1
+    },
+    {
+      "service_id": "service:lagoon-cuts:02",
+      "name": "Fades",
+      "description": "",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "book-lagoon-cuts",
+      "version": 1
+    },
+    {
+      "service_id": "service:lagoon-cuts:03",
+      "name": "Beard Trims",
+      "description": "",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "book-lagoon-cuts",
+      "version": 1
+    },
+    {
+      "service_id": "service:lagoon-cuts:04",
+      "name": "Shaves",
+      "description": "",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "book-lagoon-cuts",
+      "version": 1
+    }
+  ],
+  "external_actions": [
+    {
+      "action_id": "book-lagoon-cuts",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Book Appointment",
+      "destination": "https://example.com/?source=BREVARD-COM-DEMO-001&action=book",
+      "purpose": "External demo booking route only; does not establish booking completion.",
+      "status": "ACTIVE",
+      "last_verified_at": null,
+      "provenance": {
+        "source_system": "BREVARD-COM-DEMO-001",
+        "source_schema": "brevard-spatial-world/0.1",
+        "source_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+        "evidence_refs": [
+          "docs/evidence/predecessor/BREVARD-COM-DEMO-001/baseline.json"
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "source_system": "BREVARD-COM-DEMO-001",
+    "source_schema": "brevard-spatial-world/0.1",
+    "source_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+    "evidence_refs": [
+      "docs/evidence/predecessor/BREVARD-COM-DEMO-001/baseline.json"
+    ]
+  },
+  "verified_at": null,
+  "version": 1
+}

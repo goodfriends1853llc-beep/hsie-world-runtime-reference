@@ -1,0 +1,17 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "connection_id": "connection:lagoon-exterior-to-street-001",
+  "source_place_ref": "place:lagoon-cuts-demo",
+  "source_space_ref": "exterior",
+  "target_place_ref": "place:brevard-demo-street",
+  "target_space_ref": null,
+  "connection_type": "PLACE_TRANSITION",
+  "direction": "ONE_WAY",
+  "status": "ACTIVE",
+  "policy_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "lagoon-exterior:CONNECTS_TO:street-001",
+    "move-exterior-to-street"
+  ]
+}

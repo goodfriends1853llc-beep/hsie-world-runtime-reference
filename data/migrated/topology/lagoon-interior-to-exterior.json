@@ -1,0 +1,17 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "connection_id": "connection:lagoon-interior-to-exterior",
+  "source_place_ref": "place:lagoon-cuts-demo",
+  "source_space_ref": "interior",
+  "target_place_ref": "place:lagoon-cuts-demo",
+  "target_space_ref": "exterior",
+  "connection_type": "SPACE_TRANSITION",
+  "direction": "ONE_WAY",
+  "status": "ACTIVE",
+  "policy_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "lagoon-interior:CONNECTS_TO:lagoon-exterior",
+    "move-exit-shop"
+  ]
+}

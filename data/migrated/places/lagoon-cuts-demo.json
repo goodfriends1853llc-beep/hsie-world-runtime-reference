@@ -1,0 +1,47 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "place_id": "place:lagoon-cuts-demo",
+  "place_type": "BUSINESS",
+  "status": "ACTIVE",
+  "display_name": "Lagoon Cuts",
+  "parent_place_ref": null,
+  "district_ref": null,
+  "public_visibility": "PUBLIC",
+  "steward_ref": null,
+  "spaces": [
+    {
+      "space_id": "exterior",
+      "space_type": "EXTERIOR",
+      "display_name": "SCENE-002 — Lagoon Cuts Exterior",
+      "status": "ACTIVE",
+      "representation_refs": [
+        "representation:lagoon-exterior-360-v1"
+      ],
+      "legacy_refs": [
+        "lagoon-exterior"
+      ]
+    },
+    {
+      "space_id": "interior",
+      "space_type": "INTERIOR",
+      "display_name": "SCENE-003 — Lagoon Cuts Interior",
+      "status": "ACTIVE",
+      "representation_refs": [
+        "representation:lagoon-interior-360-v1"
+      ],
+      "legacy_refs": [
+        "lagoon-interior"
+      ]
+    }
+  ],
+  "representation_refs": [
+    "representation:lagoon-exterior-360-v1",
+    "representation:lagoon-interior-360-v1"
+  ],
+  "created_event_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "lagoon-exterior",
+    "lagoon-interior"
+  ]
+}

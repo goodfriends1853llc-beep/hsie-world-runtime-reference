@@ -1,0 +1,17 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:street-001-360-v1",
+  "place_ref": "place:brevard-demo-street",
+  "space_ref": null,
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "scenes/street.jpg",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "POC_PLACEHOLDER",
+  "integrity_digest": "git-blob-sha1:773fb1cb300a0e171be916334aca8fa010269c48",
+  "legacy_refs": [
+    "street-001",
+    "scenes/street.jpg"
+  ]
+}
