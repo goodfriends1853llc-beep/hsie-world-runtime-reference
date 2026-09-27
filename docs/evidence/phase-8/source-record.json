@@ -1,0 +1,11 @@
+{
+  "artifact_id": "WRB-001-PHASE-8-SOURCE-001",
+  "source_surface": "ChatGPT Library",
+  "filename": "MIA-RUNTIME-v1.0.0.zip",
+  "library_path": "/MIA-RUNTIME-v1.0.0.zip",
+  "library_file_id": "file_000000003d7881f6ab34a0c41f1d0b72",
+  "size_bytes": 57405,
+  "expected_sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+  "observed_sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+  "disposition": "EXACT_FROZEN_ARTIFACT_VERIFIED"
+}

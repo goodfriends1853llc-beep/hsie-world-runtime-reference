@@ -1,0 +1,42 @@
+{
+  "artifact_id": "WRB-001-PHASE-8-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 8",
+  "status": "PASS",
+  "frozen_artifact": {
+    "library_path": "/MIA-RUNTIME-v1.0.0.zip",
+    "library_file_id": "file_000000003d7881f6ab34a0c41f1d0b72",
+    "size_bytes": 57405,
+    "expected_sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+    "observed_sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+    "sha256_match": true,
+    "outer_sha256_rechecked_after_validation": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a"
+  },
+  "package_integrity": {
+    "sha256sums_entries": 30,
+    "sha256sums_all_pass": true
+  },
+  "release_validator": {
+    "command": "python3 validate_release.py",
+    "status": "PASS",
+    "compileall_pass": true,
+    "unittest_pass": true,
+    "end_to_end_pass": true,
+    "claim": "COMPLETE FOR WALKER INTEGRATION — INTERNAL VALIDATION"
+  },
+  "fresh_tests": {
+    "unittest_count": 34,
+    "unittest_result": "PASS",
+    "repeat_cycles": 20,
+    "total_test_executions": 680,
+    "repeat_result": "PASS",
+    "end_to_end_result": "PASS"
+  },
+  "boundaries": {
+    "public_github_mia_head_used": false,
+    "api_inspection_performed": false,
+    "mia_adapter_implemented": false,
+    "mia_integrated": false,
+    "activate_business_place_executed": false
+  },
+  "claim_ceiling": "Phase 8 proves that the exact frozen MIA Runtime v1.0.0 ZIP from the user's Library matches the preserved SHA-256 and passes fresh package integrity, release validation, 34-test, 20-cycle/680-execution, and synthetic end-to-end checks in the current controlled environment. It does not establish independent validation, production security, distributed safety, live-provider behavior, or integration with WRB-001."
+}

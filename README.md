@@ -14,30 +14,33 @@
 - Phase 5 — **PASS — OWNER TESTED**
 - Phase 6 — **PASS**
 - Phase 7 — **PASS**
-- Phase 8 — **NEXT / NOT YET STARTED**
+- Phase 8 — **PASS**
+- Phase 9 — **NEXT / NOT YET STARTED**
 
-Architecture expansion remains on HOLD. Pass 10 remains unauthorized. MIA has not been integrated.
+Architecture expansion remains on HOLD. Pass 10 remains unauthorized.
 
-## Phase 7 local runtime
+## Frozen MIA verification
 
-Verified path:
+Verified frozen artifact:
 
-`Request → validation → local handler → Event → persistence`
+`MIA-RUNTIME-v1.0.0.zip`
 
-The Phase 7 proof used the read-only local operation `RESOLVE_WORLD_ENTRY`.
-
-`ACTIVATE_BUSINESS_PLACE` remains rejected and unexecuted.
-
-Request/Event persistence in Phase 7 is a narrow append-only NDJSON reference mechanism, not a production datastore architecture decision.
-
-No receipt was created.
-
-## Next work
-
-`PHASE 8 — Frozen MIA verification`
-
-The exact frozen MIA artifact must match:
+SHA-256:
 
 `ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a`
 
-Public repository HEAD is not an acceptable substitute.
+Fresh checks:
+
+- internal SHA256SUMS: PASS
+- release validator: PASS
+- 34/34 tests: PASS
+- 20 repeat cycles / 680 test executions: PASS
+- synthetic end-to-end: PASS
+
+This is internal controlled validation, not independent certification or production readiness.
+
+## Next work
+
+`PHASE 9 — MIA API inspection`
+
+Phase 9 will inspect only the exact verified frozen artifact and derive the adapter contract from what is actually implemented.

@@ -8,8 +8,8 @@
 - [x] PHASE 5 — Mobile regression proof
 - [x] PHASE 6 — Deterministic publisher
 - [x] PHASE 7 — Local Runtime / Request / Event
-- [ ] PHASE 8 — Frozen MIA verification — NEXT
-- [ ] PHASE 9 — MIA API inspection
+- [x] PHASE 8 — Frozen MIA verification
+- [ ] PHASE 9 — MIA API inspection — NEXT
 - [ ] PHASE 10 — MiaExecutionPort
 - [ ] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [ ] PHASE 12 — Receipt/restart proof
@@ -19,12 +19,12 @@
 
 ## Current control
 
-Phase 7 produced local reference Events only.
+Exact frozen MIA Runtime v1.0.0 SHA-256 verified:
 
-No World Runtime receipt was created.
+`ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a`
 
-No MIA execution receipt was created.
+Fresh internal validation passed.
 
-MIA has not been integrated.
+MIA has not yet been integrated into WRB-001.
 
-Phase 8 must locate and verify the exact frozen MIA artifact before any API inspection or adapter work.
+Phase 9 is inspection only: determine the exact callable MIA interface from the verified artifact before any adapter implementation.
