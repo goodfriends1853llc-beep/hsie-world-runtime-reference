@@ -1,0 +1,18 @@
+{
+  "artifact_id": "WRB-001-PHASE-0-FILE-MANIFEST-001",
+  "repository": "goodfriends1853llc-beep/brevard-com-demo",
+  "commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+  "tree_sha1": "de7621fc2490dee581655e032305b0040fac5b4d",
+  "digest_algorithm": "git_blob_sha1",
+  "files": [
+    {"path": ".nojekyll", "type": "blob", "size": 0, "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"},
+    {"path": "README.md", "type": "blob", "size": 3403, "git_blob_sha1": "35b3611ecff156e274a9554f9ace0637ac13ce69"},
+    {"path": "app.js", "type": "blob", "size": 8727, "git_blob_sha1": "ef393318ad60a78c1d709461aa9233f53761f3f9"},
+    {"path": "index.html", "type": "blob", "size": 2076, "git_blob_sha1": "f4f0b5b21a3515430bbceb436100f51ba8045134"},
+    {"path": "scenes/lagoon-exterior.jpg", "type": "blob", "size": 8981, "git_blob_sha1": "8458a36e613ee5fe5e911e77d82e802364b838f0"},
+    {"path": "scenes/lagoon-interior.jpg", "type": "blob", "size": 1656, "git_blob_sha1": "da4422059f779acd7c7c475e0b7f537fc4b58538"},
+    {"path": "scenes/street.jpg", "type": "blob", "size": 8980, "git_blob_sha1": "773fb1cb300a0e171be916334aca8fa010269c48"},
+    {"path": "styles.css", "type": "blob", "size": 3906, "git_blob_sha1": "1953bdee3075928df9e7d044374485cc34cf2e3d"},
+    {"path": "world.json", "type": "blob", "size": 4821, "git_blob_sha1": "dbd782f66d022a8e09a53ee70bc5e76691219e24"}
+  ]
+}

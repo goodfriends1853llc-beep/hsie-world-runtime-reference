@@ -1,0 +1,66 @@
+{
+  "artifact_id": "WRB-001-PHASE-0-EVIDENCE-001",
+  "phase": "WRB-001 / PHASE 0",
+  "status": "PASS",
+  "claim": "The predecessor source state used for WRB-001 has been identified and preserved as migration evidence.",
+  "predecessor_id": "BREVARD-COM-DEMO-001",
+  "repository": "goodfriends1853llc-beep/brevard-com-demo",
+  "branch": "main",
+  "commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+  "commit_message": "Record owner-tested POC acceptance gates",
+  "commit_time_utc": "2026-09-26T20:48:38Z",
+  "commit_tree_sha1": "de7621fc2490dee581655e032305b0040fac5b4d",
+  "current_main_at_inspection": "29326120dffa33a94a9489ed41874ce9d5163328",
+  "source_schema": "brevard-spatial-world/0.1",
+  "world_id": "BREVARD-COM-DEMO-001",
+  "runtime_style": "static HTML/CSS/JavaScript/JSON + Pannellum 2.5.7 + local JPEG scene assets",
+  "scene_ids": [
+    "street-001",
+    "lagoon-exterior",
+    "lagoon-interior"
+  ],
+  "interaction_types": [
+    "MOVE",
+    "ABOUT",
+    "SERVICES",
+    "BOOK"
+  ],
+  "known_public_url": "https://goodfriends1853llc-beep.github.io/brevard-com-demo/",
+  "known_public_url_status": "historically accepted in predecessor record; not freshly browser-verified in this Phase 0 inspection",
+  "acceptance_status": "PASSED — owner-tested POC runtime acceptance",
+  "claim_ceiling": [
+    "browser-hosted spatial interface",
+    "360 panorama rendering",
+    "touch navigation",
+    "device-orientation look",
+    "scene navigation",
+    "business exterior/interior navigation",
+    "interactive service information",
+    "external BOOK hyperlink/action"
+  ],
+  "not_proven": [
+    "production-quality imagery",
+    "traffic or conversion performance",
+    "production readiness",
+    "World Registry",
+    "Place Registry",
+    "Business Registry",
+    "MIA integration",
+    "VEIL enforcement",
+    "persistent Event ledger",
+    "governed receipt path",
+    "Walker authentication",
+    "booking completion"
+  ],
+  "book_claim_ceiling": {
+    "supported": [
+      "BOOK_CLICKED",
+      "EXTERNAL_BOOKING_ROUTE_OPENED"
+    ],
+    "not_supported_without_external_evidence": [
+      "BOOKING_COMPLETED"
+    ]
+  },
+  "preservation_method": "read-only inspection of GitHub repository commit/tree and source files; no predecessor mutation performed",
+  "digest_note": "File digests in file-manifest.json are Git blob SHA-1 identifiers from the exact accepted commit tree. They establish repository content identity, not semantic correctness."
+}

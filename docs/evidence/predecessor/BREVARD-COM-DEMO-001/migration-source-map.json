@@ -1,0 +1,63 @@
+{
+  "artifact_id": "WRB-001-PHASE-0-MIGRATION-SOURCE-MAP-001",
+  "source_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+  "status": "ESTABLISHED_FOR_PHASE_0",
+  "allowed_mapping_states": [
+    "MIGRATED",
+    "DERIVED",
+    "DEPRECATED",
+    "UNRESOLVED"
+  ],
+  "mappings": [
+    {
+      "legacy_ref": "scenes.street-001",
+      "legacy_scene_id": "street-001",
+      "candidate_destination": {
+        "place_ref": "place:brevard-demo-street",
+        "space_ref": null,
+        "representation_ref": "representation:street-001-360-v1"
+      },
+      "mapping_state": "MIGRATED",
+      "notes": "Candidate semantic destination for Phase 3; final schema implementation not yet built."
+    },
+    {
+      "legacy_ref": "scenes.lagoon-exterior",
+      "legacy_scene_id": "lagoon-exterior",
+      "candidate_destination": {
+        "place_ref": "place:lagoon-cuts-demo",
+        "space_ref": "space:exterior",
+        "representation_ref": "representation:lagoon-exterior-360-v1"
+      },
+      "mapping_state": "MIGRATED",
+      "notes": "Fictional demo business; preserve PLATFORM_DEMO_FICTIONAL equivalent authority state."
+    },
+    {
+      "legacy_ref": "scenes.lagoon-interior",
+      "legacy_scene_id": "lagoon-interior",
+      "candidate_destination": {
+        "place_ref": "place:lagoon-cuts-demo",
+        "space_ref": "space:interior",
+        "representation_ref": "representation:lagoon-interior-360-v1"
+      },
+      "mapping_state": "MIGRATED",
+      "notes": "Interior remains subordinate Space candidate for Slice 001, not a separate Place by default."
+    },
+    {
+      "legacy_ref": "entities.business:lagoon-cuts",
+      "candidate_destination": {
+        "business_ref": "business:lagoon-cuts-demo",
+        "place_ref": "place:lagoon-cuts-demo"
+      },
+      "mapping_state": "MIGRATED",
+      "notes": "Preserve fictional sample status; do not represent as verified real merchant."
+    },
+    {
+      "legacy_ref": "interactions.BOOK",
+      "candidate_destination": {
+        "external_action_type": "OPEN_EXTERNAL_URL"
+      },
+      "mapping_state": "MIGRATED",
+      "notes": "External route only. No BOOKING_COMPLETED event may be inferred."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "artifact_id": "WRB-001-ARCHITECTURE-BASELINE-001",
+  "implementation_event": "WRB-001",
+  "status": "ENGINEERING BASELINE / CANDIDATE SOURCE",
+  "canonical": false,
+  "architecture_source": {
+    "name": "Master Integration Candidate",
+    "version": "v0.9",
+    "pass": 9,
+    "normalizations": [
+      "N-001",
+      "N-002",
+      "N-003"
+    ]
+  },
+  "control": {
+    "architecture_expansion": "HOLD",
+    "pass_10": "NOT_AUTHORIZED",
+    "tb_sub_001": "FROZEN_UNCHANGED",
+    "mia_runtime_v1_0_0": "FROZEN_UNCHANGED",
+    "predecessor": "BREVARD-COM-DEMO-001"
+  },
+  "seven_initial_contracts": [
+    "World",
+    "Place",
+    "Business",
+    "Representation",
+    "Topology",
+    "Request",
+    "Event"
+  ],
+  "space_decision_for_slice_001": "Space is subordinate structure inside Place; no eighth top-level contract in Phase 2.",
+  "first_governed_operation": "ACTIVATE_BUSINESS_PLACE",
+  "receipt_law": "WORLD_RUNTIME_RECEIPT != MIA_EXECUTION_RECEIPT",
+  "mia_gate": "No MIA adapter implementation before Phase 5 passes and frozen artifact verification is completed."
+}

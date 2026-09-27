@@ -1,0 +1,10 @@
+{
+  "name": "hsie-world-runtime-reference",
+  "version": "0.0.0-wrb001",
+  "private": true,
+  "description": "WRB-001 reference implementation scaffold. Not production and not canonical.",
+  "scripts": {},
+  "engines": {
+    "node": ">=20"
+  }
+}
