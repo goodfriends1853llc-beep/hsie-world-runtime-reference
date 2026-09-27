@@ -1,0 +1,53 @@
+{
+  "artifact_id": "WRB-001-PHASE-12-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 12",
+  "status": "PASS",
+  "implementation_commit": "87199c30d82746b1e4359523db6cd8c52d60eb12",
+  "correction_commit": "a294bd60afa8c409231855b2ee3d7e08e4f623b9",
+  "github_actions": {
+    "initial_run": {
+      "run_id": 36340439876,
+      "conclusion": "failure",
+      "cause": "Python receipt journal parser used non-existent str.trim_end().",
+      "disposition": "Preserved as failed history; corrected without rewriting prior commit."
+    },
+    "passing_run": {
+      "run_id": 36340476964,
+      "conclusion": "success",
+      "source_artifact_id": 10938344913,
+      "source_artifact_sha256": "b45ed6b6416d514811eb23606b07ba3774b0e3a12fd7f84074d2ff406c91d3fb"
+    }
+  },
+  "frozen_mia": {
+    "sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+    "source_modified": false
+  },
+  "restart_proof": {
+    "mia_request_id": "request:phase12:activate-business-place:001",
+    "mia_execution_id": "1bd97a68-9305-482f-b212-0f7960141bce",
+    "mia_receipt_ref": "81ac9387-0039-4aec-8e66-e6fad80e75e3",
+    "mia_receipt_after_restart": "PASS",
+    "mia_proof_ref": "254b0930-b7fa-4741-8a93-2fb7c76b8131",
+    "mia_proof_after_restart": "PASS",
+    "mia_replay_after_restart": "PASS",
+    "mia_store_integrity_after_restart": "PASS",
+    "world_receipt_id": "world-receipt:5b27fdf2f8ee3e045d847b9457457304db9ece7053c1688acc059b412954e7b6",
+    "world_receipt_class": "WORLD_RUNTIME_RECEIPT",
+    "world_receipt_after_restart": "PASS",
+    "world_receipt_distinct_from_mia_receipt": true,
+    "activation_id": "business-activation:sha256:7ceeffcc62e28dbbdce3eb8add8b77cca5c4ef5b9534a105351e573a50f98d0f",
+    "activation_state_preserved_after_restart": true,
+    "activation_state_file_sha256": "937f48e47957232b45aa37ee6ee89f68fe6f68acf6d9120ebe46bc0972444b6a",
+    "world_receipt_journal_sha256": "ddfa9c840f3c6de2d42f0f56b1bc6cd82cf9f6fb2d88c23ce8e5acf962422fdb",
+    "idempotent_activation_readback_changed": false,
+    "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+  },
+  "boundaries": {
+    "graceful_restart_only": true,
+    "crash_atomicity_proven": false,
+    "distributed_recovery_proven": false,
+    "failover_proven": false,
+    "independent_reproduction_proven": false
+  },
+  "claim_ceiling": "Phase 12 proves graceful local restart reconstruction for the tested combined WRB-001 + frozen-MIA activation path, including separate verification of MIA receipt/proof/replay, World Runtime receipt integrity, activation-state persistence, and receipt-class separation. It does not prove crash atomicity, distributed recovery, failover, or independent reproduction."
+}

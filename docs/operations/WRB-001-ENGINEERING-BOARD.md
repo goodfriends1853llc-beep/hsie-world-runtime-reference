@@ -12,13 +12,17 @@
 - [x] PHASE 9 — MIA API inspection
 - [x] PHASE 10 — MiaExecutionPort
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
-- [~] PHASE 12 — Receipt / Restart Proof — IMPLEMENTED / VALIDATION PENDING
-- [ ] PHASE 13 — Static deployment
+- [x] PHASE 12 — Receipt / Restart Proof
+- [ ] PHASE 13 — Static deployment — NEXT
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
 
 ## Current control
 
-Phase 12 introduces a World Runtime receipt class without relabeling or replacing MIA receipts.
+Graceful local restart proof has passed.
 
-No production durability or crash-atomicity claim is authorized.
+The first failed Phase 12 verification remains preserved in workflow history.
+
+`WORLD RUNTIME RECEIPT ≠ MIA EXECUTION RECEIPT`
+
+Phase 13 may deploy only the static public reference surface. It must not imply that GitHub Pages is running MIA or the local World Runtime.

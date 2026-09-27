@@ -18,20 +18,23 @@
 - Phase 9 — **PASS WITH IMPLEMENTATION FINDING**
 - Phase 10 — **PASS**
 - Phase 11 — **PASS**
-- Phase 12 — **NEXT / NOT YET STARTED**
+- Phase 12 — **PASS**
+- Phase 13 — **NEXT / NOT YET STARTED**
 
-## Phase 11
+## Phase 12
 
-`ACTIVATE_BUSINESS_PLACE` has now executed successfully through the bounded compatibility port and the exact frozen MIA v1.0.0 runtime.
+The combined local activation path passed graceful restart verification.
 
-The operation used a separate derived registry and a World-owned deterministic write capability. Frozen MIA source bytes remained unchanged.
+MIA receipt/proof/replay, activation state, World Runtime receipt, and MIA store integrity remained verifiable after restart.
 
-MIA receipt/proof verification passed.
+The first Phase-12 workflow failure remains preserved; the corrected run passed.
 
-No World Runtime receipt exists yet.
+This is not crash-atomicity or distributed failover proof.
 
 ## Next work
 
-`PHASE 12 — Receipt / Restart Proof`
+`PHASE 13 — Static Deployment`
 
-The next phase must prove recovery of the combined activation state and MIA evidence after runtime restart while keeping World Runtime receipt identity separate from MIA receipt identity.
+Static deployment must remain clearly separated from the local governed runtime:
+
+`STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
