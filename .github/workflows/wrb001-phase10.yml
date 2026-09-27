@@ -1,0 +1,28 @@
+name: WRB-001 Phase 10 MiaExecutionPort
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'adapters/**'
+      - 'tests/phase10/**'
+      - '.github/workflows/wrb001-phase10.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-port-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Verify bounded compatibility port
+        run: python -m unittest tests.phase10.test_mia_execution_port -v
