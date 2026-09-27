@@ -1,0 +1,20 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "place_id": "place:hsa-arrival-hub",
+  "place_type": "PUBLIC_ARRIVAL_HUB",
+  "status": "ACTIVE",
+  "display_name": "Human Systems Architect™ — Explore Brevard Arrival Hub",
+  "parent_place_ref": null,
+  "district_ref": null,
+  "public_visibility": "PUBLIC",
+  "steward_ref": null,
+  "spaces": [],
+  "representation_refs": [
+    "representation:hsa-arrival-hub-360-v1"
+  ],
+  "created_event_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "WRB-001-PHASE-15-OWNER-PILOT"
+  ]
+}
