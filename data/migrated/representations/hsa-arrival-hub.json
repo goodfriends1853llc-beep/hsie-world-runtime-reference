@@ -42,6 +42,16 @@
         "target_type": "BUSINESS_PUBLIC_PROFILE",
         "target_ref": "business:hsa-owner-pilot",
         "legacy_refs": []
+      },
+      {
+        "anchor_id": "services-hsa",
+        "interaction_kind": "SERVICES",
+        "label": "Services",
+        "pitch": 1,
+        "yaw": -62,
+        "target_type": "BUSINESS_SERVICES",
+        "target_ref": "business:hsa-owner-pilot",
+        "legacy_refs": []
       }
     ]
   }
