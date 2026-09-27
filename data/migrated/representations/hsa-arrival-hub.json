@@ -72,6 +72,16 @@
         "target_type": "BUSINESS_EXTERNAL_ACTION",
         "target_ref": "action:hsa:book",
         "legacy_refs": []
+      },
+      {
+        "anchor_id": "message-hsa",
+        "interaction_kind": "MESSAGE",
+        "label": "Message",
+        "pitch": 1,
+        "yaw": 154,
+        "target_type": "BUSINESS_EXTERNAL_ACTION",
+        "target_ref": "action:hsa:message",
+        "legacy_refs": []
       }
     ]
   }
