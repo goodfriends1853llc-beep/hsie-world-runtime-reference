@@ -8,28 +8,105 @@
     "transport": "HTTPS"
   },
   "test_matrix": [
-    {"id":"P5-01","name":"Public HTTPS load","status":"UNTESTED"},
-    {"id":"P5-02","name":"Entry overlay","status":"UNTESTED"},
-    {"id":"P5-03","name":"Touch mode selection","status":"UNTESTED"},
-    {"id":"P5-04","name":"Touch drag look","status":"UNTESTED"},
-    {"id":"P5-05","name":"Motion permission prompt","status":"UNTESTED"},
-    {"id":"P5-06","name":"Physical motion look","status":"UNTESTED"},
-    {"id":"P5-07","name":"Street to exterior","status":"UNTESTED"},
-    {"id":"P5-08","name":"Exterior to interior","status":"UNTESTED"},
-    {"id":"P5-09","name":"Interior to exterior","status":"UNTESTED"},
-    {"id":"P5-10","name":"Exterior to street","status":"UNTESTED"},
-    {"id":"P5-11","name":"ABOUT structured content","status":"UNTESTED"},
-    {"id":"P5-12","name":"SERVICES structured content","status":"UNTESTED"},
-    {"id":"P5-13","name":"BOOK external route","status":"UNTESTED"},
-    {"id":"P5-14","name":"No booking completion claim","status":"UNTESTED"},
-    {"id":"P5-15","name":"HUD label updates","status":"UNTESTED"},
-    {"id":"P5-16","name":"Modal close behavior","status":"UNTESTED"},
-    {"id":"P5-17","name":"No visible legacy target_scene dependency","status":"UNTESTED"},
-    {"id":"P5-18","name":"Round-trip return to Street","status":"UNTESTED"}
+    {
+      "id": "P5-01",
+      "name": "Public HTTPS load",
+      "status": "DEPLOYMENT_SUCCESS_USER_REACHABILITY_PENDING"
+    },
+    {
+      "id": "P5-02",
+      "name": "Entry overlay",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-03",
+      "name": "Touch mode selection",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-04",
+      "name": "Touch drag look",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-05",
+      "name": "Motion permission prompt",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-06",
+      "name": "Physical motion look",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-07",
+      "name": "Street to exterior",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-08",
+      "name": "Exterior to interior",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-09",
+      "name": "Interior to exterior",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-10",
+      "name": "Exterior to street",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-11",
+      "name": "ABOUT structured content",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-12",
+      "name": "SERVICES structured content",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-13",
+      "name": "BOOK external route",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-14",
+      "name": "No booking completion claim",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-15",
+      "name": "HUD label updates",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-16",
+      "name": "Modal close behavior",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-17",
+      "name": "No visible legacy target_scene dependency",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P5-18",
+      "name": "Round-trip return to Street",
+      "status": "UNTESTED"
+    }
   ],
   "public_https": {
-    "status": "NOT_CONFIGURED_AT_PREPARATION_TIME",
-    "note": "GitHub Pages endpoint was not configured or accessible when Phase 5 preparation began."
+    "status": "PAGES_DEPLOYMENT_WORKFLOW_SUCCESS",
+    "url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+    "workflow_run_id": 36328376420,
+    "workflow_name": "pages build and deployment",
+    "deployed_commit": "b4c5d9c09d34a00faa538e412fea5f50d5c21192",
+    "workflow_conclusion": "success",
+    "note": "GitHub Pages deployment workflow completed successfully. Assistant-side public URL fetch returned a cache miss, so physical iPhone reachability still requires user confirmation."
   },
   "claim_ceiling": "No mobile regression claim is established until the public HTTPS build is physically tested on iPhone."
 }
