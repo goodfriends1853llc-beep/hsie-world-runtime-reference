@@ -5,5 +5,10 @@ export const PREDECESSOR_ASSET_BASE =
 
 export function resolveAssetUrl(assetRef) {
   if (/^https?:\/\//i.test(assetRef)) return assetRef;
+
+  if (assetRef.startsWith('assets/')) {
+    return new URL(`../../${assetRef}`, import.meta.url).href;
+  }
+
   return new URL(assetRef, PREDECESSOR_ASSET_BASE).href;
 }
