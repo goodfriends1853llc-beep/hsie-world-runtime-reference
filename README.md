@@ -16,18 +16,21 @@
 - Phase 7 — **PASS**
 - Phase 8 — **PASS**
 - Phase 9 — **PASS WITH IMPLEMENTATION FINDING**
-- Phase 10 — **NEXT / NOT YET STARTED**
+- Phase 10 — **PASS**
+- Phase 11 — **NEXT / NOT YET STARTED**
 
-## Phase 9
+## Phase 10
 
-The actual frozen MIA v1.0.0 API has been inspected.
+The bounded `MiaExecutionPort` has been verified in GitHub and against the exact frozen MIA v1.0.0 artifact.
 
-`WRB-001-IF-002` records implementation/contract differences around caller identity, runtime identity, plural governance references, and the absence of `ACTIVATE_BUSINESS_PLACE` from the default capability surface.
+The port preserves canonical request evidence while adding only the singular aliases required by frozen v1.0.0 after strict compatibility checks.
 
-The frozen artifact was not modified.
+No World Runtime receipt is created by the port.
+
+`ACTIVATE_BUSINESS_PLACE` remains blocked until Phase 11.
 
 ## Next work
 
-`PHASE 10 — MiaExecutionPort`
+`PHASE 11 — ACTIVATE_BUSINESS_PLACE`
 
-The port must enforce the missing compatibility boundary before invoking frozen MIA and must not execute `ACTIVATE_BUSINESS_PLACE` yet.
+Phase 11 must add a governed business-activation capability/registry configuration without changing frozen MIA source bytes.

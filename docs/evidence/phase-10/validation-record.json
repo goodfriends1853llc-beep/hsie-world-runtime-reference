@@ -1,0 +1,49 @@
+{
+  "artifact_id": "WRB-001-PHASE-10-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 10",
+  "status": "PASS",
+  "port_source": {
+    "implementation_commit": "48c0440e3959857f9b1b39a5e8318f406455003c",
+    "verification_workflow_commit": "e5e1ea0c10e95a84e5a495e377c033cb3f147eb4",
+    "file_sha256": "3246ed548b5acda8336280be7dcc01f6cfc746325f74eec5752b712d61e51f6b"
+  },
+  "github_actions": {
+    "workflow": "WRB-001 Phase 10 MiaExecutionPort",
+    "run_id": 36339905988,
+    "conclusion": "success",
+    "source_artifact_id": 10938462855,
+    "source_artifact_sha256": "09375b7bfa875d18064ad92d4b6375a052f512e8d887d3ec76683038285a7f31"
+  },
+  "exact_mia_integration": {
+    "frozen_mia_sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+    "result": "PASS",
+    "runtime_id": "MIA-RUNTIME-v1",
+    "request_id": "request:phase10:frozen-mia:001",
+    "execution_id": "275fd74f-4477-4bfe-9f7d-16d511a49148",
+    "mia_receipt_ref": "795149f9-5639-4abb-969b-ca55de03731c",
+    "mia_receipt_verified": true,
+    "mia_proof_ref": "3e710ae1-8316-4770-a249-3842471fda37",
+    "mia_proof_verified": true
+  },
+  "compatibility_checks": {
+    "caller_id_required_by_port": true,
+    "caller_id_persisted_in_mia_execution_request": true,
+    "exact_runtime_id_required_by_port": true,
+    "canonical_plural_fields_preserved": true,
+    "singular_v1_aliases_added_after_cardinality_checks": true,
+    "multiple_authority_refs_rejected": true,
+    "multiple_requested_capabilities_rejected": true,
+    "multiple_consent_refs_rejected": true,
+    "nonempty_policy_context_rejected": true,
+    "explicit_requested_provider_rejected": true,
+    "activate_business_place_blocked": true,
+    "world_runtime_receipt_created": false
+  },
+  "boundaries": {
+    "frozen_mia_modified": false,
+    "activate_business_place_executed": false,
+    "world_runtime_receipt_issued": false,
+    "mia_receipt_relabelled": false
+  },
+  "claim_ceiling": "Phase 10 proves the bounded compatibility port against its GitHub unit tests and a fresh local execution against the exact Phase-8-verified frozen MIA Runtime v1.0.0 artifact. It does not establish support for ACTIVATE_BUSINESS_PLACE, production transport, independent reproduction, or World Runtime receipt semantics."
+}
