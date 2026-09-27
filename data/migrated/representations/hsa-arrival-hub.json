@@ -62,6 +62,16 @@
         "target_type": "BUSINESS_EXTERNAL_ACTION",
         "target_ref": "action:hsa:founding",
         "legacy_refs": []
+      },
+      {
+        "anchor_id": "book-hsa",
+        "interaction_kind": "BOOK",
+        "label": "Book",
+        "pitch": 1,
+        "yaw": 117,
+        "target_type": "BUSINESS_EXTERNAL_ACTION",
+        "target_ref": "action:hsa:book",
+        "legacy_refs": []
       }
     ]
   }
