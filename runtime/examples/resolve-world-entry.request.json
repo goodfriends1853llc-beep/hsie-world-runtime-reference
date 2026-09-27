@@ -1,0 +1,17 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "request_id": "request:phase7:resolve-world-entry:001",
+  "request_type": "LOCAL_REFERENCE_QUERY",
+  "session_ref": "session:phase7:test",
+  "caller_ref": "client:phase7:test",
+  "actor_ref": null,
+  "target_domain": "WORLD",
+  "target_ref": "BREVARD-COM-DEMO-001",
+  "operation": "RESOLVE_WORLD_ENTRY",
+  "purpose": "Prove the Phase 7 local Request to Event path without executing a governed business operation.",
+  "input": {},
+  "expected_state_version": null,
+  "correlation_id": "correlation:phase7:001",
+  "created_at": "2026-09-27T17:55:00.000Z",
+  "status": "PROPOSED"
+}

@@ -7,7 +7,7 @@
 - [x] PHASE 4 — Reconstruct through governed semantics
 - [x] PHASE 5 — Mobile regression proof
 - [x] PHASE 6 — Deterministic publisher
-- [ ] PHASE 7 — Local Runtime / Request / Event — NEXT
+- [~] PHASE 7 — Local Runtime / Request / Event — IMPLEMENTED / VALIDATION PENDING
 - [ ] PHASE 8 — Frozen MIA verification
 - [ ] PHASE 9 — MIA API inspection
 - [ ] PHASE 10 — MiaExecutionPort
@@ -19,8 +19,10 @@
 
 ## Current control
 
+Phase 7 may emit only local reference Events.
+
+No runtime receipt is authorized in Phase 7.
+
 MIA has not been integrated.
 
-Pass 10 remains unauthorized.
-
-Phase 7 may introduce only the local reference Runtime / Request / Event path. It may not impersonate MIA execution or MIA receipts.
+`ACTIVATE_BUSINESS_PLACE` remains blocked until its authorized later phase.
