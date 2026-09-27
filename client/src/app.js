@@ -80,8 +80,9 @@ function showServices(business) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'action-button';
-    button.textContent = 'BOOK APPOINTMENT';
-    button.addEventListener('click', () => openExternal(store.externalAction(bookingRef)));
+    const bookingAction = store.externalAction(bookingRef);
+    button.textContent = bookingAction.label || 'BOOK / CONTACT';
+    button.addEventListener('click', () => openExternal(bookingAction));
     modalActions.appendChild(button);
   }
 
@@ -89,7 +90,7 @@ function showServices(business) {
 }
 
 function openExternal(action) {
-  showToast('External BOOK route reached. Opening demo endpoint…');
+  showToast(`Opening ${action.label || 'external destination'}…`);
   const opened = window.open(action.destination, '_blank', 'noopener,noreferrer');
   if (!opened) window.location.assign(action.destination);
 }
