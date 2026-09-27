@@ -20,23 +20,17 @@
 - Phase 11 — **PASS**
 - Phase 12 — **PASS**
 - Phase 13 — **PASS**
-- Phase 14 — **PENDING EXTERNAL MOBILE TEST**
-- Phase 15 — **NOT YET AUTHORIZED**
+- Phase 14 — **PASS — OWNER-RELAYED EXTERNAL MOBILE TEST**
+- Phase 15 — **OPEN — REAL AUTHORIZED BUSINESS REQUIRED**
 
-## Phase 14 owner scope revision
+## Phase 14
 
-The active Phase-14 acceptance target is now **Independent Mobile Experience Acceptance**.
+A friend of the owner who did not build WRB-001 successfully used the public spatial experience on another phone according to the owner's relayed report.
 
-The external tester receives only the public Pages URL and checks loading, 360 rendering, touch look, motion when supported, scene movement, and return navigation.
+This establishes only external mobile-experience acceptance within the narrowed Phase-14 scope.
 
-External GitHub/MIA/runtime reproduction is not required for this acceptance gate.
+## Phase 15
 
-The earlier broad technical-reproduction protocol remains preserved in Git history but is superseded by the owner's current scope decision.
+The next stage is the first real authorized business pilot.
 
-## Public test URL
-
-`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/`
-
-## Next event
-
-Record the external tester's actual phone result. If the six mobile checks pass, Phase 14 may close and Phase 15 may open.
+Before activation, the pilot requires a named real business and authorization from a representative allowed to approve the business's participation and public representation.

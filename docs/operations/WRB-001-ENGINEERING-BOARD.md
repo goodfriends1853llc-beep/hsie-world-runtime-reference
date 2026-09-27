@@ -14,19 +14,17 @@
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [x] PHASE 12 — Receipt / Restart Proof
 - [x] PHASE 13 — Static deployment
-- [~] PHASE 14 — Independent Mobile Experience Acceptance — TESTER INVITED / RESULT PENDING
-- [ ] PHASE 15 — Authorized business pilot
+- [x] PHASE 14 — Independent Mobile Experience Acceptance
+- [~] PHASE 15 — Authorized business pilot — OPEN / REAL BUSINESS REQUIRED
 
-## Current Phase 14 scope
+## Current Phase 15 gate
 
-Owner-authorized acceptance scope is now public-mobile experience only.
+No real business is activated until a specific business and authorized representative are recorded.
 
-The external tester receives only the public Pages URL.
+`INTEREST ≠ AUTHORIZATION`
 
-GitHub/runtime/MIA technical reproduction is **not required** for Phase 14.
+`AUTHORIZATION ≠ ACTIVATION`
 
-## Gate
+`ACTIVATION ≠ PUBLICATION`
 
-Phase 15 remains execution-locked until the external mobile tester result is recorded.
-
-Planning for Phase 15 may be prepared, but no real-business activation is authorized before Phase 14 PASS.
+The next required input is the identity of the first real business pilot and confirmation from an authorized representative that the business may be represented in the pilot.

@@ -1,0 +1,44 @@
+{
+  "artifact_id": "WRB-001-PHASE-15-PILOT-INTAKE-001",
+  "status": "AWAITING_REAL_BUSINESS",
+  "business": {
+    "display_name": null,
+    "stable_business_id": null,
+    "business_type": null,
+    "physical_or_service_model": null,
+    "public_address_or_service_area": null,
+    "public_phone": null,
+    "public_website": null,
+    "booking_or_action_url": null
+  },
+  "authorization": {
+    "authorized_representative": null,
+    "representative_role": null,
+    "authorization_confirmed": false,
+    "authorization_evidence_ref": null,
+    "approved_for_public_spatial_representation": false
+  },
+  "public_content": {
+    "about_text": null,
+    "services": [],
+    "approved_logo_or_asset_refs": [],
+    "asset_use_permission_confirmed": false
+  },
+  "world_scope": {
+    "target_place_ref": null,
+    "target_space_refs": [],
+    "representation_plan": null
+  },
+  "commercial_scope": {
+    "pilot_price_state": "NOT_SET",
+    "payment_state": "NOT_APPLICABLE_UNTIL_SEPARATELY_AGREED",
+    "performance_guarantee": false
+  },
+  "activation": {
+    "status": "NOT_AUTHORIZED",
+    "request_ref": null,
+    "mia_execution_ref": null,
+    "mia_receipt_ref": null,
+    "world_runtime_receipt_ref": null
+  }
+}

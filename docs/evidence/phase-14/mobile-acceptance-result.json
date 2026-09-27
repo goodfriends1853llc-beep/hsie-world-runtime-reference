@@ -1,54 +1,56 @@
 {
   "artifact_id": "WRB-001-PHASE-14-MOBILE-RESULT-001",
   "phase": "WRB-001 / PHASE 14 — Independent Mobile Experience Acceptance",
-  "status": "PENDING_EXTERNAL_REPORT",
+  "status": "PASS_OWNER_RELAYED_EXTERNAL_TEST",
   "tester": {
     "identifier": "OWNER-FRIEND-EXTERNAL-TESTER-001",
     "builder_role": false,
     "public_url_only": true,
-    "tested_at": null,
-    "device": null,
-    "browser": null
+    "tested_at": "2026-09-27",
+    "device": "external friend's phone",
+    "browser": null,
+    "report_channel": "owner-relayed tester observation"
   },
   "checks": [
     {
       "id": "M01",
       "name": "Public URL opens",
-      "status": "PENDING",
-      "notes": null
+      "status": "PASS_OWNER_RELAYED",
+      "notes": "Owner reports friend's phone opened and used the spatial world."
     },
     {
       "id": "M02",
       "name": "360 scene renders",
-      "status": "PENDING",
-      "notes": null
+      "status": "PASS_OWNER_RELAYED",
+      "notes": "Owner reports spatial world rendered and was usable."
     },
     {
       "id": "M03",
       "name": "Touch/finger look works",
-      "status": "PENDING",
-      "notes": null
+      "status": "PASS_OWNER_RELAYED",
+      "notes": "Owner reports everything worked properly on friend's phone."
     },
     {
       "id": "M04",
       "name": "Motion look works when supported",
-      "status": "PENDING",
-      "notes": null
+      "status": "PASS_OWNER_RELAYED",
+      "notes": "Included within owner's statement that the narrowed mobile test worked properly."
     },
     {
       "id": "M05",
       "name": "Scene-to-scene movement works",
-      "status": "PENDING",
-      "notes": null
+      "status": "PASS_OWNER_RELAYED",
+      "notes": "Owner specifically reports friend was able to move around through the spatial world."
     },
     {
       "id": "M06",
       "name": "Return path works without blank/broken scene",
-      "status": "PENDING",
-      "notes": null
+      "status": "PASS_OWNER_RELAYED",
+      "notes": "Owner reports everything worked properly; no broken navigation was reported."
     }
   ],
-  "final_result": "PENDING",
-  "raw_tester_report": null,
-  "claim_ceiling": "External mobile experience only; no independent technical/runtime verification."
+  "final_result": "PASS",
+  "raw_tester_report": "Relayed by owner: friend opened the public link on their phone, was able to move around through the spatial world, and everything worked properly.",
+  "evidence_class": "OWNER_RELAYED_EXTERNAL_MOBILE_OBSERVATION",
+  "claim_ceiling": "External mobile experience acceptance only. This is owner-relayed evidence from a non-builder friend's phone and is not direct independent technical/runtime verification."
 }
