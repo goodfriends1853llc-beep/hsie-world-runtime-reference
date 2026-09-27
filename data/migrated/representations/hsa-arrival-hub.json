@@ -52,6 +52,16 @@
         "target_type": "BUSINESS_SERVICES",
         "target_ref": "business:hsa-owner-pilot",
         "legacy_refs": []
+      },
+      {
+        "anchor_id": "founding-hsa",
+        "interaction_kind": "FOUNDING",
+        "label": "Founding Businesses",
+        "pitch": 1,
+        "yaw": 51,
+        "target_type": "BUSINESS_EXTERNAL_ACTION",
+        "target_ref": "action:hsa:founding",
+        "legacy_refs": []
       }
     ]
   }
