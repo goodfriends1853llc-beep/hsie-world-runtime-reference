@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Contact Tommie Bellamy — Human Systems Architect™.">
+  <title>Contact — Tommie Bellamy</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .contact-shell{max-width:860px;margin:0 auto;padding:80px 20px 120px}
+    .contact-shell h1{font-size:clamp(44px,8vw,88px);line-height:.92;letter-spacing:-.055em;margin:12px 0 22px}
+    .contact-copy{max-width:700px;color:var(--muted);font-size:18px}
+    .request-form{display:grid;gap:18px;margin-top:38px;padding:26px;border:1px solid var(--line);background:var(--panel)}
+    .field{display:grid;gap:7px}
+    .field label{font-size:10px;font-weight:900;letter-spacing:.14em;color:#c9c9c4}
+    .field input,.field textarea,.field select{width:100%;background:#070707;color:var(--text);border:1px solid #333;padding:14px 15px;font:inherit;border-radius:0}
+    .field textarea{min-height:150px;resize:vertical}
+    .request-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .request-actions button{cursor:pointer}
+    .generated{margin-top:24px;padding:20px;border:1px solid #333;background:#080808;white-space:pre-wrap;color:#d9d9d4}
+    .notice{font-size:12px;color:var(--muted);margin-top:18px}
+    .back{display:inline-block;margin-top:28px;color:var(--red);font-size:11px;font-weight:900;letter-spacing:.12em}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main class="contact-shell">
+    <p class="eyebrow" id="modeLabel">CONTACT</p>
+    <h1 id="pageTitle">Send an inquiry.</h1>
+    <p class="contact-copy" id="pageCopy">
+      Fill this out and your phone can prepare the request for sharing or copy it for you.
+    </p>
+
+    <form class="request-form" id="requestForm">
+      <div class="field">
+        <label for="name">YOUR NAME</label>
+        <input id="name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="business">BUSINESS / PROJECT</label>
+        <input id="business" name="business" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="contact">BEST WAY TO REACH YOU</label>
+        <input id="contact" name="contact" placeholder="Phone, email, social handle, etc." required>
+      </div>
+      <div class="field">
+        <label for="service">WHAT ARE YOU INTERESTED IN?</label>
+        <select id="service" name="service">
+          <option>Founding Business / Spatial World</option>
+          <option>Business Clarity Breakdown</option>
+          <option>Website / Customer Journey Review</option>
+          <option>AI Readiness Session</option>
+          <option>Ad Graphic + Message Set</option>
+          <option>Small Business Systems Audit</option>
+          <option>Custom Architecture Session</option>
+          <option>General Inquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">WHAT DO YOU NEED?</label>
+        <textarea id="message" name="message" placeholder="Tell Tommie what you're trying to build, fix, book, or explore."></textarea>
+      </div>
+      <div class="request-actions">
+        <button class="button button-primary" type="submit">PREPARE REQUEST</button>
+        <button class="button button-ghost" type="button" id="copyButton" hidden>COPY REQUEST</button>
+        <button class="button button-ghost" type="button" id="shareButton" hidden>SHARE REQUEST</button>
+      </div>
+    </form>
+
+    <div class="generated" id="generated" hidden></div>
+    <p class="notice" id="notice">
+      This page prepares a request only. A booking request is not a confirmed appointment until Tommie responds and confirms it.
+    </p>
+    <a class="back" href="./">← BACK TO TOMMIE'S PUBLIC HUB</a>
+  </main>
+  <script src="./contact.js"></script>
+</body>
+</html>
