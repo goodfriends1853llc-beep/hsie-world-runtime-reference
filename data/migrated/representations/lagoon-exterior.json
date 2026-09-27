@@ -13,5 +13,53 @@
   "legacy_refs": [
     "lagoon-exterior",
     "scenes/lagoon-exterior.jpg"
-  ]
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": -2,
+      "yaw": 82,
+      "hfov": 90,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-exterior-to-street",
+        "interaction_kind": "MOVE",
+        "label": "Return to Street",
+        "pitch": -12,
+        "yaw": -96,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:lagoon-exterior-to-street-001",
+        "legacy_refs": [
+          "move-exterior-to-street"
+        ]
+      },
+      {
+        "anchor_id": "move-enter-shop",
+        "interaction_kind": "MOVE",
+        "label": "Enter Lagoon Cuts",
+        "pitch": -7,
+        "yaw": 68,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:lagoon-exterior-to-interior",
+        "legacy_refs": [
+          "move-enter-shop"
+        ]
+      },
+      {
+        "anchor_id": "about-lagoon-cuts",
+        "interaction_kind": "ABOUT",
+        "label": "About Lagoon Cuts",
+        "pitch": 12,
+        "yaw": 69,
+        "target_type": "BUSINESS_PUBLIC_PROFILE",
+        "target_ref": "business:lagoon-cuts/public-profile/about",
+        "legacy_refs": [
+          "about-lagoon-cuts"
+        ]
+      }
+    ]
+  }
 }

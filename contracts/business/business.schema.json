@@ -166,6 +166,11 @@
               "source_commit",
               "evidence_refs"
             ]
+          },
+          "environment_class": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
           }
         },
         "required": [
@@ -176,7 +181,8 @@
           "purpose",
           "status",
           "last_verified_at",
-          "provenance"
+          "provenance",
+          "environment_class"
         ]
       }
     },
@@ -229,6 +235,49 @@
     "version": {
       "type": "integer",
       "minimum": 1
+    },
+    "public_profile": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "purpose": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "about_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "about_body": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "services_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "purpose",
+            "about_title",
+            "about_body",
+            "services_title"
+          ]
+        }
+      ]
     }
   },
   "required": [
@@ -243,6 +292,7 @@
     "external_actions",
     "provenance",
     "verified_at",
-    "version"
+    "version",
+    "public_profile"
   ]
 }

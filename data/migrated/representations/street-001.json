@@ -13,5 +13,29 @@
   "legacy_refs": [
     "street-001",
     "scenes/street.jpg"
-  ]
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": 0,
+      "yaw": 5,
+      "hfov": 92,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-street-to-exterior",
+        "interaction_kind": "MOVE",
+        "label": "Approach Lagoon Cuts",
+        "pitch": -8,
+        "yaw": 24,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:street-001-to-lagoon-exterior",
+        "legacy_refs": [
+          "move-street-to-exterior"
+        ]
+      }
+    ]
+  }
 }

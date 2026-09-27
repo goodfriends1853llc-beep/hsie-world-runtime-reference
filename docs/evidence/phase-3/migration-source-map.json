@@ -1,5 +1,5 @@
 {
-  "artifact_id": "WRB-001-PHASE-3-MIGRATION-SOURCE-MAP-001",
+  "artifact_id": "WRB-001-PHASE-3-MIGRATION-SOURCE-MAP-002",
   "source_system": "BREVARD-COM-DEMO-001",
   "source_schema": "brevard-spatial-world/0.1",
   "source_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
@@ -11,11 +11,13 @@
     "UNRESOLVED"
   ],
   "counts": {
-    "MIGRATED": 47,
+    "MIGRATED": 98,
     "DEPRECATED": 5,
-    "UNRESOLVED": 46,
-    "DERIVED": 12
+    "UNRESOLVED": 1,
+    "DERIVED": 6
   },
+  "behaviorally_critical_unresolved_count": 0,
+  "unresolved_count": 1,
   "mappings": [
     {
       "source_path": "/schema",
@@ -23,10 +25,10 @@
       "mapping_state": "MIGRATED",
       "destination_refs": [
         "business.provenance.source_schema",
-        "external_actions[].provenance.source_schema",
-        "migration.source_schema"
+        "external_actions[].provenance.source_schema"
       ],
-      "notes": "Preserved as provenance."
+      "notes": "Preserved as provenance.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/world_id",
@@ -35,7 +37,8 @@
       "destination_refs": [
         "world.world_id"
       ],
-      "notes": "Preserved exactly for the migrated reference world."
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/title",
@@ -44,7 +47,8 @@
       "destination_refs": [
         "world.display_name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/status",
@@ -53,7 +57,8 @@
       "destination_refs": [
         "world.status"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/foundational_rules/0",
@@ -62,7 +67,8 @@
       "destination_refs": [
         "docs/architecture/WRB-001-ARCHITECTURE-BASELINE"
       ],
-      "notes": "Architecture law; not runtime World data."
+      "notes": "Architecture law, not runtime World data.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/foundational_rules/1",
@@ -71,7 +77,8 @@
       "destination_refs": [
         "docs/architecture/WRB-001-ARCHITECTURE-BASELINE"
       ],
-      "notes": "Architecture law; not runtime World data."
+      "notes": "Architecture law, not runtime World data.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/foundational_rules/2",
@@ -80,7 +87,8 @@
       "destination_refs": [
         "docs/architecture/WRB-001-ARCHITECTURE-BASELINE"
       ],
-      "notes": "Architecture law; not runtime World data."
+      "notes": "Architecture law, not runtime World data.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/foundational_rules/3",
@@ -89,7 +97,8 @@
       "destination_refs": [
         "docs/architecture/WRB-001-ARCHITECTURE-BASELINE"
       ],
-      "notes": "Architecture law; not runtime World data."
+      "notes": "Architecture law, not runtime World data.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/foundational_rules/4",
@@ -98,7 +107,8 @@
       "destination_refs": [
         "docs/architecture/WRB-001-ARCHITECTURE-BASELINE"
       ],
-      "notes": "Architecture law; not runtime World data."
+      "notes": "Architecture law, not runtime World data.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/entities/business:lagoon-cuts/entity_type",
@@ -107,7 +117,8 @@
       "destination_refs": [
         "business contract/class"
       ],
-      "notes": "Represented by Business record type rather than a field."
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/entities/business:lagoon-cuts/name",
@@ -117,14 +128,16 @@
         "business.display_name",
         "place:lagoon-cuts-demo.display_name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/entities/business:lagoon-cuts/district",
       "source_value": "Melbourne District",
       "mapping_state": "UNRESOLVED",
       "destination_refs": [],
-      "notes": "No District contract/registered district_ref exists in Slice 001."
+      "notes": "No registered District Entity/reference exists in Slice 001.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/entities/business:lagoon-cuts/real_world_status",
@@ -134,24 +147,29 @@
         "business.physical_relationship_state",
         "business.representation_authority_state"
       ],
-      "notes": "Mapped conservatively to fictional/demo states."
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/entities/business:lagoon-cuts/purpose",
       "source_value": "Demonstrate interactive business placement inside the Brevard spatial commercial world.",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Business contract has no descriptive purpose/about field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "business.public_profile.purpose"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/scene_id",
       "source_value": "street-001",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "place:brevard-demo-street.legacy_refs",
-        "representation:street-001-360-v1.legacy_refs"
+        "representation:street-001-360-v1.legacy_refs",
+        "place:brevard-demo-street.legacy_refs"
       ],
-      "notes": "Preserved as legacy identity."
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/street-001/label",
@@ -160,7 +178,8 @@
       "destination_refs": [
         "place:brevard-demo-street.display_name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/street-001/scene_type",
@@ -169,7 +188,8 @@
       "destination_refs": [
         "place.place_type"
       ],
-      "notes": "Normalized from legacy scene type to uppercase reference type."
+      "notes": "Normalized scene type.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/street-001/representation/asset",
@@ -178,7 +198,8 @@
       "destination_refs": [
         "representation:street-001-360-v1.asset_ref"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/representation/projection",
@@ -187,21 +208,28 @@
       "destination_refs": [
         "representation:street-001-360-v1.projection"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/representation/coverage",
       "source_value": "360x180",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no coverage field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.coverage"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/representation/aspect_ratio",
       "source_value": "2:1",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no aspect_ratio field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.aspect_ratio"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/representation/status",
@@ -210,121 +238,150 @@
       "destination_refs": [
         "representation:street-001-360-v1.status"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/street-001/view/pitch",
       "source_value": 0,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.initial_view.pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/view/yaw",
       "source_value": 5,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.initial_view.yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/view/hfov",
       "source_value": 92,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.initial_view.hfov"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/view/north_offset",
       "source_value": 0,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.initial_view.north_offset"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/relationships/0/relationship_type",
       "source_value": "CONNECTS_TO",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:street-001-to-lagoon-exterior"
+        "topology:street-001->lagoon-exterior"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/relationships/0/target",
       "source_value": "lagoon-exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:street-001-to-lagoon-exterior"
+        "topology:street-001->lagoon-exterior"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/interactions/0/interaction_id",
       "source_value": "move-street-to-exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.legacy_refs"
+        "representation:street-001-360-v1.presentation.interaction_anchors[move-street-to-exterior].anchor_id"
       ],
-      "notes": "Preserved on corresponding Topology connection."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/interactions/0/interaction_type",
       "source_value": "MOVE",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.connection_type"
+        "representation:street-001-360-v1.presentation.interaction_anchors[move-street-to-exterior].interaction_kind"
       ],
-      "notes": "MOVE mapped to PLACE_TRANSITION or SPACE_TRANSITION from source/target semantics."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/interactions/0/label",
       "source_value": "Approach Lagoon Cuts",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Topology contract has no interaction/hotspot display label."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.interaction_anchors[move-street-to-exterior].label"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/interactions/0/pitch",
       "source_value": -8,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.interaction_anchors[move-street-to-exterior].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/interactions/0/yaw",
       "source_value": 24,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:street-001-360-v1.presentation.interaction_anchors[move-street-to-exterior].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/street-001/interactions/0/target_scene",
       "source_value": "lagoon-exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.target_place_ref",
-        "topology.target_space_ref"
+        "representation:street-001-360-v1.presentation.interaction_anchors[move-street-to-exterior].target_ref",
+        "topology target for move-street-to-exterior"
       ],
-      "notes": null
+      "notes": "Topology owns movement meaning.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/scene_id",
       "source_value": "lagoon-exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "place:lagoon-cuts-demo.spaces[exterior].legacy_refs",
-        "representation:lagoon-exterior-360-v1.legacy_refs"
+        "representation:lagoon-exterior-360-v1.legacy_refs",
+        "place:lagoon-cuts-demo.space:exterior.legacy_refs"
       ],
-      "notes": "Preserved as legacy identity."
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-exterior/label",
       "source_value": "SCENE-002 — Lagoon Cuts Exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "place:lagoon-cuts-demo.spaces[exterior].display_name"
+        "place:lagoon-cuts-demo.space:exterior.display_name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-exterior/scene_type",
@@ -333,17 +390,18 @@
       "destination_refs": [
         "place.spaces[].space_type"
       ],
-      "notes": "Normalized from legacy scene type to uppercase reference type."
+      "notes": "Normalized scene type.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-exterior/entity_ref",
       "source_value": "business:lagoon-cuts",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.world_place_refs",
-        "business/place relationship"
+        "business.world_place_refs"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-exterior/representation/asset",
@@ -352,7 +410,8 @@
       "destination_refs": [
         "representation:lagoon-exterior-360-v1.asset_ref"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/representation/projection",
@@ -361,21 +420,28 @@
       "destination_refs": [
         "representation:lagoon-exterior-360-v1.projection"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/representation/coverage",
       "source_value": "360x180",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no coverage field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.coverage"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/representation/aspect_ratio",
       "source_value": "2:1",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no aspect_ratio field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.aspect_ratio"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/representation/status",
@@ -384,239 +450,301 @@
       "destination_refs": [
         "representation:lagoon-exterior-360-v1.status"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-exterior/view/pitch",
       "source_value": -2,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.initial_view.pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/view/yaw",
       "source_value": 82,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.initial_view.yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/view/hfov",
       "source_value": 90,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.initial_view.hfov"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/view/north_offset",
       "source_value": 0,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.initial_view.north_offset"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/relationships/0/relationship_type",
       "source_value": "CONNECTS_TO",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:lagoon-exterior-to-street-001"
+        "topology:lagoon-exterior->street-001"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/relationships/0/target",
       "source_value": "street-001",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:lagoon-exterior-to-street-001"
+        "topology:lagoon-exterior->street-001"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/relationships/1/relationship_type",
       "source_value": "CONNECTS_TO",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:lagoon-exterior-to-lagoon-interior"
+        "topology:lagoon-exterior->lagoon-interior"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/relationships/1/target",
       "source_value": "lagoon-interior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:lagoon-exterior-to-lagoon-interior"
+        "topology:lagoon-exterior->lagoon-interior"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/0/interaction_id",
       "source_value": "move-exterior-to-street",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.legacy_refs"
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-exterior-to-street].anchor_id"
       ],
-      "notes": "Preserved on corresponding Topology connection."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/0/interaction_type",
       "source_value": "MOVE",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.connection_type"
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-exterior-to-street].interaction_kind"
       ],
-      "notes": "MOVE mapped to PLACE_TRANSITION or SPACE_TRANSITION from source/target semantics."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/0/label",
       "source_value": "Return to Street",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Topology contract has no interaction/hotspot display label."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-exterior-to-street].label"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/0/pitch",
       "source_value": -12,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-exterior-to-street].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/0/yaw",
       "source_value": -96,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-exterior-to-street].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/0/target_scene",
       "source_value": "street-001",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.target_place_ref",
-        "topology.target_space_ref"
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-exterior-to-street].target_ref",
+        "topology target for move-exterior-to-street"
       ],
-      "notes": null
+      "notes": "Topology owns movement meaning.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/1/interaction_id",
       "source_value": "move-enter-shop",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.legacy_refs"
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-enter-shop].anchor_id"
       ],
-      "notes": "Preserved on corresponding Topology connection."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/1/interaction_type",
       "source_value": "MOVE",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.connection_type"
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-enter-shop].interaction_kind"
       ],
-      "notes": "MOVE mapped to PLACE_TRANSITION or SPACE_TRANSITION from source/target semantics."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/1/label",
       "source_value": "Enter Lagoon Cuts",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Topology contract has no interaction/hotspot display label."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-enter-shop].label"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/1/pitch",
       "source_value": -7,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-enter-shop].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/1/yaw",
       "source_value": 68,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-enter-shop].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/1/target_scene",
       "source_value": "lagoon-interior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.target_place_ref",
-        "topology.target_space_ref"
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[move-enter-shop].target_ref",
+        "topology target for move-enter-shop"
       ],
-      "notes": null
+      "notes": "Topology owns movement meaning.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/interaction_id",
       "source_value": "about-lagoon-cuts",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No structured ABOUT interaction/anchor representation exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[about-lagoon-cuts].anchor_id"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/interaction_type",
       "source_value": "ABOUT",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No structured ABOUT interaction/anchor representation exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[about-lagoon-cuts].interaction_kind"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/label",
       "source_value": "About Lagoon Cuts",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No structured ABOUT interaction/anchor representation exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[about-lagoon-cuts].label"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/pitch",
       "source_value": 12,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No structured ABOUT interaction/anchor representation exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[about-lagoon-cuts].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/yaw",
       "source_value": 69,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No structured ABOUT interaction/anchor representation exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-exterior-360-v1.presentation.interaction_anchors[about-lagoon-cuts].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/content/title",
       "source_value": "Lagoon Cuts",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.display_name"
+        "business.public_profile.about_title"
       ],
-      "notes": "Content title duplicates business name; no standalone ABOUT content object exists."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-exterior/interactions/2/content/body",
       "source_value": "A fictional Brevard sample business used to prove how a real local business could become an interactive destination inside the spatial world.",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Business contract has no about/body field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "business.public_profile.about_body"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/scene_id",
       "source_value": "lagoon-interior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "place:lagoon-cuts-demo.spaces[interior].legacy_refs",
-        "representation:lagoon-interior-360-v1.legacy_refs"
+        "representation:lagoon-interior-360-v1.legacy_refs",
+        "place:lagoon-cuts-demo.space:interior.legacy_refs"
       ],
-      "notes": "Preserved as legacy identity."
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-interior/label",
       "source_value": "SCENE-003 — Lagoon Cuts Interior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "place:lagoon-cuts-demo.spaces[interior].display_name"
+        "place:lagoon-cuts-demo.space:interior.display_name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-interior/scene_type",
@@ -625,17 +753,18 @@
       "destination_refs": [
         "place.spaces[].space_type"
       ],
-      "notes": "Normalized from legacy scene type to uppercase reference type."
+      "notes": "Normalized scene type.",
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-interior/entity_ref",
       "source_value": "business:lagoon-cuts",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.world_place_refs",
-        "business/place relationship"
+        "business.world_place_refs"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-interior/representation/asset",
@@ -644,7 +773,8 @@
       "destination_refs": [
         "representation:lagoon-interior-360-v1.asset_ref"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/representation/projection",
@@ -653,21 +783,28 @@
       "destination_refs": [
         "representation:lagoon-interior-360-v1.projection"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/representation/coverage",
       "source_value": "360x180",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no coverage field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.coverage"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/representation/aspect_ratio",
       "source_value": "2:1",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no aspect_ratio field."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.aspect_ratio"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/representation/status",
@@ -676,146 +813,189 @@
       "destination_refs": [
         "representation:lagoon-interior-360-v1.status"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": false
     },
     {
       "source_path": "/scenes/lagoon-interior/view/pitch",
       "source_value": 0,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.initial_view.pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/view/yaw",
       "source_value": 0,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.initial_view.yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/view/hfov",
       "source_value": 88,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.initial_view.hfov"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/view/north_offset",
       "source_value": 0,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Representation contract has no initial-view/camera configuration fields."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.initial_view.north_offset"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/relationships/0/relationship_type",
       "source_value": "CONNECTS_TO",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:lagoon-interior-to-lagoon-exterior"
+        "topology:lagoon-interior->lagoon-exterior"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/relationships/0/target",
       "source_value": "lagoon-exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "connection:lagoon-interior-to-lagoon-exterior"
+        "topology:lagoon-interior->lagoon-exterior"
       ],
-      "notes": "Relationship represented as Topology connection."
+      "notes": "Represented as Topology.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/0/interaction_id",
       "source_value": "move-exit-shop",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.legacy_refs"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[move-exit-shop].anchor_id"
       ],
-      "notes": "Preserved on corresponding Topology connection."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/0/interaction_type",
       "source_value": "MOVE",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.connection_type"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[move-exit-shop].interaction_kind"
       ],
-      "notes": "MOVE mapped to PLACE_TRANSITION or SPACE_TRANSITION from source/target semantics."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/0/label",
       "source_value": "Exit to Brevard",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "Topology contract has no interaction/hotspot display label."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[move-exit-shop].label"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/0/pitch",
       "source_value": -10,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[move-exit-shop].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/0/yaw",
       "source_value": -150,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No renderer-neutral interaction-anchor contract field exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[move-exit-shop].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/0/target_scene",
       "source_value": "lagoon-exterior",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "topology.target_place_ref",
-        "topology.target_space_ref"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[move-exit-shop].target_ref",
+        "topology target for move-exit-shop"
       ],
-      "notes": null
+      "notes": "Topology owns movement meaning.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/interaction_id",
       "source_value": "services-lagoon-cuts",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No service-group interaction/anchor display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[services-lagoon-cuts].anchor_id"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/interaction_type",
       "source_value": "SERVICES",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.services"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[services-lagoon-cuts].interaction_kind"
       ],
-      "notes": "SERVICES content migrated into structured service records."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/label",
       "source_value": "View Services",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No service-group interaction/anchor display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[services-lagoon-cuts].label"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/pitch",
       "source_value": 5,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No service-group interaction/anchor display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[services-lagoon-cuts].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/yaw",
       "source_value": 28,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No service-group interaction/anchor display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[services-lagoon-cuts].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/content/title",
       "source_value": "Lagoon Cuts Services",
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No service-group interaction/anchor display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "business.public_profile.services_title"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/content/items/0",
@@ -824,7 +1004,8 @@
       "destination_refs": [
         "business.services[0].name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/content/items/1",
@@ -833,7 +1014,8 @@
       "destination_refs": [
         "business.services[1].name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/content/items/2",
@@ -842,7 +1024,8 @@
       "destination_refs": [
         "business.services[2].name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/content/items/3",
@@ -851,7 +1034,8 @@
       "destination_refs": [
         "business.services[3].name"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/1/content/book_interaction_ref",
@@ -860,48 +1044,58 @@
       "destination_refs": [
         "business.services[].booking_action_ref"
       ],
-      "notes": "Group-level booking reference propagated to migrated services."
+      "notes": "Propagated to structured services.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/interaction_id",
       "source_value": "book-lagoon-cuts",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.external_actions[].action_id"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[book-lagoon-cuts].anchor_id"
       ],
-      "notes": "Preserved exactly as action_id."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/interaction_type",
       "source_value": "BOOK",
-      "mapping_state": "DERIVED",
+      "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.external_actions[].action_type"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[book-lagoon-cuts].interaction_kind"
       ],
-      "notes": "BOOK represented as external action."
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/label",
       "source_value": "Book Appointment",
       "mapping_state": "MIGRATED",
       "destination_refs": [
-        "business.external_actions[].label"
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[book-lagoon-cuts].label"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/pitch",
       "source_value": -2,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No interaction-anchor/display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[book-lagoon-cuts].pitch"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/yaw",
       "source_value": 62,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "No interaction-anchor/display contract exists."
+      "mapping_state": "MIGRATED",
+      "destination_refs": [
+        "representation:lagoon-interior-360-v1.presentation.interaction_anchors[book-lagoon-cuts].yaw"
+      ],
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/action/action_type",
@@ -910,7 +1104,8 @@
       "destination_refs": [
         "business.external_actions[].action_type"
       ],
-      "notes": "OPEN_URL normalized to OPEN_EXTERNAL_URL."
+      "notes": "OPEN_URL normalized to OPEN_EXTERNAL_URL.",
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/action/url",
@@ -919,14 +1114,18 @@
       "destination_refs": [
         "business.external_actions[].destination"
       ],
-      "notes": null
+      "notes": null,
+      "behaviorally_critical": true
     },
     {
       "source_path": "/scenes/lagoon-interior/interactions/2/action/demo",
       "source_value": true,
-      "mapping_state": "UNRESOLVED",
-      "destination_refs": [],
-      "notes": "ExternalAction contract has no demo/test-mode field; semantics remain only in migration evidence/claim ceiling."
+      "mapping_state": "DERIVED",
+      "destination_refs": [
+        "business.external_actions[].environment_class"
+      ],
+      "notes": "true mapped to DEMO.",
+      "behaviorally_critical": false
     }
   ]
 }

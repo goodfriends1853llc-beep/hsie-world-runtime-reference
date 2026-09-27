@@ -54,6 +54,7 @@
       "destination": "https://example.com/?source=BREVARD-COM-DEMO-001&action=book",
       "purpose": "External demo booking route only; does not establish booking completion.",
       "status": "ACTIVE",
+      "environment_class": "DEMO",
       "last_verified_at": null,
       "provenance": {
         "source_system": "BREVARD-COM-DEMO-001",
@@ -65,6 +66,12 @@
       }
     }
   ],
+  "public_profile": {
+    "purpose": "Demonstrate interactive business placement inside the Brevard spatial commercial world.",
+    "about_title": "Lagoon Cuts",
+    "about_body": "A fictional Brevard sample business used to prove how a real local business could become an interactive destination inside the spatial world.",
+    "services_title": "Lagoon Cuts Services"
+  },
   "provenance": {
     "source_system": "BREVARD-COM-DEMO-001",
     "source_schema": "brevard-spatial-world/0.1",

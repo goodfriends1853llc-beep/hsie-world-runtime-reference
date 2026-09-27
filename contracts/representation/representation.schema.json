@@ -68,6 +68,114 @@
       },
       "uniqueItems": true,
       "default": []
+    },
+    "presentation": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "coverage": {
+              "type": "string",
+              "minLength": 1
+            },
+            "aspect_ratio": {
+              "type": "string",
+              "minLength": 1
+            },
+            "initial_view": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "pitch": {
+                  "type": "number"
+                },
+                "yaw": {
+                  "type": "number"
+                },
+                "hfov": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "north_offset": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "pitch",
+                "yaw",
+                "hfov",
+                "north_offset"
+              ]
+            },
+            "interaction_anchors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "anchor_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "interaction_kind": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[A-Z][A-Z0-9_]*$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pitch": {
+                    "type": "number"
+                  },
+                  "yaw": {
+                    "type": "number"
+                  },
+                  "target_type": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[A-Z][A-Z0-9_]*$"
+                  },
+                  "target_ref": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "legacy_refs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "uniqueItems": true,
+                    "default": []
+                  }
+                },
+                "required": [
+                  "anchor_id",
+                  "interaction_kind",
+                  "label",
+                  "pitch",
+                  "yaw",
+                  "target_type",
+                  "target_ref",
+                  "legacy_refs"
+                ]
+              }
+            }
+          },
+          "required": [
+            "coverage",
+            "aspect_ratio",
+            "initial_view",
+            "interaction_anchors"
+          ]
+        }
+      ]
     }
   },
   "required": [
@@ -82,6 +190,7 @@
     "version",
     "status",
     "integrity_digest",
-    "legacy_refs"
+    "legacy_refs",
+    "presentation"
   ]
 }

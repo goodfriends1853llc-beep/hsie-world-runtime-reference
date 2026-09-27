@@ -13,5 +13,53 @@
   "legacy_refs": [
     "lagoon-interior",
     "scenes/lagoon-interior.jpg"
-  ]
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": 0,
+      "yaw": 0,
+      "hfov": 88,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-exit-shop",
+        "interaction_kind": "MOVE",
+        "label": "Exit to Brevard",
+        "pitch": -10,
+        "yaw": -150,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:lagoon-interior-to-exterior",
+        "legacy_refs": [
+          "move-exit-shop"
+        ]
+      },
+      {
+        "anchor_id": "services-lagoon-cuts",
+        "interaction_kind": "SERVICES",
+        "label": "View Services",
+        "pitch": 5,
+        "yaw": 28,
+        "target_type": "BUSINESS_SERVICES",
+        "target_ref": "business:lagoon-cuts/services",
+        "legacy_refs": [
+          "services-lagoon-cuts"
+        ]
+      },
+      {
+        "anchor_id": "book-lagoon-cuts",
+        "interaction_kind": "BOOK",
+        "label": "Book Appointment",
+        "pitch": -2,
+        "yaw": 62,
+        "target_type": "BUSINESS_EXTERNAL_ACTION",
+        "target_ref": "book-lagoon-cuts",
+        "legacy_refs": [
+          "book-lagoon-cuts"
+        ]
+      }
+    ]
+  }
 }
