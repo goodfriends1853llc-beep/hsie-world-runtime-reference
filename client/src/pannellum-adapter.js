@@ -1,12 +1,28 @@
 const ICONS = {
-  MOVE: '↑',
-  ABOUT: 'ℹ',
-  SERVICES: '⚙',
+  MOVE: '➜',
+  ABOUT: 'ⓘ',
+  SERVICES: '≡',
   FOUNDING: '★',
   BOOK: '↗',
   MESSAGE: '✉',
   LINK: '↗'
 };
+
+function iconForAnchor(anchor) {
+  const label = (anchor.label || '').toLowerCase();
+
+  if (anchor.interaction_kind === 'MOVE' && label.includes('back')) return '↩';
+  if (label.includes('about')) return 'ⓘ';
+  if (label.includes('founding') || label.includes('business directory')) return '★';
+  if (label.includes('book') || label.includes('appointment')) return '↗';
+  if (label.includes('message') || label.includes('contact')) return '✉';
+  if (label.includes('shop')) return '◈';
+  if (label.includes('dine') || label.includes('food')) return '◉';
+  if (label.includes('event')) return '✦';
+  if (label.includes('service')) return '≡';
+
+  return ICONS[anchor.interaction_kind] || '•';
+}
 
 export class PannellumRendererAdapter {
   constructor({ containerId, resolveAssetUrl, onInteraction, onSceneChange, onError }) {
@@ -23,18 +39,16 @@ export class PannellumRendererAdapter {
     hotSpotDiv.setAttribute('tabindex', '0');
     hotSpotDiv.setAttribute('aria-label', args.label);
 
-    const pill = document.createElement('div');
-    pill.className = 'hs-pill';
+    const button = document.createElement('div');
+    button.className = 'hs-icon-button';
+    button.setAttribute('aria-hidden', 'true');
 
     const icon = document.createElement('span');
     icon.className = 'hs-icon';
-    icon.textContent = ICONS[args.interactionKind] || '•';
+    icon.textContent = iconForAnchor(args.anchor);
 
-    const label = document.createElement('span');
-    label.textContent = args.label;
-
-    pill.append(icon, label);
-    hotSpotDiv.appendChild(pill);
+    button.appendChild(icon);
+    hotSpotDiv.appendChild(button);
 
     hotSpotDiv.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {

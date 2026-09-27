@@ -7,13 +7,14 @@
   "asset_ref": "assets/360/explore-brevard-main-street-360-8k.webp",
   "projection": "equirectangular",
   "renderer_adapter": "pannellum-360",
-  "version": 1,
+  "version": 2,
   "status": "PILOT_PUBLIC",
   "integrity_digest": "sha256:ce856b6eadfb5f1cb009b2c535fac0567cb74077800a94a069aaa4b48712b05b",
   "legacy_refs": [
     "generated-source:1774x887",
     "runtime-upscale:8192x4096",
-    "seam-edge-blend:source-master"
+    "seam-edge-blend:source-master",
+    "phase15:icon-only-hotspot-cleanup"
   ],
   "presentation": {
     "coverage": "360x180",
@@ -33,26 +34,6 @@
         "yaw": 0,
         "target_type": "TOPOLOGY_CONNECTION",
         "target_ref": "connection:explore-brevard-main-street-to-hsa-arrival",
-        "legacy_refs": []
-      },
-      {
-        "anchor_id": "link-main-street-shop",
-        "interaction_kind": "LINK",
-        "label": "Shop Possibilities",
-        "pitch": 5,
-        "yaw": -160,
-        "target_type": "BUSINESS_EXTERNAL_ACTION",
-        "target_ref": "action:hsa:explore-shop",
-        "legacy_refs": []
-      },
-      {
-        "anchor_id": "link-main-street-dine",
-        "interaction_kind": "LINK",
-        "label": "Dining Possibilities",
-        "pitch": 5,
-        "yaw": -132,
-        "target_type": "BUSINESS_EXTERNAL_ACTION",
-        "target_ref": "action:hsa:explore-dine",
         "legacy_refs": []
       },
       {
@@ -83,26 +64,6 @@
         "yaw": 129,
         "target_type": "BUSINESS_EXTERNAL_ACTION",
         "target_ref": "action:hsa:book",
-        "legacy_refs": []
-      },
-      {
-        "anchor_id": "link-main-street-events",
-        "interaction_kind": "LINK",
-        "label": "Events Possibilities",
-        "pitch": 3,
-        "yaw": 148,
-        "target_type": "BUSINESS_EXTERNAL_ACTION",
-        "target_ref": "action:hsa:explore-events",
-        "legacy_refs": []
-      },
-      {
-        "anchor_id": "link-main-street-services",
-        "interaction_kind": "LINK",
-        "label": "Services Possibilities",
-        "pitch": 3,
-        "yaw": 168,
-        "target_type": "BUSINESS_EXTERNAL_ACTION",
-        "target_ref": "action:hsa:explore-services",
         "legacy_refs": []
       },
       {

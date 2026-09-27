@@ -48,18 +48,44 @@ button { font: inherit; }
   transform: translateX(-50%); background: rgba(0,0,0,.86); border: 1px solid rgba(255,255,255,.22);
   padding: 11px 15px; border-radius: 999px; font-size: 13px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
-.brevard-hotspot { width: auto !important; height: auto !important; background: transparent !important; border: 0 !important; }
-.brevard-hotspot .hs-pill {
-  display: flex; align-items: center; gap: 7px; min-width: max-content; padding: 9px 12px;
-  border-radius: 999px; border: 1px solid rgba(255,255,255,.52); background: rgba(5,7,9,.78);
-  color: white; font-size: 12px; font-weight: 850; letter-spacing: .03em;
-  box-shadow: 0 8px 25px rgba(0,0,0,.35); backdrop-filter: blur(6px); transform: translate(-50%, -50%);
+.brevard-hotspot {
+  width: 44px !important;
+  height: 44px !important;
+  background: transparent !important;
+  border: 0 !important;
 }
-.brevard-hotspot .hs-icon { font-size: 15px; }
-.brevard-hotspot:focus-visible .hs-pill { outline: 3px solid white; outline-offset: 3px; }
+.brevard-hotspot .hs-icon-button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.62);
+  background: rgba(5,7,9,.72);
+  color: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,.34);
+  backdrop-filter: blur(6px);
+  transform: translate(-50%, -50%);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.brevard-hotspot:hover .hs-icon-button {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgba(5,7,9,.9);
+  border-color: rgba(255,255,255,.9);
+}
+.brevard-hotspot .hs-icon {
+  display: block;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 850;
+  text-align: center;
+}
+.brevard-hotspot:focus-visible .hs-icon-button { outline: 3px solid white; outline-offset: 3px; }
 .pnlm-hotspot-base { cursor: pointer; }
 .pnlm-container { background: #090b0d; }
 @media (max-width: 640px) {
   .entry-card, .modal-card { border-radius: 20px; padding: 22px; }
   .hud { padding-left: 12px; padding-right: 12px; }
+  .brevard-hotspot, .brevard-hotspot .hs-icon-button { width: 42px !important; height: 42px !important; }
+  .brevard-hotspot .hs-icon { font-size: 19px; }
 }
