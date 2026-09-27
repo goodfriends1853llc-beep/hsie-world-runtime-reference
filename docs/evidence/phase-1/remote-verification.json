@@ -1,0 +1,21 @@
+{
+  "artifact_id": "WRB-001-PHASE-1-REMOTE-VERIFICATION-001",
+  "phase": "WRB-001 / PHASE 1",
+  "status": "PASS",
+  "repository": "goodfriends1853llc-beep/hsie-world-runtime-reference",
+  "branch": "main",
+  "scaffold_commit": "73c27e7d5ede2c0d66aa5508a6774e3ba8b35b7a",
+  "scaffold_tree": "cfa73516a063cac261d7e867f84934c38761f8f7",
+  "tree_readback": {
+    "recursive": true,
+    "truncated": false
+  },
+  "verified_boundaries": {
+    "reference_only": true,
+    "production_claimed": false,
+    "phase_2_started": false,
+    "mia_adapter_present": false,
+    "pass_10_authorized": false
+  },
+  "next_phase": "PHASE_2_SEVEN_CONTRACTS"
+}

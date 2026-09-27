@@ -44,8 +44,8 @@ It is not:
 ## Current cursor
 
 - WRB-001 Phase 0 — **PASS**
-- WRB-001 Phase 1 — **REMOTE SCAFFOLD COMMITTED / VERIFICATION PENDING**
-- WRB-001 Phase 2 — **NOT STARTED**
+- WRB-001 Phase 1 — **PASS**
+- WRB-001 Phase 2 — **NEXT / NOT YET STARTED**
 - Architecture expansion — **HOLD**
 - Pass 10 — **NOT AUTHORIZED**
 - MIA integration — **LOCKED BEHIND PHASE 5**

@@ -1,11 +1,11 @@
 # WRB-001 Engineering Board
 
 - [x] PHASE 0 — Preserve predecessor
-- [~] PHASE 1 — Establish reference repository
+- [x] PHASE 1 — Establish reference repository
   - [x] Local scaffold prepared
   - [x] Remote GitHub repository created
   - [x] Initial scaffold committed remotely
-  - [ ] Remote tree verified
+  - [x] Remote tree verified
 - [ ] PHASE 2 — Seven contracts
 - [ ] PHASE 3 — Migrate POC
 - [ ] PHASE 4 — Reconstruct through governed semantics
