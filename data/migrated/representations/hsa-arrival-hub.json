@@ -1,0 +1,48 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:hsa-arrival-hub-360-v1",
+  "place_ref": "place:hsa-arrival-hub",
+  "space_ref": null,
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "assets/360/explore-brevard-tommie-arrival-360-8k.webp",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "PILOT_PUBLIC",
+  "integrity_digest": "sha256:9c29562302de37facb43431e444560a2d19cb554e4db5f3177874bc84253e9a7",
+  "legacy_refs": [
+    "phase15:owner-arrival-generated-2026-09-27"
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": 0,
+      "yaw": 0,
+      "hfov": 96,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-hsa-hub-to-explore-brevard",
+        "interaction_kind": "MOVE",
+        "label": "Explore Brevard",
+        "pitch": 1,
+        "yaw": -147,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:hsa-arrival-to-street-001",
+        "legacy_refs": []
+      },
+      {
+        "anchor_id": "about-hsa",
+        "interaction_kind": "ABOUT",
+        "label": "About",
+        "pitch": 1,
+        "yaw": -101,
+        "target_type": "BUSINESS_PUBLIC_PROFILE",
+        "target_ref": "business:hsa-owner-pilot",
+        "legacy_refs": []
+      }
+    ]
+  }
+}
