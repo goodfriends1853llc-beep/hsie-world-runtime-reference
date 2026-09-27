@@ -1,0 +1,43 @@
+name: WRB-001 Phase 13 Static Deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'deployment.json'
+      - 'client/**'
+      - 'data/migrated/**'
+      - 'tests/phase13/**'
+      - 'package.json'
+      - '.github/workflows/wrb001-phase13.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-static-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify static deployment source
+        run: npm run test:phase13
+
+      - name: Preserve deployment manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrb001-phase13-static-deployment
+          path: |
+            deployment.json
+            client/build.json
+            index.html
+            client/index.html
+            .nojekyll
+          if-no-files-found: error
