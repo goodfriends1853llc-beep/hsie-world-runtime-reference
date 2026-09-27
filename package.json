@@ -2,8 +2,10 @@
   "name": "hsie-world-runtime-reference",
   "version": "0.0.0-wrb001",
   "private": true,
-  "description": "WRB-001 reference implementation scaffold. Not production and not canonical.",
-  "scripts": {},
+  "description": "WRB-001 reference implementation. Not production and not canonical.",
+  "scripts": {
+    "test:phase4": "node tests/phase4/verify-structure.mjs"
+  },
   "engines": {
     "node": ">=20"
   }

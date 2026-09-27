@@ -1,0 +1,22 @@
+{
+  "artifact_id": "WRB-001-PHASE-4-DATA-MANIFEST-001",
+  "world": "world.json",
+  "places": [
+    "places/brevard-demo-street.json",
+    "places/lagoon-cuts-demo.json"
+  ],
+  "businesses": [
+    "businesses/lagoon-cuts.json"
+  ],
+  "representations": [
+    "representations/street-001.json",
+    "representations/lagoon-exterior.json",
+    "representations/lagoon-interior.json"
+  ],
+  "topology": [
+    "topology/street-001-to-lagoon-exterior.json",
+    "topology/lagoon-exterior-to-street-001.json",
+    "topology/lagoon-exterior-to-interior.json",
+    "topology/lagoon-interior-to-exterior.json"
+  ]
+}

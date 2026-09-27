@@ -2,23 +2,25 @@
 
 **Identifier:** WRB-001  
 **Status:** REFERENCE IMPLEMENTATION — ENGINEERING CANDIDATE  
-**Production status:** NOT PRODUCTION  
-**Canonical World status:** NOT CANONICAL
+**Production status:** NOT PRODUCTION
 
 ## Current cursor
 
-- Phase 0 — **PASS**
-- Phase 1 — **PASS**
-- Phase 2 — **PASS**
-- WRB-001-IF-001 normalization — **RESOLVED**
-- Phase 3 — **PASS**
-- Phase 4 — **NEXT / NOT YET STARTED**
-- Architecture expansion — **HOLD**
-- Pass 10 — **NOT AUTHORIZED**
-- MIA integration — **LOCKED BEHIND PHASE 5**
+- Phase 0 — PASS
+- Phase 1 — PASS
+- Phase 2 — PASS
+- Phase 3 — PASS
+- Phase 4 — IMPLEMENTED / VALIDATION PENDING
+- Phase 5 — NOT STARTED
 
-The predecessor migration now has zero behaviorally critical unresolved source fields under the Slice 001 boundary.
+Architecture expansion remains on HOLD. Pass 10 remains unauthorized. MIA integration remains locked behind Phase 5.
 
-One noncritical legacy field remains intentionally unresolved: the `Melbourne District` label has no registered District Entity/reference in Slice 001.
+## Phase 4 reconstruction
 
-The predecessor remains `BREVARD-COM-DEMO-001` at commit `29326120dffa33a94a9489ed41874ce9d5163328` and is not modified by WRB-001.
+The client reconstruction now follows:
+
+`World → Place → Space → Topology → Representation → Renderer Adapter → Pannellum`
+
+Pannellum is isolated behind `client/src/pannellum-adapter.js`. Semantic movement is resolved through Topology before any visual scene transition.
+
+The predecessor remains `BREVARD-COM-DEMO-001` at commit `29326120dffa33a94a9489ed41874ce9d5163328`.
