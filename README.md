@@ -13,26 +13,31 @@
 - Phase 4 — **PASS**
 - Phase 5 — **PASS — OWNER TESTED**
 - Phase 6 — **PASS**
-- Phase 7 — **NEXT / NOT YET STARTED**
+- Phase 7 — **PASS**
+- Phase 8 — **NEXT / NOT YET STARTED**
 
 Architecture expansion remains on HOLD. Pass 10 remains unauthorized. MIA has not been integrated.
 
-## Phase 6 deterministic publisher
+## Phase 7 local runtime
 
-Current deterministic semantic identity:
+Verified path:
 
-`sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991`
+`Request → validation → local handler → Event → persistence`
 
-Snapshot:
+The Phase 7 proof used the read-only local operation `RESOLVE_WORLD_ENTRY`.
 
-`snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991`
+`ACTIVATE_BUSINESS_PLACE` remains rejected and unexecuted.
 
-Validated by successful GitHub Actions run `36338426367`.
+Request/Event persistence in Phase 7 is a narrow append-only NDJSON reference mechanism, not a production datastore architecture decision.
 
-The publisher separates semantic content identity from volatile generation metadata.
+No receipt was created.
 
 ## Next work
 
-`PHASE 7 — Local Runtime / Request / Event`
+`PHASE 8 — Frozen MIA verification`
 
-The next phase may prove a local reference Request → Event path only. It must not call itself MIA and must not issue anything labeled as a MIA execution receipt.
+The exact frozen MIA artifact must match:
+
+`ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a`
+
+Public repository HEAD is not an acceptable substitute.

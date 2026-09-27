@@ -1,0 +1,59 @@
+{
+  "artifact_id": "WRB-001-PHASE-7-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 7",
+  "status": "PASS",
+  "validated_commit": "2fd65bf5e6996758fd66719b2be45339335c6a6b",
+  "github_actions": {
+    "workflow": "WRB-001 Phase 7 Local Runtime",
+    "run_id": 36339153217,
+    "job_id": 108675691364,
+    "conclusion": "success"
+  },
+  "request": {
+    "request_id": "request:phase7:resolve-world-entry:001",
+    "operation": "RESOLVE_WORLD_ENTRY",
+    "classification": "LOCAL_REFERENCE_QUERY",
+    "persisted": true
+  },
+  "event": {
+    "event_id": "event:local:886ea8718fe41baef12285be28536805",
+    "event_type": "WORLD_ENTRY_RESOLVED",
+    "persisted": true,
+    "integrity_digest": "sha256:eecb9a95b1800104c0a8a3211d6b84a240833fc9d49647a2f6e6271c85afeb54",
+    "integrity_verified": true
+  },
+  "semantic_state": {
+    "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+    "content_digest": "sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+  },
+  "checks": {
+    "request_schema_validation": true,
+    "local_runtime_handler": true,
+    "request_persistence": true,
+    "event_schema_validation": true,
+    "event_persistence": true,
+    "request_event_link": true,
+    "event_integrity": true,
+    "identical_retry_no_duplicate": true,
+    "conflicting_request_id_rejected": true,
+    "activate_business_place_rejected": true,
+    "request_event_separation": true,
+    "receipt_created": false,
+    "mia_called": false
+  },
+  "persistence": {
+    "mechanism": "separate append-only NDJSON journals for Phase 7 proof",
+    "files": [
+      "requests.ndjson",
+      "events.ndjson"
+    ],
+    "scope": "LOCAL_REFERENCE_ONLY",
+    "production_datastore_claim": false
+  },
+  "workflow_artifact": {
+    "artifact_id": 10937914316,
+    "name": "wrb001-phase7-runtime-evidence",
+    "zip_sha256": "9a7977b9fb1363c5e5a1af7e58cdcf7192a901fbfb58f7fbc0246785543ba0ef"
+  },
+  "claim_ceiling": "Phase 7 proves the tested local reference Request → validation → handler → Event → persistence path and retry separation. It does not prove MIA execution, receipt semantics, production persistence, crash-atomicity, distributed operation, or restart proof."
+}
