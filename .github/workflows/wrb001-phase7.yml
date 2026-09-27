@@ -1,0 +1,40 @@
+name: WRB-001 Phase 7 Local Runtime
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/**'
+      - 'tests/phase7/**'
+      - 'contracts/**'
+      - 'publisher/**'
+      - 'package.json'
+      - '.github/workflows/wrb001-phase7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify local Request Event runtime
+        env:
+          WRB_PHASE7_EVIDENCE_DIR: artifacts/phase7
+        run: npm run test:phase7
+
+      - name: Upload Phase 7 runtime evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrb001-phase7-runtime-evidence
+          path: artifacts/phase7/
+          if-no-files-found: error
