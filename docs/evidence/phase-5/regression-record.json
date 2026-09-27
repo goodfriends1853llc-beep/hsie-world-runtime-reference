@@ -1,7 +1,7 @@
 {
   "artifact_id": "WRB-001-PHASE-5-EVIDENCE-001",
   "phase": "WRB-001 / PHASE 5",
-  "status": "BLOCKED_PENDING_PUBLIC_HTTPS_AND_PHYSICAL_IPHONE_TEST",
+  "status": "IN_PROGRESS_OWNER_DEVICE_TEST",
   "target": {
     "device_class": "iPhone",
     "browser": "Safari",
@@ -11,12 +11,12 @@
     {
       "id": "P5-01",
       "name": "Public HTTPS load",
-      "status": "DEPLOYMENT_SUCCESS_USER_REACHABILITY_PENDING"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-02",
       "name": "Entry overlay",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-03",
@@ -41,22 +41,22 @@
     {
       "id": "P5-07",
       "name": "Street to exterior",
-      "status": "UNTESTED"
+      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
     },
     {
       "id": "P5-08",
       "name": "Exterior to interior",
-      "status": "UNTESTED"
+      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
     },
     {
       "id": "P5-09",
       "name": "Interior to exterior",
-      "status": "UNTESTED"
+      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
     },
     {
       "id": "P5-10",
       "name": "Exterior to street",
-      "status": "UNTESTED"
+      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
     },
     {
       "id": "P5-11",
@@ -108,5 +108,23 @@
     "workflow_conclusion": "success",
     "note": "GitHub Pages deployment workflow completed successfully. Assistant-side public URL fetch returned a cache miss, so physical iPhone reachability still requires user confirmation."
   },
-  "claim_ceiling": "No mobile regression claim is established until the public HTTPS build is physically tested on iPhone."
+  "claim_ceiling": "No mobile regression claim is established until the public HTTPS build is physically tested on iPhone.",
+  "owner_report": {
+    "device_class": "iPhone",
+    "browser": "Safari",
+    "reported_observations": [
+      "Public Explore Brevard page opened successfully.",
+      "ENABLE MOTION LOOK control appeared.",
+      "USE TOUCH INSTEAD control appeared.",
+      "User was able to move between the available world scenes."
+    ],
+    "evidence_class": "OWNER_REPORTED_PHYSICAL_DEVICE_OBSERVATION",
+    "limitations": [
+      "Motion permission grant and physical orientation response not yet explicitly confirmed.",
+      "Touch-drag panorama look not yet explicitly confirmed.",
+      "All four directed navigation legs not yet individually confirmed.",
+      "ABOUT, SERVICES, and BOOK behaviors not yet explicitly confirmed.",
+      "Round-trip return to Street not yet explicitly confirmed."
+    ]
+  }
 }
