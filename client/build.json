@@ -1,10 +1,12 @@
 {
   "build_id": "WRB-001-PHASE-5-CANDIDATE-001",
-  "source_commit": "PHASE5_PREP_COMMIT_PENDING",
+  "source_commit": "b7a1532ac769e9b31bd13270df504bead3e6db50",
   "schema_version": "hsie-world-reference/0.1",
   "runtime_version": "not-started",
   "client_version": "phase-4-reconstruction",
   "phase": 5,
   "status": "TEST_CANDIDATE",
-  "purpose": "Mobile regression proof only; not production deployment."
+  "purpose": "Mobile regression proof only; not production deployment.",
+  "test_surface_prep_commit": "30f9b8f371a7c22a3dfcfde30d308c6c808402f9",
+  "note": "source_commit identifies the Phase 4-closed semantic implementation under Phase 5 regression; test_surface_prep_commit identifies the first Phase 5 hosting/test-surface preparation commit."
 }
