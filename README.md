@@ -21,17 +21,7 @@ A controlled engineering environment for proving selected contracts.
 
 ## What this repository is not
 
-It is not:
-
-- the production World;
-- MIA;
-- a production Walker implementation;
-- a production identity system;
-- a production economy;
-- a property market;
-- an NFC/card infrastructure;
-- a multiplayer platform;
-- a production financial system.
+It is not the production World, MIA, a production Walker implementation, a production identity system, a production economy, a property market, NFC/card infrastructure, multiplayer, or a production financial system.
 
 ## Engineering control law
 
@@ -45,10 +35,19 @@ It is not:
 
 - WRB-001 Phase 0 — **PASS**
 - WRB-001 Phase 1 — **PASS**
-- WRB-001 Phase 2 — **NEXT / NOT YET STARTED**
+- WRB-001 Phase 2 — **PASS**
+- WRB-001 Phase 3 — **NEXT / NOT YET STARTED**
 - Architecture expansion — **HOLD**
 - Pass 10 — **NOT AUTHORIZED**
 - MIA integration — **LOCKED BEHIND PHASE 5**
+
+## Phase 2 contracts
+
+Exactly seven top-level contracts are established under `contracts/`:
+
+World, Place, Business, Representation, Topology, Request, and Event.
+
+`Space` remains subordinate inside Place for Slice 001.
 
 ## Predecessor
 

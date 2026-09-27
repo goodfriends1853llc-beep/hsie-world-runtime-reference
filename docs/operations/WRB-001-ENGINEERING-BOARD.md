@@ -2,11 +2,7 @@
 
 - [x] PHASE 0 — Preserve predecessor
 - [x] PHASE 1 — Establish reference repository
-  - [x] Local scaffold prepared
-  - [x] Remote GitHub repository created
-  - [x] Initial scaffold committed remotely
-  - [x] Remote tree verified
-- [ ] PHASE 2 — Seven contracts
+- [x] PHASE 2 — Seven contracts
 - [ ] PHASE 3 — Migrate POC
 - [ ] PHASE 4 — Reconstruct through governed semantics
 - [ ] PHASE 5 — Mobile regression proof

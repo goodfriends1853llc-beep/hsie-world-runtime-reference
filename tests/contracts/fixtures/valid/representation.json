@@ -1,0 +1,17 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:lagoon-exterior-360-v1",
+  "place_ref": "place:lagoon-cuts-demo",
+  "space_ref": "exterior",
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "asset:lagoon-exterior-jpg",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "ACTIVE",
+  "integrity_digest": null,
+  "legacy_refs": [
+    "lagoon-exterior",
+    "scenes/lagoon-exterior.jpg"
+  ]
+}

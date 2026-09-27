@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:topology:0.1",
+  "title": "WRB-001 Topology Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "connection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_place_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_space_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "target_place_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_space_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "connection_type": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "direction": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "policy_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "legacy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    }
+  },
+  "required": [
+    "schema_version",
+    "connection_id",
+    "source_place_ref",
+    "source_space_ref",
+    "target_place_ref",
+    "target_space_ref",
+    "connection_type",
+    "direction",
+    "status",
+    "policy_ref",
+    "version",
+    "legacy_refs"
+  ]
+}

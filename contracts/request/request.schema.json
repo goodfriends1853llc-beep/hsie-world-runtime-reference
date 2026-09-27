@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:request:0.1",
+  "title": "WRB-001 Request Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_type": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "session_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "caller_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "actor_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "target_domain": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "target_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input": {
+      "type": "object"
+    },
+    "expected_state_version": {
+      "type": [
+        "integer",
+        "string",
+        "null"
+      ]
+    },
+    "correlation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "request_type",
+    "session_ref",
+    "caller_ref",
+    "actor_ref",
+    "target_domain",
+    "target_ref",
+    "operation",
+    "purpose",
+    "input",
+    "expected_state_version",
+    "correlation_id",
+    "created_at",
+    "status"
+  ]
+}

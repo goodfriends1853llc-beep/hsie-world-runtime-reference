@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:world:0.1",
+  "title": "WRB-001 World Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "world_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "public_name_status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "root_place_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "topology_version": {
+      "type": [
+        "string",
+        "integer"
+      ],
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "schema_version",
+    "world_id",
+    "status",
+    "display_name",
+    "public_name_status",
+    "root_place_refs",
+    "topology_version",
+    "created_at",
+    "updated_at"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "artifact_id": "WRB-001-PHASE-2-CONTRACT-INDEX-001",
+  "schema_version": "hsie-world-reference/0.1",
+  "json_schema_draft": "2020-12",
+  "top_level_contract_count": 7,
+  "contracts": [
+    {
+      "name": "World",
+      "path": "contracts/world/world.schema.json",
+      "$id": "urn:hsie:wrb001:contract:world:0.1"
+    },
+    {
+      "name": "Place",
+      "path": "contracts/place/place.schema.json",
+      "$id": "urn:hsie:wrb001:contract:place:0.1"
+    },
+    {
+      "name": "Business",
+      "path": "contracts/business/business.schema.json",
+      "$id": "urn:hsie:wrb001:contract:business:0.1"
+    },
+    {
+      "name": "Representation",
+      "path": "contracts/representation/representation.schema.json",
+      "$id": "urn:hsie:wrb001:contract:representation:0.1"
+    },
+    {
+      "name": "Topology",
+      "path": "contracts/topology/topology.schema.json",
+      "$id": "urn:hsie:wrb001:contract:topology:0.1"
+    },
+    {
+      "name": "Request",
+      "path": "contracts/request/request.schema.json",
+      "$id": "urn:hsie:wrb001:contract:request:0.1"
+    },
+    {
+      "name": "Event",
+      "path": "contracts/event/event.schema.json",
+      "$id": "urn:hsie:wrb001:contract:event:0.1"
+    }
+  ],
+  "space_model": "Space is subordinate within Place for Slice 001; it is not an eighth top-level contract.",
+  "status": "CANDIDATE_REFERENCE_CONTRACTS"
+}

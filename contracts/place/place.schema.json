@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:place:0.1",
+  "title": "WRB-001 Place Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "place_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "place_type": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_place_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "district_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "public_visibility": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "steward_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "spaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "space_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "space_type": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "display_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "representation_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "legacy_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "default": []
+          }
+        },
+        "required": [
+          "space_id",
+          "space_type",
+          "display_name",
+          "status",
+          "representation_refs",
+          "legacy_refs"
+        ]
+      }
+    },
+    "representation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "created_event_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "legacy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    }
+  },
+  "required": [
+    "schema_version",
+    "place_id",
+    "place_type",
+    "status",
+    "display_name",
+    "parent_place_ref",
+    "district_ref",
+    "public_visibility",
+    "steward_ref",
+    "spaces",
+    "representation_refs",
+    "created_event_ref",
+    "version",
+    "legacy_refs"
+  ]
+}

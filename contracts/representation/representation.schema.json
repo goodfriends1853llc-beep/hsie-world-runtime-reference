@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:representation:0.1",
+  "title": "WRB-001 Representation Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "representation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "place_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "space_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "representation_type": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "asset_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "projection": {
+      "type": "string",
+      "minLength": 1
+    },
+    "renderer_adapter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "integrity_digest": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 8
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "legacy_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    }
+  },
+  "required": [
+    "schema_version",
+    "representation_id",
+    "place_ref",
+    "space_ref",
+    "representation_type",
+    "asset_ref",
+    "projection",
+    "renderer_adapter",
+    "version",
+    "status",
+    "integrity_digest",
+    "legacy_refs"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:event:0.1",
+  "title": "WRB-001 Event Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "source_domain": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "actor_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "subject_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "correlation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "causation_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "integrity_digest": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 8
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "source_domain",
+    "actor_ref",
+    "subject_ref",
+    "request_ref",
+    "correlation_id",
+    "causation_id",
+    "occurred_at",
+    "recorded_at",
+    "payload",
+    "integrity_digest"
+  ]
+}

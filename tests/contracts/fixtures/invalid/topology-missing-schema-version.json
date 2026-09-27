@@ -1,0 +1,15 @@
+{
+  "connection_id": "connection:street-to-lagoon-exterior",
+  "source_place_ref": "place:brevard-demo-street",
+  "source_space_ref": null,
+  "target_place_ref": "place:lagoon-cuts-demo",
+  "target_space_ref": "exterior",
+  "connection_type": "PLACE_TRANSITION",
+  "direction": "ONE_WAY",
+  "status": "ACTIVE",
+  "policy_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "street-001->lagoon-exterior"
+  ]
+}

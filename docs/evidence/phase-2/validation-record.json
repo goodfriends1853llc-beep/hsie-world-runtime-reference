@@ -1,0 +1,65 @@
+{
+  "artifact_id": "WRB-001-PHASE-2-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 2",
+  "validator": "python-jsonschema 4.26.0",
+  "draft": "2020-12",
+  "top_level_contracts": 7,
+  "tests": [
+    {
+      "contract": "world",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    },
+    {
+      "contract": "place",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    },
+    {
+      "contract": "business",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    },
+    {
+      "contract": "representation",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    },
+    {
+      "contract": "topology",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    },
+    {
+      "contract": "request",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    },
+    {
+      "contract": "event",
+      "schema_valid": true,
+      "valid_fixture_passed": true,
+      "invalid_fixture_rejected": true,
+      "invalid_error_count": 1
+    }
+  ],
+  "summary": {
+    "schemas_checked": 7,
+    "valid_fixtures_accepted": 7,
+    "invalid_fixtures_rejected": 7,
+    "result": "PASS"
+  },
+  "claim_ceiling": "The seven Phase 2 JSON Schema contracts are syntactically valid Draft 2020-12 schemas and the supplied positive/negative fixtures behaved as expected under this validator. This does not establish runtime integration or migration correctness."
+}

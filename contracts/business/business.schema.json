@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hsie:wrb001:contract:business:0.1",
+  "title": "WRB-001 Business Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "hsie-world-reference/0.1"
+    },
+    "business_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "representation_authority_state": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "physical_relationship_state": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "world_place_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "service_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "public_visibility": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "booking_action_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "service_id",
+          "name",
+          "description",
+          "status",
+          "public_visibility",
+          "booking_action_ref",
+          "version"
+        ]
+      }
+    },
+    "external_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action_type": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "destination": {
+            "type": "string",
+            "format": "uri"
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Z][A-Z0-9_]*$"
+          },
+          "last_verified_at": {
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "provenance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "source_system": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_schema": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_commit": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "source_system",
+              "source_schema",
+              "source_commit",
+              "evidence_refs"
+            ]
+          }
+        },
+        "required": [
+          "action_id",
+          "action_type",
+          "label",
+          "destination",
+          "purpose",
+          "status",
+          "last_verified_at",
+          "provenance"
+        ]
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_system": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_schema": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "source_system",
+        "source_schema",
+        "source_commit",
+        "evidence_refs"
+      ]
+    },
+    "verified_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "business_id",
+    "status",
+    "display_name",
+    "representation_authority_state",
+    "physical_relationship_state",
+    "world_place_refs",
+    "services",
+    "external_actions",
+    "provenance",
+    "verified_at",
+    "version"
+  ]
+}

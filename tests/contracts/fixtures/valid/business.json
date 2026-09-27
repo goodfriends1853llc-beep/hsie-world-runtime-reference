@@ -1,0 +1,47 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "business_id": "business:lagoon-cuts-demo",
+  "status": "CANDIDATE",
+  "display_name": "Lagoon Cuts",
+  "representation_authority_state": "PLATFORM_DEMO_FICTIONAL",
+  "physical_relationship_state": "FICTIONAL_DEMO",
+  "world_place_refs": [
+    "place:lagoon-cuts-demo"
+  ],
+  "services": [
+    {
+      "service_id": "service:demo-cut",
+      "name": "Demo Cut",
+      "description": "Fictional demo service",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:demo-book",
+      "version": 1
+    }
+  ],
+  "external_actions": [
+    {
+      "action_id": "action:demo-book",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Book",
+      "destination": "https://example.com/book",
+      "purpose": "External demo routing only",
+      "status": "ACTIVE",
+      "last_verified_at": null,
+      "provenance": {
+        "source_system": "BREVARD-COM-DEMO-001",
+        "source_schema": "brevard-spatial-world/0.1",
+        "source_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+        "evidence_refs": []
+      }
+    }
+  ],
+  "provenance": {
+    "source_system": "BREVARD-COM-DEMO-001",
+    "source_schema": "brevard-spatial-world/0.1",
+    "source_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
+    "evidence_refs": []
+  },
+  "verified_at": null,
+  "version": 1
+}

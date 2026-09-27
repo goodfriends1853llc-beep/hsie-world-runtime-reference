@@ -1,0 +1,14 @@
+{
+  "event_id": "event:001",
+  "event_type": "REFERENCE_FIXTURE_CREATED",
+  "source_domain": "WORLD_RUNTIME",
+  "actor_ref": null,
+  "subject_ref": "world:brevard-reference",
+  "request_ref": null,
+  "correlation_id": "correlation:001",
+  "causation_id": null,
+  "occurred_at": "2026-09-27T04:40:00Z",
+  "recorded_at": "2026-09-27T04:40:00Z",
+  "payload": {},
+  "integrity_digest": null
+}
