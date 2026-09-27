@@ -1,0 +1,56 @@
+{
+  "artifact_id": "WRB-001-PHASE-11-VALIDATION-001",
+  "phase": "WRB-001 / PHASE 11",
+  "status": "PASS",
+  "implementation_commit": "06a179ef215de9da6f4a4d69db3325d8f386495e",
+  "workflow_commit": "572e2a9070bbbbee8f0da10173b2e0f2d7181413",
+  "github_actions": {
+    "workflow": "WRB-001 Phase 11 Business Activation",
+    "run_id": 36340245898,
+    "conclusion": "success",
+    "source_artifact_id": 10938697157,
+    "source_artifact_sha256": "ab963a13d32d30c66faa28a56d98b1d80b32b78182728950ba682838cf952d5a"
+  },
+  "frozen_mia": {
+    "sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+    "source_modified": false,
+    "frozen_registry_file_sha256": "f520fcb9636b2c9b94333dc77fbb5c54312844f269e2c409318a032c50d923f3"
+  },
+  "capability": {
+    "capability_id": "world.business.activation",
+    "provider_id": "wrb001.business.activation.local",
+    "operation": "ACTIVATE_BUSINESS_PLACE",
+    "determinism_class": "DETERMINISTIC",
+    "side_effect_class": "WRITE",
+    "derived_registry_digest": "897189f6471edbeaba6f83eb4e2ae1fa49e2f9eddbd22a87ca1594360400729c",
+    "registry_preflight": "PASS"
+  },
+  "execution": {
+    "request_id": "request:phase11:activate-business-place:001",
+    "execution_id": "f95a2d27-4052-44a1-9ede-a7599dd4c3d5",
+    "terminal_state": "COMPLETED",
+    "mia_receipt_ref": "6e06de19-5049-40e6-a3a8-c7beda8f47d9",
+    "mia_receipt_verified": true,
+    "mia_proof_ref": "716d2910-c73f-4a04-bada-36cef1f8f7db",
+    "mia_proof_verified": true,
+    "effect_status": "CONFIRMED"
+  },
+  "activation": {
+    "activation_id": "business-activation:sha256:7ceeffcc62e28dbbdce3eb8add8b77cca5c4ef5b9534a105351e573a50f98d0f",
+    "status": "ACTIVE",
+    "verification_state": "VERIFIED",
+    "state_digest": "sha256:1269afb5da51287d8577e13f760db0e1957c6c120b874bcb2181198184cee11e",
+    "business_id": "business:lagoon-cuts",
+    "place_id": "place:lagoon-cuts-demo",
+    "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+    "content_digest": "sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+  },
+  "governance": {
+    "authority_required": true,
+    "authority_scoped_to_mia_business_subject": true,
+    "requires_consent": false,
+    "no_consent_exception_scope": "ACTIVATE_BUSINESS_PLACE only, configured at the port",
+    "world_runtime_receipt_created": false
+  },
+  "claim_ceiling": "Phase 11 proves the bounded local ACTIVATE_BUSINESS_PLACE operation against the exact frozen MIA v1.0.0 runtime using a separate derived registry and a World-owned deterministic write capability. It does not establish production deployment, independent reproduction, broad authorization policy, or World Runtime receipt/restart proof."
+}

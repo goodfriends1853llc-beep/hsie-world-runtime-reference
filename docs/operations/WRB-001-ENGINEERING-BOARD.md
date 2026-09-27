@@ -11,16 +11,16 @@
 - [x] PHASE 8 — Frozen MIA verification
 - [x] PHASE 9 — MIA API inspection
 - [x] PHASE 10 — MiaExecutionPort
-- [~] PHASE 11 — ACTIVATE_BUSINESS_PLACE — IMPLEMENTED / VALIDATION PENDING
-- [ ] PHASE 12 — Receipt/restart proof
+- [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
+- [ ] PHASE 12 — Receipt / Restart Proof — NEXT
 - [ ] PHASE 13 — Static deployment
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
 
 ## Current control
 
-Frozen MIA source remains unchanged.
+The first governed business activation operation has passed against exact frozen MIA v1.0.0.
 
-Phase 11 uses an external derived registry and a World-owned capability provider through the frozen runtime's existing extension point.
+Phase 12 must prove combined persistence/restart reconstruction and preserve:
 
-No World Runtime receipt is authorized yet.
+`WORLD RUNTIME RECEIPT ≠ MIA EXECUTION RECEIPT`

@@ -17,20 +17,21 @@
 - Phase 8 — **PASS**
 - Phase 9 — **PASS WITH IMPLEMENTATION FINDING**
 - Phase 10 — **PASS**
-- Phase 11 — **NEXT / NOT YET STARTED**
+- Phase 11 — **PASS**
+- Phase 12 — **NEXT / NOT YET STARTED**
 
-## Phase 10
+## Phase 11
 
-The bounded `MiaExecutionPort` has been verified in GitHub and against the exact frozen MIA v1.0.0 artifact.
+`ACTIVATE_BUSINESS_PLACE` has now executed successfully through the bounded compatibility port and the exact frozen MIA v1.0.0 runtime.
 
-The port preserves canonical request evidence while adding only the singular aliases required by frozen v1.0.0 after strict compatibility checks.
+The operation used a separate derived registry and a World-owned deterministic write capability. Frozen MIA source bytes remained unchanged.
 
-No World Runtime receipt is created by the port.
+MIA receipt/proof verification passed.
 
-`ACTIVATE_BUSINESS_PLACE` remains blocked until Phase 11.
+No World Runtime receipt exists yet.
 
 ## Next work
 
-`PHASE 11 — ACTIVATE_BUSINESS_PLACE`
+`PHASE 12 — Receipt / Restart Proof`
 
-Phase 11 must add a governed business-activation capability/registry configuration without changing frozen MIA source bytes.
+The next phase must prove recovery of the combined activation state and MIA evidence after runtime restart while keeping World Runtime receipt identity separate from MIA receipt identity.
