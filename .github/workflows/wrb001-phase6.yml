@@ -1,0 +1,47 @@
+name: WRB-001 Phase 6 Deterministic Publisher
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publisher/**'
+      - 'tests/phase6/**'
+      - 'data/migrated/**'
+      - 'contracts/**'
+      - 'package.json'
+      - '.github/workflows/wrb001-phase6.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify deterministic publisher
+        run: npm run test:phase6
+
+      - name: Generate deterministic publish artifacts
+        env:
+          WRB_SOURCE_COMMIT: ${{ github.sha }}
+        run: npm run publish:deterministic
+
+      - name: Display generated identifiers
+        run: |
+          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('data/published/world.snapshot.json','utf8')); console.log('SNAPSHOT_ID='+x.snapshot_id); console.log('CONTENT_DIGEST='+x.content_digest);"
+
+      - name: Upload Phase 6 publish artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrb001-phase6-publish
+          path: data/published/
+          if-no-files-found: error
