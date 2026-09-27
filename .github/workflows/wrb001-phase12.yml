@@ -1,0 +1,43 @@
+name: WRB-001 Phase 12 Receipt Restart
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/**'
+      - 'adapters/**'
+      - 'tests/phase12/**'
+      - 'data/migrated/**'
+      - '.github/workflows/wrb001-phase12.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-phase12-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Verify World Runtime receipt engine
+        run: python -m unittest tests.phase12.test_world_runtime_receipt -v
+
+      - name: Upload exact Phase 12 source
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrb001-phase12-source
+          path: |
+            runtime/world_runtime_receipt.py
+            adapters/mia_execution_port.py
+            adapters/mia_business_activation.py
+            adapters/mia/registry/wrb001-phase11-runtime-registry.json
+            tests/phase12/verify_restart_with_frozen_mia.py
+            data/migrated/
+          if-no-files-found: error
