@@ -15,32 +15,19 @@
 - Phase 6 — **PASS**
 - Phase 7 — **PASS**
 - Phase 8 — **PASS**
-- Phase 9 — **NEXT / NOT YET STARTED**
+- Phase 9 — **PASS WITH IMPLEMENTATION FINDING**
+- Phase 10 — **NEXT / NOT YET STARTED**
 
-Architecture expansion remains on HOLD. Pass 10 remains unauthorized.
+## Phase 9
 
-## Frozen MIA verification
+The actual frozen MIA v1.0.0 API has been inspected.
 
-Verified frozen artifact:
+`WRB-001-IF-002` records implementation/contract differences around caller identity, runtime identity, plural governance references, and the absence of `ACTIVATE_BUSINESS_PLACE` from the default capability surface.
 
-`MIA-RUNTIME-v1.0.0.zip`
-
-SHA-256:
-
-`ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a`
-
-Fresh checks:
-
-- internal SHA256SUMS: PASS
-- release validator: PASS
-- 34/34 tests: PASS
-- 20 repeat cycles / 680 test executions: PASS
-- synthetic end-to-end: PASS
-
-This is internal controlled validation, not independent certification or production readiness.
+The frozen artifact was not modified.
 
 ## Next work
 
-`PHASE 9 — MIA API inspection`
+`PHASE 10 — MiaExecutionPort`
 
-Phase 9 will inspect only the exact verified frozen artifact and derive the adapter contract from what is actually implemented.
+The port must enforce the missing compatibility boundary before invoking frozen MIA and must not execute `ACTIVATE_BUSINESS_PLACE` yet.

@@ -1,0 +1,128 @@
+{
+  "artifact_id": "WRB-001-PHASE-9-MIA-API-INSPECTION-001",
+  "phase": "WRB-001 / PHASE 9",
+  "status": "PASS_WITH_IMPLEMENTATION_FINDING",
+  "inspected_artifact": {
+    "name": "MIA-RUNTIME-v1.0.0.zip",
+    "sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a",
+    "phase8_verified": true
+  },
+  "construction": {
+    "runtime": "MIARuntime(db_path, registry_path)",
+    "facade": "MIAAPI(runtime)"
+  },
+  "facade_methods": [
+    "create_entity(kind, name)",
+    "create_relationship(source_id, target_id, rel_type, actor_id)",
+    "grant_authority(*args, **kwargs)",
+    "grant_consent(*args, **kwargs)",
+    "add_evidence(*args, **kwargs)",
+    "execute(request)",
+    "state(subject_id, **kwargs)",
+    "replay(execution_id)",
+    "diff(a, b)",
+    "verify_receipt(receipt_id)",
+    "verify_proof(proof_id)",
+    "health()"
+  ],
+  "execute_implementation": {
+    "required_fields": [
+      "actor_id",
+      "operation",
+      "purpose",
+      "capability_id",
+      "authority_id"
+    ],
+    "conditional_fields": {
+      "subject_id": "optional, but if supplied consent is required by default",
+      "consent_id": "required for subject operation unless requires_consent=false",
+      "request_id": "generated if absent",
+      "submitted_at": "generated if absent",
+      "runtime_id": "set/overwritten by runtime"
+    },
+    "success_return_fields": [
+      "status",
+      "terminal_state",
+      "request_id",
+      "execution_id",
+      "output",
+      "claim_ref",
+      "commit_refs",
+      "receipt_id",
+      "snapshot_hash",
+      "proof_id"
+    ],
+    "failure_return_fields": [
+      "status",
+      "terminal_state",
+      "request_id",
+      "execution_id",
+      "error",
+      "receipt_id"
+    ]
+  },
+  "default_registry": {
+    "runtime_id": "MIA-RUNTIME-v1",
+    "capabilities": [
+      "local.core",
+      "model.sim.a",
+      "model.sim.b"
+    ]
+  },
+  "implemented_provider_operations": {
+    "local.core": [
+      "echo",
+      "accept_claim",
+      "state_patch"
+    ],
+    "model.sim.a": [
+      "analyze"
+    ],
+    "model.sim.b": [
+      "analyze"
+    ]
+  },
+  "implementation_findings": [
+    {
+      "id": "WRB-001-IF-002-A",
+      "finding": "The frozen v1.0.0 implementation does not independently require caller_id even though the runtime contract distinguishes Caller from Actor and lists caller_id in the minimum ExecutionRequest.",
+      "dynamic_probe": "Request without caller_id completed successfully."
+    },
+    {
+      "id": "WRB-001-IF-002-B",
+      "finding": "The frozen v1.0.0 implementation overwrites a supplied runtime_id with its own runtime identity instead of rejecting a mismatch.",
+      "dynamic_probe": "Supplied WRONG-RUNTIME-ID was persisted as MIA-RUNTIME-v1."
+    },
+    {
+      "id": "WRB-001-IF-002-C",
+      "finding": "The frozen v1.0.0 execute implementation consumes singular capability_id, authority_id, and consent_id while the runtime contract describes requested_capabilities, authority_refs, and consent_refs.",
+      "impact": "Phase 10 port must perform explicit cardinality validation and mapping rather than silently flattening plural inputs."
+    },
+    {
+      "id": "WRB-001-IF-002-D",
+      "finding": "ACTIVATE_BUSINESS_PLACE is not implemented by the default frozen capability surface.",
+      "dynamic_probe_local_core": "FAILED — unsupported local operation ACTIVATE_BUSINESS_PLACE",
+      "dynamic_probe_unregistered_capability": "DENIED — registry preflight denied",
+      "note": "Both failure paths produced verifiable MIA receipts."
+    }
+  ],
+  "extension_points_observed": {
+    "capability_gateway_register": "CapabilityGateway.register(contract, provider)",
+    "registry_path_injected_at_runtime_construction": true,
+    "facade_exposes_capability_registration": false
+  },
+  "phase10_design_constraint": {
+    "strategy": "BOUNDED_COMPATIBILITY_PORT",
+    "requirements": [
+      "Require and preserve caller identity outside the frozen v1.0.0 implementation.",
+      "Require runtime_id to match MIA-RUNTIME-v1 before calling frozen MIA.",
+      "Require exactly one requested capability and exactly one authority reference for the v1.0.0 mapping.",
+      "Allow at most one consent reference for the current v1.0.0 mapping.",
+      "Map plural governed request fields to v1.0.0 singular fields only after cardinality checks.",
+      "Use MIAAPI as the consumer-facing execution facade.",
+      "Do not label World Runtime artifacts as MIA execution receipts.",
+      "Do not execute ACTIVATE_BUSINESS_PLACE in Phase 10."
+    ]
+  },
+  "claim_ceiling": "Phase 9 identifies the actual frozen v1.0.0 callable surface and observed implementation/contract mismatches. It does not modify MIA, integrate it into WRB-001, or establish support for ACTIVATE_BUSINESS_PLACE."
+}

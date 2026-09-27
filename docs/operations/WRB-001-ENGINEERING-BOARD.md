@@ -9,8 +9,8 @@
 - [x] PHASE 6 — Deterministic publisher
 - [x] PHASE 7 — Local Runtime / Request / Event
 - [x] PHASE 8 — Frozen MIA verification
-- [ ] PHASE 9 — MIA API inspection — NEXT
-- [ ] PHASE 10 — MiaExecutionPort
+- [x] PHASE 9 — MIA API inspection
+- [ ] PHASE 10 — MiaExecutionPort — NEXT
 - [ ] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [ ] PHASE 12 — Receipt/restart proof
 - [ ] PHASE 13 — Static deployment
@@ -19,12 +19,10 @@
 
 ## Current control
 
-Exact frozen MIA Runtime v1.0.0 SHA-256 verified:
+`WRB-001-IF-002` is open as an implementation compatibility finding.
 
-`ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a`
+No architecture amendment is currently required.
 
-Fresh internal validation passed.
+Phase 10 must compensate for the frozen v1.0.0 caller/runtime/plural-field enforcement gaps at the port boundary without modifying the frozen MIA package.
 
-MIA has not yet been integrated into WRB-001.
-
-Phase 9 is inspection only: determine the exact callable MIA interface from the verified artifact before any adapter implementation.
+`ACTIVATE_BUSINESS_PLACE` remains unexecuted.
