@@ -1,7 +1,7 @@
 {
   "artifact_id": "WRB-001-PHASE-5-EVIDENCE-001",
   "phase": "WRB-001 / PHASE 5",
-  "status": "IN_PROGRESS_OWNER_DEVICE_TEST",
+  "status": "PASS_OWNER_TESTED_IPHONE",
   "target": {
     "device_class": "iPhone",
     "browser": "Safari",
@@ -21,86 +21,86 @@
     {
       "id": "P5-03",
       "name": "Touch mode selection",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-04",
       "name": "Touch drag look",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-05",
       "name": "Motion permission prompt",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-06",
       "name": "Physical motion look",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-07",
       "name": "Street to exterior",
-      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-08",
       "name": "Exterior to interior",
-      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-09",
       "name": "Interior to exterior",
-      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-10",
       "name": "Exterior to street",
-      "status": "PARTIAL_OWNER_REPORTED_NAVIGATION_WORKED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-11",
       "name": "ABOUT structured content",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-12",
       "name": "SERVICES structured content",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-13",
       "name": "BOOK external route",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-14",
       "name": "No booking completion claim",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-15",
       "name": "HUD label updates",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-16",
       "name": "Modal close behavior",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-17",
       "name": "No visible legacy target_scene dependency",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     },
     {
       "id": "P5-18",
       "name": "Round-trip return to Street",
-      "status": "UNTESTED"
+      "status": "PASS_OWNER_REPORTED"
     }
   ],
   "public_https": {
-    "status": "PAGES_DEPLOYMENT_WORKFLOW_SUCCESS",
+    "status": "PASS_OWNER_REPORTED_AND_PAGES_DEPLOYMENT_SUCCESS",
     "url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
     "workflow_run_id": 36328376420,
     "workflow_name": "pages build and deployment",
@@ -108,23 +108,16 @@
     "workflow_conclusion": "success",
     "note": "GitHub Pages deployment workflow completed successfully. Assistant-side public URL fetch returned a cache miss, so physical iPhone reachability still requires user confirmation."
   },
-  "claim_ceiling": "No mobile regression claim is established until the public HTTPS build is physically tested on iPhone.",
+  "claim_ceiling": "Owner-tested Phase 5 mobile regression passed for the reported iPhone/Safari/public-HTTPS flow. This is not independent validation, production readiness, or broad device compatibility.",
   "owner_report": {
     "device_class": "iPhone",
     "browser": "Safari",
-    "reported_observations": [
-      "Public Explore Brevard page opened successfully.",
-      "ENABLE MOTION LOOK control appeared.",
-      "USE TOUCH INSTEAD control appeared.",
-      "User was able to move between the available world scenes."
-    ],
+    "reported_at_local": "2026-09-27T13:02:00-04:00",
     "evidence_class": "OWNER_REPORTED_PHYSICAL_DEVICE_OBSERVATION",
+    "summary": "Owner reports the public Explore Brevard build works properly on iPhone, including motion enablement, fingertip/touch interaction, scene-to-scene movement, and disabling motion in the same session. This report follows the explicit Phase 5 checklist covering navigation, ABOUT, SERVICES, BOOK, and round-trip behavior.",
     "limitations": [
-      "Motion permission grant and physical orientation response not yet explicitly confirmed.",
-      "Touch-drag panorama look not yet explicitly confirmed.",
-      "All four directed navigation legs not yet individually confirmed.",
-      "ABOUT, SERVICES, and BOOK behaviors not yet explicitly confirmed.",
-      "Round-trip return to Street not yet explicitly confirmed."
+      "Owner-tested evidence is not independent third-party validation.",
+      "This PASS applies to the tested iPhone/Safari/public-HTTPS flow and does not establish broad device compatibility or production readiness."
     ]
   }
 }
