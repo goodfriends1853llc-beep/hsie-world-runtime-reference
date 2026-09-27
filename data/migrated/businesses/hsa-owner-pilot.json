@@ -1,0 +1,139 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "business_id": "business:hsa-owner-pilot",
+  "status": "CANDIDATE",
+  "display_name": "Human Systems Architect™ — Owner Pilot",
+  "representation_authority_state": "OWNER_AUTHORIZED_PUBLIC_PILOT",
+  "physical_relationship_state": "OWNER_OPERATED_PRACTICE_PUBLIC_PILOT",
+  "world_place_refs": [
+    "place:hsa-arrival-hub"
+  ],
+  "services": [
+    {
+      "service_id": "service:hsa:clarity",
+      "name": "Business Clarity Breakdown",
+      "description": "Focused review of one business problem to identify what is not working and what to do next.",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:hsa:book",
+      "version": 1
+    },
+    {
+      "service_id": "service:hsa:journey",
+      "name": "Website / Customer Journey Review",
+      "description": "Review of messaging, trust, clarity, customer action, and where customers may be getting lost.",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:hsa:book",
+      "version": 1
+    },
+    {
+      "service_id": "service:hsa:ai-readiness",
+      "name": "AI Readiness Session",
+      "description": "Practical review of where AI can help and where stronger structure is needed first.",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:hsa:book",
+      "version": 1
+    },
+    {
+      "service_id": "service:hsa:ad-message",
+      "name": "Ad Graphic + Message Set",
+      "description": "Two ad directions with visual direction, hooks, messaging, and calls to action.",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:hsa:book",
+      "version": 1
+    },
+    {
+      "service_id": "service:hsa:systems-audit",
+      "name": "Small Business Systems Audit",
+      "description": "Review of lead flow, follow-up, customer process, operations weak points, and improvement opportunities.",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:hsa:book",
+      "version": 1
+    },
+    {
+      "service_id": "service:hsa:architecture",
+      "name": "Custom Architecture Session",
+      "description": "Focused 90-minute breakdown for a founder, owner, project, system, or idea that needs a clear action path.",
+      "status": "ACTIVE",
+      "public_visibility": "PUBLIC",
+      "booking_action_ref": "action:hsa:book",
+      "version": 1
+    }
+  ],
+  "external_actions": [
+    {
+      "action_id": "action:hsa:founding",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Founding Businesses",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/#founding-businesses",
+      "purpose": "Open the public founding-business pilot information.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T20:55:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-owner-authorized-pilot",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:book",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Book / Request Appointment",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/contact.html?mode=book",
+      "purpose": "Open the public booking-request composer. Submission is not a confirmed appointment until a response is received.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T20:55:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-owner-authorized-pilot",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:message",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Message / Inquiry",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/contact.html?mode=message",
+      "purpose": "Open the public message composer for business and pilot inquiries.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T20:55:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-owner-authorized-pilot",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    }
+  ],
+  "public_profile": {
+    "purpose": "Public entry point for Human Systems Architecture work, services, AI-environment projects, spatial-world pilot, and founding-business participation.",
+    "about_title": "Human Systems Architect™",
+    "about_body": "Turning real-life complexity into usable structure across business, people, systems, AI environments, customer journeys, workflows, and spatial experiences. This public hub shows the offer without exposing private architecture underneath it.",
+    "services_title": "Services"
+  },
+  "provenance": {
+    "source_system": "WRB-001",
+    "source_schema": "phase15-owner-authorized-pilot",
+    "source_commit": null,
+    "evidence_refs": [
+      "docs/evidence/phase-15/pilot-intake.json"
+    ]
+  },
+  "verified_at": "2026-09-27T20:55:00Z",
+  "version": 1
+}
