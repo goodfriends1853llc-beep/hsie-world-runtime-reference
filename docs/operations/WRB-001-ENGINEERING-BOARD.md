@@ -15,16 +15,26 @@
 - [x] PHASE 12 — Receipt / Restart Proof
 - [x] PHASE 13 — Static deployment
 - [x] PHASE 14 — Independent Mobile Experience Acceptance
-- [~] PHASE 15 — Authorized business pilot — OPEN / REAL BUSINESS REQUIRED
+- [~] PHASE 15 — Authorized business pilot — TOMMIE BELLAMY SELF-PILOT ACTIVE
 
-## Current Phase 15 gate
+## Pilot subject
 
-No real business is activated until a specific business and authorized representative are recorded.
+`business:tommie-bellamy-hsa`
 
-`INTEREST ≠ AUTHORIZATION`
+Public identity:
 
-`AUTHORIZATION ≠ ACTIVATION`
+`Tommie Bellamy — Human Systems Architect™`
 
-`ACTIVATION ≠ PUBLICATION`
+Owner authorization:
 
-The next required input is the identity of the first real business pilot and confirmation from an authorized representative that the business may be represented in the pilot.
+**CONFIRMED**
+
+## Current step
+
+Public-safe pilot destination is being deployed at:
+
+`/tommie/`
+
+Private HSIE/MIA/runtime architecture is excluded from the public destination.
+
+Spatial-world insertion and governed activation remain subsequent Phase-15 steps.

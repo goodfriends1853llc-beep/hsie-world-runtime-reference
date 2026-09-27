@@ -1,41 +1,83 @@
 {
   "artifact_id": "WRB-001-PHASE-15-PILOT-INTAKE-001",
-  "status": "AWAITING_REAL_BUSINESS",
+  "status": "OWNER_AUTHORIZED_PUBLIC_CONTENT_BUILD",
   "business": {
-    "display_name": null,
-    "stable_business_id": null,
-    "business_type": null,
-    "physical_or_service_model": null,
-    "public_address_or_service_area": null,
+    "display_name": "Tommie Bellamy — Human Systems Architect™",
+    "stable_business_id": "business:tommie-bellamy-hsa",
+    "business_type": "OWNER_OPERATED_PROFESSIONAL_PRACTICE_AND_PERSONAL_BRAND_PILOT",
+    "physical_or_service_model": "HYBRID_DIGITAL_AND_LOCAL_SERVICE",
+    "public_address_or_service_area": "Brevard County, Florida",
     "public_phone": null,
-    "public_website": null,
-    "booking_or_action_url": null
+    "public_website": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/",
+    "booking_or_action_url": "https://tommie-bellamy.kit.com/e0521bc4a8"
   },
   "authorization": {
-    "authorized_representative": null,
-    "representative_role": null,
-    "authorization_confirmed": false,
-    "authorization_evidence_ref": null,
-    "approved_for_public_spatial_representation": false
+    "authorized_representative": "Tommie Bellamy",
+    "representative_role": "Owner / Human Systems Architect™",
+    "authorization_confirmed": true,
+    "authorization_evidence_ref": "OWNER-DIRECTION-2026-09-27-FIRST-PILOT",
+    "approved_for_public_spatial_representation": true
   },
   "public_content": {
-    "about_text": null,
-    "services": [],
+    "about_text": "Tommie Bellamy is a Human Systems Architect focused on business, people, systems, AI environments, spatial experiences, and turning real-life complexity into usable structure.",
+    "services": [
+      {
+        "name": "Business Clarity Breakdown",
+        "price": "$75",
+        "state": "PILOT_STARTER_MENU"
+      },
+      {
+        "name": "Website / Customer Journey Review",
+        "price": "$125",
+        "state": "PILOT_STARTER_MENU"
+      },
+      {
+        "name": "AI Readiness Session",
+        "price": "$150",
+        "state": "PILOT_STARTER_MENU"
+      },
+      {
+        "name": "Ad Graphic + Message Set",
+        "price": "$200",
+        "state": "PILOT_STARTER_MENU"
+      },
+      {
+        "name": "Small Business Systems Audit",
+        "price": "$250",
+        "state": "PILOT_STARTER_MENU"
+      },
+      {
+        "name": "Custom Architecture Session",
+        "price": "$300",
+        "state": "PILOT_STARTER_MENU"
+      }
+    ],
+    "public_experiences": [
+      "Explore Brevard",
+      "Substrate House",
+      "Read the Room",
+      "AI Environment Checkup",
+      "ROOT TRACE™",
+      "Last Conversation Mail + Genesis Input",
+      "Supreme Environment™",
+      "HSIE Proof Release"
+    ],
     "approved_logo_or_asset_refs": [],
-    "asset_use_permission_confirmed": false
+    "asset_use_permission_confirmed": true,
+    "private_architecture_excluded": true
   },
   "world_scope": {
-    "target_place_ref": null,
+    "target_place_ref": "PENDING_PHASE15_SPATIAL_INSERTION",
     "target_space_refs": [],
-    "representation_plan": null
+    "representation_plan": "Public Human Systems Architect destination website first; spatial-world Place/Representation insertion follows after public-site verification."
   },
   "commercial_scope": {
-    "pilot_price_state": "NOT_SET",
-    "payment_state": "NOT_APPLICABLE_UNTIL_SEPARATELY_AGREED",
+    "pilot_price_state": "SELF_PILOT_NOT_CHARGED",
+    "payment_state": "NOT_APPLICABLE_SELF_PILOT",
     "performance_guarantee": false
   },
   "activation": {
-    "status": "NOT_AUTHORIZED",
+    "status": "PUBLIC_CONTENT_BUILD_IN_PROGRESS",
     "request_ref": null,
     "mia_execution_ref": null,
     "mia_receipt_ref": null,
