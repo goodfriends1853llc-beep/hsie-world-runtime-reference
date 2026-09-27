@@ -7,7 +7,7 @@
   "asset_ref": "assets/360/explore-brevard-tommie-arrival-360-8k.webp",
   "projection": "equirectangular",
   "renderer_adapter": "pannellum-360",
-  "version": 1,
+  "version": 2,
   "status": "PILOT_PUBLIC",
   "integrity_digest": "sha256:9c29562302de37facb43431e444560a2d19cb554e4db5f3177874bc84253e9a7",
   "legacy_refs": [
@@ -30,7 +30,7 @@
         "pitch": 1,
         "yaw": -147,
         "target_type": "TOPOLOGY_CONNECTION",
-        "target_ref": "connection:hsa-arrival-to-street-001",
+        "target_ref": "connection:hsa-arrival-to-explore-brevard-main-street",
         "legacy_refs": []
       },
       {

@@ -1,6 +1,6 @@
 {
   "artifact_id": "WRB-001-PHASE-15-PILOT-INTAKE-001",
-  "status": "OWNER_AUTHORIZED_PUBLIC_CONTENT_BUILD",
+  "status": "MAIN_STREET_SECOND_NODE_DEPLOYMENT_CANDIDATE",
   "business": {
     "display_name": "Tommie Bellamy — Human Systems Architect™",
     "stable_business_id": "business:tommie-bellamy-hsa",
@@ -68,9 +68,11 @@
     "private_architecture_excluded": true
   },
   "world_scope": {
-    "target_place_ref": "PENDING_PHASE15_SPATIAL_INSERTION",
-    "target_space_refs": [],
-    "representation_plan": "Public Human Systems Architect destination website first; spatial-world Place/Representation insertion follows after public-site verification."
+    "target_place_ref": "place:hsa-arrival-hub",
+    "target_space_refs": [
+      "space:arrival-plaza"
+    ],
+    "representation_plan": "Entry remains the Human Systems Architect hub. Explore Brevard now routes through topology to a separate 8K Main Street arrival-plaza node with public possibility hotspots and a return path."
   },
   "commercial_scope": {
     "pilot_price_state": "SELF_PILOT_NOT_CHARGED",
@@ -78,7 +80,7 @@
     "performance_guarantee": false
   },
   "activation": {
-    "status": "PUBLIC_CONTENT_BUILD_IN_PROGRESS",
+    "status": "MAIN_STREET_NODE_WIRED_PRE_PUBLIC_QC",
     "request_ref": null,
     "mia_execution_ref": null,
     "mia_receipt_ref": null,

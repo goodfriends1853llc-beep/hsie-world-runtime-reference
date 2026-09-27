@@ -73,7 +73,7 @@
       "purpose": "Open the public founding-business pilot information.",
       "status": "ACTIVE",
       "environment_class": "PUBLIC_PILOT",
-      "last_verified_at": "2026-09-27T20:55:00Z",
+      "last_verified_at": "2026-09-27T22:58:00Z",
       "provenance": {
         "source_system": "WRB-001",
         "source_schema": "phase15-owner-authorized-pilot",
@@ -91,7 +91,7 @@
       "purpose": "Open the public booking-request composer. Submission is not a confirmed appointment until a response is received.",
       "status": "ACTIVE",
       "environment_class": "PUBLIC_PILOT",
-      "last_verified_at": "2026-09-27T20:55:00Z",
+      "last_verified_at": "2026-09-27T22:58:00Z",
       "provenance": {
         "source_system": "WRB-001",
         "source_schema": "phase15-owner-authorized-pilot",
@@ -109,10 +109,100 @@
       "purpose": "Open the public message composer for business and pilot inquiries.",
       "status": "ACTIVE",
       "environment_class": "PUBLIC_PILOT",
-      "last_verified_at": "2026-09-27T20:55:00Z",
+      "last_verified_at": "2026-09-27T22:58:00Z",
       "provenance": {
         "source_system": "WRB-001",
         "source_schema": "phase15-owner-authorized-pilot",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:explore-about",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "About Explore Brevard",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/explore-brevard.html#about",
+      "purpose": "Open the public Explore Brevard concept and pilot explanation.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T22:58:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-main-street-public-preview",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:explore-shop",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Shop Possibilities",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/explore-brevard.html#shop",
+      "purpose": "Show how retail and product businesses may be represented in Main Street.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T22:58:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-main-street-public-preview",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:explore-dine",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Dining Possibilities",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/explore-brevard.html#dine",
+      "purpose": "Show how restaurants, bars, cafes, and food businesses may be represented.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T22:58:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-main-street-public-preview",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:explore-events",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Events Possibilities",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/explore-brevard.html#events",
+      "purpose": "Show how events and entertainment may be represented.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T22:58:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-main-street-public-preview",
+        "source_commit": null,
+        "evidence_refs": [
+          "docs/evidence/phase-15/pilot-intake.json"
+        ]
+      }
+    },
+    {
+      "action_id": "action:hsa:explore-services",
+      "action_type": "OPEN_EXTERNAL_URL",
+      "label": "Services Possibilities",
+      "destination": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/explore-brevard.html#services",
+      "purpose": "Show how service businesses may be represented.",
+      "status": "ACTIVE",
+      "environment_class": "PUBLIC_PILOT",
+      "last_verified_at": "2026-09-27T22:58:00Z",
+      "provenance": {
+        "source_system": "WRB-001",
+        "source_schema": "phase15-main-street-public-preview",
         "source_commit": null,
         "evidence_refs": [
           "docs/evidence/phase-15/pilot-intake.json"
@@ -134,6 +224,6 @@
       "docs/evidence/phase-15/pilot-intake.json"
     ]
   },
-  "verified_at": "2026-09-27T20:55:00Z",
-  "version": 1
+  "verified_at": "2026-09-27T22:58:00Z",
+  "version": 2
 }

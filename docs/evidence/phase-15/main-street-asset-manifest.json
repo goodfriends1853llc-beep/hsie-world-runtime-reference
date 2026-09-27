@@ -1,0 +1,31 @@
+{
+  "artifact_id": "WRB-001-PHASE-15-MAIN-STREET-ASSET-001",
+  "status": "RUNTIME_ASSET_READY",
+  "source": {
+    "description": "Owner-approved blend of the two locked Explore Brevard Main Street visual references.",
+    "generated_dimensions": "1774x887",
+    "seam_master_sha256": "48b1b3dba388d6d74631c266233ac8fa5b248737fc7e6d4f186ce015f96f3048"
+  },
+  "runtime_asset": {
+    "repository_path": "assets/360/explore-brevard-main-street-360-8k.webp",
+    "dimensions": "8192x4096",
+    "aspect_ratio": "2:1",
+    "projection": "equirectangular",
+    "web_format": "WEBP",
+    "quality_setting": 76,
+    "sha256": "ce856b6eadfb5f1cb009b2c535fac0567cb74077800a94a069aaa4b48712b05b",
+    "git_blob_sha1": "273bb80f11236e65d551eae4aa9a3ca8e7bf7921",
+    "byte_size": 2299682
+  },
+  "seam_qc": {
+    "source_master_first_last_column_mean_absolute_difference": 0,
+    "runtime_encoded_first_last_column_mean_absolute_difference": 1.4296875,
+    "note": "Source master edges were forced continuous before 8K encoding. Small encoded-edge variance is attributable to lossy WebP compression."
+  },
+  "routing": {
+    "from": "place:hsa-arrival-hub",
+    "to": "place:explore-brevard-main-street / space:arrival-plaza",
+    "via": "connection:hsa-arrival-to-explore-brevard-main-street",
+    "return_via": "connection:explore-brevard-main-street-to-hsa-arrival"
+  }
+}

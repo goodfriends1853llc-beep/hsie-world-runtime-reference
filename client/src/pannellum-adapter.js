@@ -4,7 +4,8 @@ const ICONS = {
   SERVICES: '⚙',
   FOUNDING: '★',
   BOOK: '↗',
-  MESSAGE: '✉'
+  MESSAGE: '✉',
+  LINK: '↗'
 };
 
 export class PannellumRendererAdapter {
@@ -98,15 +99,7 @@ export class PannellumRendererAdapter {
     this.viewer.loadScene(representationId);
   }
 
-  startOrientation() {
-    this.viewer?.startOrientation();
-  }
-
-  stopOrientation() {
-    this.viewer?.stopOrientation();
-  }
-
-  isOrientationActive() {
-    return Boolean(this.viewer?.isOrientationActive());
-  }
+  startOrientation() { this.viewer?.startOrientation(); }
+  stopOrientation() { this.viewer?.stopOrientation(); }
+  isOrientationActive() { return Boolean(this.viewer?.isOrientationActive()); }
 }

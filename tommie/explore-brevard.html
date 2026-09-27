@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Explore Brevard Main Street — founding spatial-world preview.">
+  <title>Explore Brevard — Main Street</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .explore-shell{max-width:1100px;margin:0 auto;padding:80px 20px 120px}
+    .explore-shell h1{font-size:clamp(48px,8vw,96px);line-height:.9;letter-spacing:-.055em;margin:12px 0 24px}
+    .lead{max-width:780px;color:var(--muted);font-size:19px}
+    .possibility-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px}
+    .possibility{background:var(--panel);padding:28px;min-height:230px}
+    .possibility h2{font-size:30px;margin:10px 0 14px}
+    .possibility p{color:var(--muted)}
+    .scope{margin-top:34px;padding:26px;border:1px solid var(--red);background:#0b0707}
+    .scope p{color:var(--muted)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+    @media(max-width:760px){.possibility-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main class="explore-shell">
+    <p class="eyebrow">EXPLORE BREVARD · MAIN STREET</p>
+    <h1>A street built for possibilities.</h1>
+    <p class="lead" id="about">
+      Main Street is the public preview corridor for Explore Brevard: a spatial place where local businesses,
+      services, dining, events, and experiences can eventually become destinations people move into instead of
+      just flat ads they scroll past.
+    </p>
+    <div class="possibility-grid">
+      <section class="possibility" id="shop"><p class="eyebrow">SHOP</p><h2>Retail + products</h2><p>Storefront representation, product discovery, menus or catalogs, websites, inquiry paths, and future interactive business scenes.</p></section>
+      <section class="possibility" id="dine"><p class="eyebrow">DINE</p><h2>Food + nightlife</h2><p>Restaurants, bars, cafes, menus, hours, reservation or inquiry actions, event promotion, and destination-style spatial presence.</p></section>
+      <section class="possibility" id="services"><p class="eyebrow">SERVICES</p><h2>Local service businesses</h2><p>Explain what you do, show service choices, route customers to booking or contact, and eventually connect dedicated 360 business nodes.</p></section>
+      <section class="possibility" id="events"><p class="eyebrow">EVENTS</p><h2>Entertainment + community</h2><p>Events, venues, entertainment, nonprofits, community experiences, temporary activations, and future destination nodes.</p></section>
+    </div>
+    <section class="scope" id="directory">
+      <p class="eyebrow">BUSINESS DIRECTORY / FOUNDING PILOT</p>
+      <h2>Businesses are added with permission.</h2>
+      <p>Main Street is a founding-pilot preview. A business appearing here does not mean Explore Brevard owns, operates, endorses, or guarantees that business. Real businesses are added only after authorization and approval of the public information and actions being represented.</p>
+      <div class="actions">
+        <a class="button button-primary" href="./contact.html?mode=founding">ASK ABOUT FOUNDING ACCESS</a>
+        <a class="button button-ghost" href="./contact.html?mode=message">MESSAGE TOMMIE</a>
+        <a class="button button-ghost" href="../">RETURN TO THE 360 WORLD</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

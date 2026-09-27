@@ -41,7 +41,8 @@ export class InteractionExecutor {
 
       case 'BOOK':
       case 'FOUNDING':
-      case 'MESSAGE': {
+      case 'MESSAGE':
+      case 'LINK': {
         if (anchor.target_type !== 'BUSINESS_EXTERNAL_ACTION') {
           throw new Error(`${anchor.interaction_kind} anchor does not reference a Business external action.`);
         }

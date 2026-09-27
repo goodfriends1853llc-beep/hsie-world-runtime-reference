@@ -1,0 +1,33 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "place_id": "place:explore-brevard-main-street",
+  "place_type": "PUBLIC_EXPERIENCE",
+  "status": "ACTIVE",
+  "display_name": "Explore Brevard — Main Street",
+  "parent_place_ref": null,
+  "district_ref": null,
+  "public_visibility": "PUBLIC",
+  "steward_ref": null,
+  "spaces": [
+    {
+      "space_id": "space:arrival-plaza",
+      "space_type": "ARRIVAL",
+      "display_name": "Main Street Arrival Plaza",
+      "status": "ACTIVE",
+      "representation_refs": [
+        "representation:explore-brevard-main-street-360-v1"
+      ],
+      "legacy_refs": [
+        "phase15:main-street-preview"
+      ]
+    }
+  ],
+  "representation_refs": [
+    "representation:explore-brevard-main-street-360-v1"
+  ],
+  "created_event_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "WRB-001-PHASE-15-MAIN-STREET"
+  ]
+}
