@@ -1,8 +1,10 @@
 const ICONS = {
   MOVE: '↑',
   ABOUT: 'ℹ',
-  SERVICES: '✂',
-  BOOK: '↗'
+  SERVICES: '⚙',
+  FOUNDING: '★',
+  BOOK: '↗',
+  MESSAGE: '✉'
 };
 
 export class PannellumRendererAdapter {
