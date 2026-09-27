@@ -1,0 +1,32 @@
+{
+  "deployment_id": "WRB-001-STATIC-DEPLOYMENT-001",
+  "phase": "WRB-001 / PHASE 13",
+  "status": "DEPLOYMENT_CANDIDATE",
+  "deployment_class": "STATIC_REFERENCE_ONLY",
+  "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+  "source_repository": "goodfriends1853llc-beep/hsie-world-runtime-reference",
+  "deployment_source_commit": "814787e38a0710ad10c344f2290c2a195933fa7c",
+  "predecessor": {
+    "system": "BREVARD-COM-DEMO-001",
+    "commit": "29326120dffa33a94a9489ed41874ce9d5163328"
+  },
+  "semantic_state": {
+    "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+    "content_digest": "sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991"
+  },
+  "entry": {
+    "root_path": "/",
+    "client_path": "/client/",
+    "entry_place_ref": "place:brevard-demo-street",
+    "entry_representation_ref": "representation:street-001-360-v1"
+  },
+  "boundaries": {
+    "static_reference_only": true,
+    "mia_service_hosted": false,
+    "world_runtime_service_hosted": false,
+    "local_runtime_hosted": false,
+    "dynamic_write_api_hosted": false,
+    "production_ready": false
+  },
+  "claim_ceiling": "This deployment exposes the static WRB-001 reference client and repository-hosted static data only. GitHub Pages is not running MIA, the local World Runtime, the business-activation provider, or a production backend."
+}

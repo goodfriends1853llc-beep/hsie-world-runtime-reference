@@ -13,16 +13,14 @@
 - [x] PHASE 10 — MiaExecutionPort
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [x] PHASE 12 — Receipt / Restart Proof
-- [ ] PHASE 13 — Static deployment — NEXT
+- [~] PHASE 13 — Static deployment — VERIFICATION PENDING
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
 
 ## Current control
 
-Graceful local restart proof has passed.
+`STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
 
-The first failed Phase 12 verification remains preserved in workflow history.
+Phase 13 deploys only the static public reference surface.
 
-`WORLD RUNTIME RECEIPT ≠ MIA EXECUTION RECEIPT`
-
-Phase 13 may deploy only the static public reference surface. It must not imply that GitHub Pages is running MIA or the local World Runtime.
+Independent acceptance remains Phase 14.

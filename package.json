@@ -8,7 +8,8 @@
     "publish:deterministic": "node publisher/publish.mjs",
     "test:phase6": "node tests/phase6/verify-determinism.mjs",
     "runtime:request": "node runtime/run-request.mjs",
-    "test:phase7": "node tests/phase7/verify-local-runtime.mjs"
+    "test:phase7": "node tests/phase7/verify-local-runtime.mjs",
+    "test:phase13": "node tests/phase13/verify-static-deployment.mjs"
   },
   "engines": {
     "node": ">=20"
