@@ -31,7 +31,7 @@ class WorldRuntimeReceiptEngine:
         if not text.strip():
             return []
         records = []
-        for index, line in enumerate(text.trim_end().splitlines(), start=1):
+        for index, line in enumerate(text.rstrip().splitlines(), start=1):
             try:
                 records.append(json.loads(line))
             except json.JSONDecodeError as exc:
