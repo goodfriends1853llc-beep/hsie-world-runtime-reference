@@ -5,7 +5,14 @@
 - [x] PHASE 2 — Seven contracts
 - [x] PHASE 3 — Migrate POC
 - [x] PHASE 4 — Reconstruct through governed semantics
-- [ ] PHASE 5 — Mobile regression proof — NEXT
+- [~] PHASE 5 — Mobile regression proof — TEST SURFACE PREPARED / EXECUTION BLOCKED
+
+## PHASE 5 BLOCKERS
+
+- [ ] Public HTTPS test surface enabled
+- [ ] Physical iPhone Safari run completed
+- [ ] Motion permission behavior observed
+- [ ] Full regression matrix recorded
 
 ## HARD GATE
 

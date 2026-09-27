@@ -1,0 +1,10 @@
+{
+  "build_id": "WRB-001-PHASE-5-CANDIDATE-001",
+  "source_commit": "PHASE5_PREP_COMMIT_PENDING",
+  "schema_version": "hsie-world-reference/0.1",
+  "runtime_version": "not-started",
+  "client_version": "phase-4-reconstruction",
+  "phase": 5,
+  "status": "TEST_CANDIDATE",
+  "purpose": "Mobile regression proof only; not production deployment."
+}

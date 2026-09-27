@@ -6,19 +6,19 @@
 
 ## Current cursor
 
-- Phase 0 — **PASS**
-- Phase 1 — **PASS**
-- Phase 2 — **PASS**
-- Phase 3 — **PASS**
-- Phase 4 — **PASS**
-- Phase 5 — **NEXT / NOT YET STARTED**
+- Phase 0 — PASS
+- Phase 1 — PASS
+- Phase 2 — PASS
+- Phase 3 — PASS
+- Phase 4 — PASS
+- Phase 5 — TEST SURFACE PREPARED / PHYSICAL REGRESSION TEST PENDING
 
 Architecture expansion remains on HOLD. Pass 10 remains unauthorized. MIA integration remains locked behind Phase 5.
 
-## Current structural path
+## Phase 5
 
-`World → Place → Space → Topology → Representation → Renderer Adapter → Pannellum`
+The repository is source-ready for a temporary public HTTPS test surface from repository root. GitHub Pages was not configured when Phase 5 preparation began, so no HTTPS/mobile PASS is claimed.
 
-Phase 4 proves structural reconstruction only. Mobile/touch/motion/public-HTTPS behavior remains unproven until Phase 5.
+The physical iPhone regression protocol is under `docs/evidence/phase-5/manual-test-protocol.md`.
 
-The predecessor remains `BREVARD-COM-DEMO-001` at commit `29326120dffa33a94a9489ed41874ce9d5163328`.
+Phase 13 remains the formal static deployment stage; a Phase 5 Pages surface is test-only.
