@@ -6,19 +6,26 @@
 
 ## Current cursor
 
-- Phase 0 — PASS
-- Phase 1 — PASS
-- Phase 2 — PASS
-- Phase 3 — PASS
-- Phase 4 — PASS
-- Phase 5 — TEST SURFACE PREPARED / PHYSICAL REGRESSION TEST PENDING
+- Phase 0 — **PASS**
+- Phase 1 — **PASS**
+- Phase 2 — **PASS**
+- Phase 3 — **PASS**
+- Phase 4 — **PASS**
+- Phase 5 — **PASS — OWNER TESTED**
+- Phase 6 — **NEXT / NOT YET STARTED**
 
-Architecture expansion remains on HOLD. Pass 10 remains unauthorized. MIA integration remains locked behind Phase 5.
+Architecture expansion remains on HOLD. Pass 10 remains unauthorized.
 
-## Phase 5
+The Phase 5 hard gate is satisfied by owner-tested iPhone/Safari/public-HTTPS regression evidence.
 
-The repository is source-ready for a temporary public HTTPS test surface from repository root. GitHub Pages was not configured when Phase 5 preparation began, so no HTTPS/mobile PASS is claimed.
+## Next work
 
-The physical iPhone regression protocol is under `docs/evidence/phase-5/manual-test-protocol.md`.
+`PHASE 6 — Deterministic Publisher`
 
-Phase 13 remains the formal static deployment stage; a Phase 5 Pages surface is test-only.
+The publisher must preserve:
+
+`source → schema validation → cross-record integrity → canonical semantic payload → content digest → snapshot metadata`
+
+Volatile generation metadata must not alter the semantic content digest.
+
+MIA remains untouched until its later authorized phases.

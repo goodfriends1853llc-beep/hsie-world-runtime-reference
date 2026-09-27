@@ -5,20 +5,13 @@
 - [x] PHASE 2 — Seven contracts
 - [x] PHASE 3 — Migrate POC
 - [x] PHASE 4 — Reconstruct through governed semantics
-- [~] PHASE 5 — Mobile regression proof — TEST SURFACE PREPARED / EXECUTION BLOCKED
-
-## PHASE 5 BLOCKERS
-
-- [ ] Public HTTPS test surface enabled
-- [ ] Physical iPhone Safari run completed
-- [ ] Motion permission behavior observed
-- [ ] Full regression matrix recorded
+- [x] PHASE 5 — Mobile regression proof
 
 ## HARD GATE
 
-No MIA adapter work before Phase 5 passes.
+**SATISFIED by Phase 5 owner-tested iPhone/Safari/public-HTTPS regression evidence.**
 
-- [ ] PHASE 6 — Deterministic publisher
+- [ ] PHASE 6 — Deterministic publisher — NEXT
 - [ ] PHASE 7 — Local Runtime / Request / Event
 - [ ] PHASE 8 — Frozen MIA verification
 - [ ] PHASE 9 — MIA API inspection
@@ -28,3 +21,11 @@ No MIA adapter work before Phase 5 passes.
 - [ ] PHASE 13 — Static deployment
 - [ ] PHASE 14 — Independent acceptance
 - [ ] PHASE 15 — Authorized business pilot
+
+## Current control
+
+MIA has not been integrated.
+
+Pass 10 remains unauthorized.
+
+Phase 6 may proceed without changing the frozen architecture.
