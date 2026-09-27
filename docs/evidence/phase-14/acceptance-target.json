@@ -1,0 +1,19 @@
+{
+  "artifact_id": "WRB-001-PHASE-14-TARGET-001",
+  "phase": "WRB-001 / PHASE 14",
+  "status": "AWAITING_INDEPENDENT_TESTER",
+  "acceptance_target": {
+    "deployed_commit": "5481662d40eba540584067c194bb022c4fd93d04",
+    "phase13_closeout_commit": "cd01a2465f9d3cbd65d392918edbb30feb272ffc",
+    "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+    "snapshot_id": "snapshot:sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+    "content_digest": "sha256:c0b8b8cf841c02112452a82ff256d9786f76a3f567a072ab4b4f37921d678991",
+    "frozen_mia_sha256": "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a"
+  },
+  "independence_rule": "Tester must not be the builder/owner and must not use assistant-generated PASS statements as substitute for their own observed results.",
+  "lanes": {
+    "public_experience": "REQUIRED",
+    "technical_reproduction": "REQUIRED_FOR_FULL_PHASE14_PASS"
+  },
+  "current_result": "NOT_TESTED"
+}

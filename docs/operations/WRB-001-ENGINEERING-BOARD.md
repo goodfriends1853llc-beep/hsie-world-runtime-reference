@@ -14,13 +14,20 @@
 - [x] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [x] PHASE 12 — Receipt / Restart Proof
 - [x] PHASE 13 — Static deployment
-- [ ] PHASE 14 — Independent acceptance — NEXT
+- [~] PHASE 14 — Independent acceptance — PROTOCOL READY / EXTERNAL TESTER REQUIRED
 - [ ] PHASE 15 — Authorized business pilot
 
-## Current control
+## Current blocker
 
-The static reference surface is deployed.
+Phase 14 cannot be self-certified.
 
-`STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
+Full Phase 14 PASS requires an independent human tester to complete both:
 
-Phase 14 requires an independent tester. Builder/owner testing and assistant validation cannot be promoted into independent acceptance.
+- Lane A — public experience acceptance;
+- Lane B — clean-environment technical reproduction.
+
+Until that evidence exists:
+
+`PHASE 14 = PENDING`
+
+Phase 15 is not authorized.

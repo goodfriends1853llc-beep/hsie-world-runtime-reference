@@ -1,0 +1,162 @@
+{
+  "artifact_id": "WRB-001-PHASE-14-INDEPENDENT-RESULT-001",
+  "status": "UNTESTED",
+  "tester": {
+    "identifier": null,
+    "relationship_to_builder": null,
+    "independence_attestation": null,
+    "tested_at": null
+  },
+  "acceptance_target": {
+    "deployed_commit": "5481662d40eba540584067c194bb022c4fd93d04",
+    "phase13_closeout_commit": "cd01a2465f9d3cbd65d392918edbb30feb272ffc",
+    "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/"
+  },
+  "lane_a_public_experience": {
+    "environment": {
+      "device": null,
+      "os": null,
+      "browser": null
+    },
+    "results": [
+      {
+        "id": "A01",
+        "name": "HTTPS load",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A02",
+        "name": "Explore Brevard entry surface",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A03",
+        "name": "Touch or pointer look",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A04",
+        "name": "Motion look when supported",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A05",
+        "name": "Street to Exterior",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A06",
+        "name": "Exterior to Interior",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A07",
+        "name": "Interior to Exterior",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A08",
+        "name": "Exterior to Street",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A09",
+        "name": "ABOUT content",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A10",
+        "name": "SERVICES content",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A11",
+        "name": "BOOK external demo route",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A12",
+        "name": "No booking-completion claim",
+        "status": "UNTESTED",
+        "notes": null
+      },
+      {
+        "id": "A13",
+        "name": "No blocking broken assets/return path",
+        "status": "UNTESTED",
+        "notes": null
+      }
+    ],
+    "lane_result": "UNTESTED"
+  },
+  "lane_b_technical_reproduction": {
+    "environment": {
+      "os": null,
+      "node_version": null,
+      "python_version": null,
+      "clean_environment_description": null
+    },
+    "frozen_mia_sha256_observed": null,
+    "frozen_mia_hash_match": "UNTESTED",
+    "commands": [
+      {
+        "command": "npm run test:phase6",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      },
+      {
+        "command": "npm run test:phase7",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      },
+      {
+        "command": "npm run test:phase13",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      },
+      {
+        "command": "python3 validate_release.py",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      },
+      {
+        "command": "python tests/phase10/verify_port_with_frozen_mia.py",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      },
+      {
+        "command": "python tests/phase11/verify_activate_with_frozen_mia.py",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      },
+      {
+        "command": "python tests/phase12/verify_restart_with_frozen_mia.py",
+        "status": "UNTESTED",
+        "exit_code": null,
+        "evidence_ref": null
+      }
+    ],
+    "lane_result": "UNTESTED"
+  },
+  "final_tester_result": "UNTESTED",
+  "tester_attestation": null,
+  "evidence_refs": [],
+  "claim_ceiling": "This form records independent acceptance evidence only after an external tester completes it. An unfilled form establishes no acceptance."
+}

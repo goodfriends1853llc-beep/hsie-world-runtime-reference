@@ -20,26 +20,19 @@
 - Phase 11 — **PASS**
 - Phase 12 — **PASS**
 - Phase 13 — **PASS**
-- Phase 14 — **NEXT / INDEPENDENT TESTER REQUIRED**
+- Phase 14 — **PENDING — INDEPENDENT TESTER REQUIRED**
+- Phase 15 — **NOT AUTHORIZED**
 
-## Phase 13 static deployment
+## Independent acceptance
 
-Public reference URL:
+Protocol:
 
-`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/`
+`docs/evidence/phase-14/independent-acceptance-protocol.md`
 
-Exact deployment commit:
+Blank evidence form:
 
-`5481662d40eba540584067c194bb022c4fd93d04`
+`docs/evidence/phase-14/independent-acceptance-result.json`
 
-GitHub Pages deployment run `36340794274` completed successfully for that exact commit.
+Full Phase 14 PASS requires both independent public-experience testing and clean-environment technical reproduction.
 
-The public surface is static only.
-
-`STATIC PUBLIC SURFACE ≠ MIA SERVICE ≠ WORLD RUNTIME SERVICE`
-
-## Next work
-
-`PHASE 14 — Independent Acceptance`
-
-The next PASS must come from an independent tester rather than the builder/owner or assistant.
+Builder/owner observations and assistant-generated verification do not count as independent acceptance.
