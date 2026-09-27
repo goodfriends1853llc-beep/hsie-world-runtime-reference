@@ -1,7 +1,7 @@
 from __future__ import annotations
 from copy import deepcopy
 from dataclasses import dataclass
-from typing import Any, Mapping
+from typing import Any, Iterable, Mapping
 
 EXPECTED_RUNTIME_ID = "MIA-RUNTIME-v1"
 PHASE_10_BLOCKED_OPERATION = "ACTIVATE_BUSINESS_PLACE"
@@ -51,16 +51,15 @@ class MiaPortResult:
 
 class MiaExecutionPort:
     """
-    WRB-001 Phase 10 compatibility boundary for frozen MIA Runtime v1.0.0.
+    WRB-001 compatibility boundary for frozen MIA Runtime v1.0.0.
 
-    This port compensates for known v1.0.0 implementation gaps without modifying MIA:
-    - caller_id is required here even though v1.0.0 does not independently require it;
-    - runtime_id is checked here before MIA overwrites/persists its own runtime identity;
-    - plural governed refs are cardinality-checked here before singular compatibility aliases
-      are supplied to the v1.0.0 implementation.
+    The port validates caller/runtime/cardinality conditions before supplying the singular
+    aliases required by the frozen v1.0.0 implementation. Canonical plural fields remain
+    in the same request and are therefore preserved in the persisted MIA ExecutionRequest.
 
-    Canonical/plural fields are still forwarded in the request so the frozen runtime's
-    persisted ExecutionRequest retains them. Singular aliases exist only for v1.0.0 execution.
+    A bounded set of operations may be configured as not requiring consent when the
+    governed subject is non-human and the operation policy explicitly allows it. The
+    default remains strict: subject-scoped operations require exactly one consent reference.
     """
 
     REQUIRED_FIELDS = (
@@ -85,9 +84,18 @@ class MiaExecutionPort:
         "trace_id",
     )
 
-    def __init__(self, mia_api: Any, *, expected_runtime_id: str = EXPECTED_RUNTIME_ID):
+    def __init__(
+        self,
+        mia_api: Any,
+        *,
+        expected_runtime_id: str = EXPECTED_RUNTIME_ID,
+        no_consent_operations: Iterable[str] = (),
+        blocked_operations: Iterable[str] = (),
+    ):
         self.mia_api = mia_api
         self.expected_runtime_id = expected_runtime_id
+        self.no_consent_operations = frozenset(no_consent_operations)
+        self.blocked_operations = frozenset(blocked_operations)
 
     @staticmethod
     def _require_nonempty_string(value: Any, field: str) -> str:
@@ -126,8 +134,8 @@ class MiaExecutionPort:
                 f"runtime_id mismatch: expected {self.expected_runtime_id}, got {governed_request['runtime_id']}"
             )
 
-        if governed_request["operation"] == PHASE_10_BLOCKED_OPERATION:
-            raise PortPhaseBoundaryError("ACTIVATE_BUSINESS_PLACE is not authorized in Phase 10")
+        if governed_request["operation"] in self.blocked_operations:
+            raise PortPhaseBoundaryError(f"{governed_request['operation']} is blocked by the current port policy")
 
         scope = self._require_list(governed_request["scope"], "scope")
         evidence_refs = self._require_list(governed_request["evidence_refs"], "evidence_refs")
@@ -149,9 +157,23 @@ class MiaExecutionPort:
             raise PortValidationError("frozen MIA v1.0.0 mapping requires exactly one requested_capability")
 
         subject_id = governed_request["subject_id"]
-        if subject_id is not None and len(consent_refs) != 1:
-            raise PortValidationError("subject-scoped frozen MIA v1.0.0 mapping requires exactly one consent_ref")
-        if subject_id is None and consent_refs:
+        explicit_requires_consent = governed_request.get("requires_consent")
+        requires_consent = subject_id is not None if explicit_requires_consent is None else bool(explicit_requires_consent)
+
+        if subject_id is None and requires_consent:
+            raise PortValidationError("requires_consent cannot be true when subject_id is null")
+
+        if subject_id is not None and requires_consent:
+            if len(consent_refs) != 1:
+                raise PortValidationError("subject-scoped consent-required mapping requires exactly one consent_ref")
+        elif subject_id is not None and not requires_consent:
+            if governed_request["operation"] not in self.no_consent_operations:
+                raise PortValidationError(
+                    f"consent bypass is not permitted for operation {governed_request['operation']}"
+                )
+            if consent_refs:
+                raise PortValidationError("consent_refs must be empty when requires_consent is false")
+        elif consent_refs:
             raise PortValidationError("consent_refs must be empty when subject_id is null")
 
         for field, values in (
@@ -169,7 +191,7 @@ class MiaExecutionPort:
 
         if policy_context:
             raise PortValidationError(
-                "policy_context must be empty in Phase 10 because frozen v1.0.0 does not consume caller-supplied policy context"
+                "policy_context must be empty because frozen v1.0.0 does not consume caller-supplied policy context"
             )
 
     def _assert_connected_runtime(self) -> None:
@@ -187,10 +209,16 @@ class MiaExecutionPort:
         mapped["capability_id"] = governed_request["requested_capabilities"][0]
         mapped["authority_id"] = governed_request["authority_refs"][0]
 
+        requires_consent = governed_request.get("requires_consent")
+        if requires_consent is None:
+            requires_consent = governed_request["subject_id"] is not None
+
         if governed_request["consent_refs"]:
             mapped["consent_id"] = governed_request["consent_refs"][0]
+        else:
+            mapped.pop("consent_id", None)
 
-        mapped["requires_consent"] = governed_request["subject_id"] is not None
+        mapped["requires_consent"] = bool(requires_consent)
         return mapped
 
     def execute(self, governed_request: Mapping[str, Any]) -> MiaPortResult:

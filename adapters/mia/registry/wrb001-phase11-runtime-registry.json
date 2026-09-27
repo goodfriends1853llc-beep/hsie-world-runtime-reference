@@ -1,0 +1,74 @@
+{
+  "runtime_id": "MIA-RUNTIME-v1",
+  "registry_version": "mia_runtime_registry_v1.0.0+wrb001.phase11.1",
+  "layers": [
+    "identity",
+    "persistence",
+    "state",
+    "evidence",
+    "authority",
+    "consent",
+    "policy",
+    "context",
+    "planning",
+    "capability_gateway",
+    "execution",
+    "effect",
+    "commit",
+    "receipt",
+    "snapshot",
+    "transcript",
+    "replay",
+    "diff",
+    "verification"
+  ],
+  "required_layers": [
+    "identity",
+    "persistence",
+    "state",
+    "evidence",
+    "authority",
+    "consent",
+    "policy",
+    "context",
+    "planning",
+    "capability_gateway",
+    "execution",
+    "effect",
+    "commit",
+    "receipt",
+    "snapshot",
+    "transcript",
+    "replay",
+    "diff",
+    "verification"
+  ],
+  "capabilities": [
+    {
+      "capability_id": "local.core",
+      "provider_id": "local.deterministic",
+      "active": true
+    },
+    {
+      "capability_id": "model.sim.a",
+      "provider_id": "model.sim.a",
+      "active": true
+    },
+    {
+      "capability_id": "model.sim.b",
+      "provider_id": "model.sim.b",
+      "active": true
+    },
+    {
+      "capability_id": "world.business.activation",
+      "provider_id": "wrb001.business.activation.local",
+      "active": true
+    }
+  ],
+  "governance": {
+    "preflight_required": true,
+    "unknown_capability_denied": true,
+    "direct_store_mutation_by_consumers": false,
+    "model_output_auto_promotes_to_truth": false
+  }
+}

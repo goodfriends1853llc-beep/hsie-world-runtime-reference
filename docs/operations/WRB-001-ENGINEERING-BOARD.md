@@ -11,7 +11,7 @@
 - [x] PHASE 8 — Frozen MIA verification
 - [x] PHASE 9 — MIA API inspection
 - [x] PHASE 10 — MiaExecutionPort
-- [ ] PHASE 11 — ACTIVATE_BUSINESS_PLACE — NEXT
+- [~] PHASE 11 — ACTIVATE_BUSINESS_PLACE — IMPLEMENTED / VALIDATION PENDING
 - [ ] PHASE 12 — Receipt/restart proof
 - [ ] PHASE 13 — Static deployment
 - [ ] PHASE 14 — Independent acceptance
@@ -19,8 +19,8 @@
 
 ## Current control
 
-The bounded compatibility port has been tested against the exact frozen MIA Runtime v1.0.0 artifact.
+Frozen MIA source remains unchanged.
 
-`ACTIVATE_BUSINESS_PLACE` remains unexecuted.
+Phase 11 uses an external derived registry and a World-owned capability provider through the frozen runtime's existing extension point.
 
-Phase 11 must introduce the operation-specific capability and governed registry admission without modifying the frozen MIA package.
+No World Runtime receipt is authorized yet.
