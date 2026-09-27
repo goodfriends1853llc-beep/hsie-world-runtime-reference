@@ -10,7 +10,7 @@
 - [x] PHASE 7 — Local Runtime / Request / Event
 - [x] PHASE 8 — Frozen MIA verification
 - [x] PHASE 9 — MIA API inspection
-- [ ] PHASE 10 — MiaExecutionPort — NEXT
+- [~] PHASE 10 — MiaExecutionPort — IMPLEMENTED / VALIDATION PENDING
 - [ ] PHASE 11 — ACTIVATE_BUSINESS_PLACE
 - [ ] PHASE 12 — Receipt/restart proof
 - [ ] PHASE 13 — Static deployment
@@ -19,10 +19,8 @@
 
 ## Current control
 
-`WRB-001-IF-002` is open as an implementation compatibility finding.
+Phase 10 port code compensates for the frozen v1.0.0 compatibility findings without modifying MIA.
 
-No architecture amendment is currently required.
+`ACTIVATE_BUSINESS_PLACE` remains explicitly blocked.
 
-Phase 10 must compensate for the frozen v1.0.0 caller/runtime/plural-field enforcement gaps at the port boundary without modifying the frozen MIA package.
-
-`ACTIVATE_BUSINESS_PLACE` remains unexecuted.
+No World Runtime receipt is created by the port.
