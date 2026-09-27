@@ -26,3 +26,12 @@ jobs:
 
       - name: Verify bounded compatibility port
         run: python -m unittest tests.phase10.test_mia_execution_port -v
+
+      - name: Upload exact Phase 10 port source
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrb001-phase10-port-source
+          path: |
+            adapters/mia_execution_port.py
+            tests/phase10/verify_port_with_frozen_mia.py
+          if-no-files-found: error
