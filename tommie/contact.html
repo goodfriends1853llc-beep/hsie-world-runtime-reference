@@ -18,8 +18,8 @@
     .field textarea{min-height:150px;resize:vertical}
     .request-actions{display:flex;flex-wrap:wrap;gap:10px}
     .request-actions button{cursor:pointer}
-    .generated{margin-top:24px;padding:20px;border:1px solid #333;background:#080808;white-space:pre-wrap;color:#d9d9d4}
-    .notice{font-size:12px;color:var(--muted);margin-top:18px}
+    .notice,.privacy-note{font-size:12px;color:var(--muted);margin-top:18px}
+    .privacy-note{margin-top:0}
     .back{display:inline-block;margin-top:28px;color:var(--red);font-size:11px;font-weight:900;letter-spacing:.12em}
   </style>
 </head>
@@ -28,23 +28,43 @@
   <main class="contact-shell">
     <p class="eyebrow" id="modeLabel">CONTACT</p>
     <h1 id="pageTitle">Send an inquiry.</h1>
-    <p class="contact-copy" id="pageCopy">
-      Fill this out and your phone can prepare the request for sharing or copy it for you.
-    </p>
+    <p class="contact-copy" id="pageCopy">Send this form and it will be delivered to Tommie automatically.</p>
 
-    <form class="request-form" id="requestForm">
+    <form
+      class="request-form"
+      id="requestForm"
+      action="https://formsubmit.co/TommieBellamy.media@gmail.com"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" id="subjectField" value="Explore Brevard — New Inquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/thanks.html">
+      <input type="hidden" name="_url" value="https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/contact.html">
+      <input type="hidden" name="_autoresponse" value="Your Explore Brevard request was received. Tommie will review it and respond using the contact information you provided. Booking requests are not confirmed until Tommie replies.">
+      <input type="hidden" name="source" value="Explore Brevard">
+      <input type="hidden" name="request_type" id="requestTypeField" value="MESSAGE / INQUIRY">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-10000px;opacity:0;height:1px;width:1px" aria-hidden="true">
+
       <div class="field">
         <label for="name">YOUR NAME</label>
         <input id="name" name="name" autocomplete="name" required>
       </div>
+
       <div class="field">
         <label for="business">BUSINESS / PROJECT</label>
         <input id="business" name="business" autocomplete="organization">
       </div>
+
       <div class="field">
-        <label for="contact">BEST WAY TO REACH YOU</label>
-        <input id="contact" name="contact" placeholder="Phone, email, social handle, etc." required>
+        <label for="email">EMAIL</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
       </div>
+
+      <div class="field">
+        <label for="phone">PHONE / TEXT NUMBER — OPTIONAL</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+
       <div class="field">
         <label for="service">WHAT ARE YOU INTERESTED IN?</label>
         <select id="service" name="service">
@@ -58,23 +78,23 @@
           <option>General Inquiry</option>
         </select>
       </div>
+
       <div class="field">
         <label for="message">WHAT DO YOU NEED?</label>
-        <textarea id="message" name="message" placeholder="Tell Tommie what you're trying to build, fix, book, or explore."></textarea>
+        <textarea id="message" name="message" placeholder="Tell Tommie what you're trying to build, fix, book, or explore." required></textarea>
       </div>
+
       <div class="request-actions">
-        <button class="button button-primary" type="submit">PREPARE REQUEST</button>
-        <button class="button button-ghost" type="button" id="copyButton" hidden>COPY REQUEST</button>
-        <button class="button button-ghost" type="button" id="shareButton" hidden>SHARE REQUEST</button>
+        <button class="button button-primary" type="submit" id="submitButton">SEND REQUEST</button>
       </div>
+
+      <p class="privacy-note">This form uses FormSubmit to deliver your information to Tommie by email. Do not include passwords, payment-card details, or other sensitive information.</p>
     </form>
 
-    <div class="generated" id="generated" hidden></div>
-    <p class="notice" id="notice">
-      This page prepares a request only. A booking request is not a confirmed appointment until Tommie responds and confirms it.
-    </p>
+    <p class="notice">A booking request is not a confirmed appointment until Tommie responds and confirms it.</p>
     <a class="back" href="./">← BACK TO TOMMIE'S PUBLIC HUB</a>
   </main>
-  <script src="./contact.js"></script>
+
+  <script src="./contact.js?v=20260927-5"></script>
 </body>
 </html>
