@@ -1,15 +1,21 @@
 {
-  "build_id": "WRB-001-PHASE-15-MAIN-STREET-STATIC-001",
-  "source_commit": "37ee9ef4292ab86ca18dd0966c8b673c3c286ce1",
+  "build_id": "WRB-001-PHASE-15-CROSSOVER-STATIC-001",
+  "source_commit": "7fe098417fb96b100bf04dbaa084f8d8a8d9cc11",
   "schema_version": "hsie-world-reference/0.1",
   "runtime_version": "LOCAL_RUNTIME_NOT_HOSTED",
-  "client_version": "phase-4-reconstruction",
-  "phase": 13,
-  "status": "STATIC_REFERENCE_DEPLOYMENT_CANDIDATE",
-  "purpose": "Current static public pilot build with Human Systems Architect entry and Explore Brevard Main Street second node. Not production deployment.",
+  "client_version": "phase-15-crossover-static",
+  "phase": 15,
+  "status": "DEPLOYED_PUBLIC_PILOT",
+  "purpose": "Static public pilot containing the Human Systems Architect arrival hub, Explore Brevard Main Street, Lagoon Nights, one deliberate crossover portal, and a separate post-apocalyptic Brevard entry.",
   "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
-  "semantic_snapshot_id": "snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95",
-  "semantic_content_digest": "sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95",
+  "semantic_snapshot_id": "snapshot:sha256:24337e36ec4b9be3eb22cf450e6b0fc2d99c70ba0254dc72251d98a89e956752",
+  "semantic_content_digest": "sha256:24337e36ec4b9be3eb22cf450e6b0fc2d99c70ba0254dc72251d98a89e956752",
+  "visual_domains": {
+    "explore_brevard": "Public community / business spatial world.",
+    "post_apocalyptic_brevard": "Separate alternate-world narrative layer.",
+    "crossover_rule": "Connected by one deliberate portal; do not visually collapse the two domains."
+  },
+  "quality_boundary": "8192x4096 browser derivatives may be used for delivery. Delivery resolution does not imply native 8K generated detail.",
   "boundaries": {
     "static_reference_only": true,
     "mia_service_hosted": false,
@@ -17,5 +23,6 @@
     "dynamic_write_api_hosted": false
   },
   "predecessor_commit": "29326120dffa33a94a9489ed41874ce9d5163328",
-  "phase5_test_surface_prep_commit": "30f9b8f371a7c22a3dfcfde30d308c6c808402f9"
+  "crossover_integration_commit": "32027c410907f214597ed208eeb1760b44e2d2e2",
+  "verified_head_before_metadata_refresh": "7fe098417fb96b100bf04dbaa084f8d8a8d9cc11"
 }

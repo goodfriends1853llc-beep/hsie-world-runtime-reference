@@ -1,19 +1,69 @@
 {
-  "artifact_id": "WRB-001-PHASE-15-TOMMIE-ARRIVAL-ASSET-MANIFEST-001",
-  "scene": "Tommie Bellamy — Explore Brevard Arrival Hub",
+  "artifact_id": "WRB-001-PHASE-15-EXPLORE-BREVARD-360-ASSET-MANIFEST-001",
+  "scene_family": "Explore Brevard public pilot + crossover + alternate Brevard",
   "projection": "equirectangular",
+  "delivery_rule": "Browser delivery dimensions and source-generation detail are separate facts. An 8192x4096 derivative must not be described as native 8K generated detail when its source was smaller.",
   "seam_qc": {
-    "method": "periodic edge blend plus explicit first/last-column equality before derivatives",
-    "edge_mean_absolute_difference": 0.6438802083333334,
-    "edge_max_channel_difference": 6
+    "arrival_hub": {
+      "method": "periodic edge blend plus explicit first/last-column equality before derivatives",
+      "edge_mean_absolute_difference": 0.6438802083333334,
+      "edge_max_channel_difference": 6,
+      "status": "MEASURED"
+    },
+    "other_runtime_derivatives": {
+      "processing_recorded": true,
+      "visual_phone_wrap_verification": "PENDING_DIRECT_DEVICE_OBSERVATION",
+      "note": "Representation records preserve seam-processing provenance; this manifest does not elevate processing provenance into an unobserved visual-verification claim."
+    }
   },
   "files": [
     {
       "path": "assets/360/explore-brevard-tommie-arrival-360-8k.webp",
+      "representation_id": "representation:hsa-arrival-hub-360-v1",
       "role": "PRIMARY_BROWSER_PANORAMA",
       "width": 8192,
       "height": 4096,
       "sha256": "9c29562302de37facb43431e444560a2d19cb554e4db5f3177874bc84253e9a7"
+    },
+    {
+      "path": "assets/360/explore-brevard-main-street-360-8k.webp",
+      "representation_id": "representation:explore-brevard-main-street-360-v1",
+      "role": "MAIN_STREET_PRIMARY_BROWSER_PANORAMA",
+      "width": 8192,
+      "height": 4096,
+      "source_generation_record": "1774x887",
+      "delivery_note": "Runtime upscale / delivery derivative; not native 8K generated detail.",
+      "sha256": "ce856b6eadfb5f1cb009b2c535fac0567cb74077800a94a069aaa4b48712b05b"
+    },
+    {
+      "path": "assets/360/explore-brevard-lagoon-nights-360-8k.webp",
+      "representation_id": "representation:lagoon-nights-360-v1",
+      "role": "LAGOON_NIGHTS_PRIMARY_BROWSER_PANORAMA",
+      "width": 8192,
+      "height": 4096,
+      "source_generation_record": "1774x887",
+      "delivery_note": "Runtime upscale / delivery derivative; not native 8K generated detail.",
+      "sha256": "a1e37775c9e3b6314bf4ffdf41183a2e4464c22c9ac295dd62d76dcdd26609df"
+    },
+    {
+      "path": "assets/360/explore-brevard-crossover-portal-360-8k.webp",
+      "representation_id": "representation:crossover-portal-360-v1",
+      "role": "CROSSOVER_PORTAL_PRIMARY_BROWSER_PANORAMA",
+      "width": 8192,
+      "height": 4096,
+      "source_generation_record": "1774x887",
+      "delivery_note": "Runtime upscale / delivery derivative; not native 8K generated detail.",
+      "sha256": "dc4d5dcec1e8b0f076c1bcd6d1cf99a033012dc361ab17f32ab21fbb4ef8a6d2"
+    },
+    {
+      "path": "assets/360/explore-brevard-post-apocalyptic-crossroads-360-8k.webp",
+      "representation_id": "representation:post-apocalyptic-crossroads-360-v1",
+      "role": "POST_APOCALYPTIC_CROSSROADS_PRIMARY_BROWSER_PANORAMA",
+      "width": 8192,
+      "height": 4096,
+      "source_generation_record": "1774x887",
+      "delivery_note": "Runtime upscale / delivery derivative; not native 8K generated detail.",
+      "sha256": "4f74b9c03bab1569db2f61a296d7c77257fd8adbf90d9fda076310b8133613b7"
     },
     {
       "path": "assets/360/explore-brevard-tommie-arrival-360-meta.jpg",
@@ -35,45 +85,15 @@
       "width": 1024,
       "height": 2048,
       "sha256": "714f10a950ec1666ca8dd116297d161a951949fda02706b67214854c4e12c7db"
-    },
-    {
-      "path": "assets/360/explore-brevard-lagoon-nights-360-8k.webp",
-      "role": "LAGOON_NIGHTS_PRIMARY_BROWSER_PANORAMA",
-      "width": 8192,
-      "height": 4096,
-      "sha256": "a1e37775c9e3b6314bf4ffdf41183a2e4464c22c9ac295dd62d76dcdd26609df"
     }
   ],
-  "hotspot_alignment": [
-    {
-      "word": "EXPLORE BREVARD",
-      "yaw": -147,
-      "action": "MOVE to existing Explore Brevard street"
-    },
-    {
-      "word": "ABOUT",
-      "yaw": -101,
-      "action": "Open Tommie public profile"
-    },
-    {
-      "word": "SERVICES",
-      "yaw": -62,
-      "action": "Open Tommie service menu"
-    },
-    {
-      "word": "FOUNDING BUSINESSES",
-      "yaw": 51,
-      "action": "Open founding-business pilot information"
-    },
-    {
-      "word": "BOOK",
-      "yaw": 117,
-      "action": "Open booking-request composer"
-    },
-    {
-      "word": "MESSAGE",
-      "yaw": 154,
-      "action": "Open message composer"
-    }
-  ]
+  "hotspot_rule": {
+    "mode": "ICON_ONLY",
+    "semantic_labels_live_in": [
+      "data",
+      "aria-label",
+      "accessibility metadata"
+    ],
+    "floating_words_over_panorama": false
+  }
 }

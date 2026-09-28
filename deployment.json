@@ -1,24 +1,38 @@
 {
   "deployment_id": "WRB-001-STATIC-DEPLOYMENT-001",
-  "phase": "WRB-001 / PHASE 13",
-  "status": "DEPLOYMENT_CANDIDATE",
+  "phase": "WRB-001 / PHASE 15",
+  "status": "DEPLOYED_PUBLIC_PILOT",
   "deployment_class": "STATIC_REFERENCE_ONLY",
   "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
   "source_repository": "goodfriends1853llc-beep/hsie-world-runtime-reference",
-  "deployment_source_commit": "37ee9ef4292ab86ca18dd0966c8b673c3c286ce1",
+  "deployment_source_commit": "7fe098417fb96b100bf04dbaa084f8d8a8d9cc11",
+  "metadata_scope": "Deployment metadata refreshed after crossover integration; this record does not make the commit self-referential.",
   "predecessor": {
     "system": "BREVARD-COM-DEMO-001",
     "commit": "29326120dffa33a94a9489ed41874ce9d5163328"
   },
   "semantic_state": {
-    "snapshot_id": "snapshot:sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95",
-    "content_digest": "sha256:6aa357c482dee7186c691b9bc3a2a8b474dc6d72a65a3c3f2a5cc8d3eff2dc95"
+    "snapshot_id": "snapshot:sha256:24337e36ec4b9be3eb22cf450e6b0fc2d99c70ba0254dc72251d98a89e956752",
+    "content_digest": "sha256:24337e36ec4b9be3eb22cf450e6b0fc2d99c70ba0254dc72251d98a89e956752"
   },
   "entry": {
     "root_path": "/",
     "client_path": "/client/",
     "entry_place_ref": "place:hsa-arrival-hub",
     "entry_representation_ref": "representation:hsa-arrival-hub-360-v1"
+  },
+  "public_flow": [
+    "place:hsa-arrival-hub",
+    "place:explore-brevard-main-street",
+    "place:lagoon-nights",
+    "place:crossover-portal",
+    "place:post-apocalyptic-crossroads"
+  ],
+  "crossover_boundary": {
+    "normal_domain": "EXPLORE_BREVARD",
+    "alternate_domain": "POST_APOCALYPTIC_BREVARD",
+    "deliberate_bridge_place_ref": "place:crossover-portal",
+    "transition_copy": "SAME LAND. DIFFERENT OUTCOME."
   },
   "boundaries": {
     "static_reference_only": true,
@@ -28,5 +42,5 @@
     "dynamic_write_api_hosted": false,
     "production_ready": false
   },
-  "claim_ceiling": "This deployment exposes the static WRB-001 reference client and repository-hosted static data only. GitHub Pages is not running MIA, the local World Runtime, the business-activation provider, or a production backend."
+  "claim_ceiling": "This deployment exposes the static Explore Brevard public pilot, repository-hosted static world data, and the crossover into the alternate post-apocalyptic narrative layer. GitHub Pages is not running MIA, the local World Runtime, a dynamic write API, or a production backend."
 }
