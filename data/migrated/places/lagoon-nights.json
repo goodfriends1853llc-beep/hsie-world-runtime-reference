@@ -1,0 +1,33 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "place_id": "place:lagoon-nights",
+  "place_type": "PUBLIC_EXPERIENCE",
+  "status": "ACTIVE",
+  "display_name": "Lagoon Nights — Moonlit Waterfront",
+  "parent_place_ref": null,
+  "district_ref": null,
+  "public_visibility": "PUBLIC",
+  "steward_ref": null,
+  "spaces": [
+    {
+      "space_id": "space:arrival",
+      "space_type": "ARRIVAL",
+      "display_name": "Moonlit Waterfront Arrival",
+      "status": "ACTIVE",
+      "representation_refs": [
+        "representation:lagoon-nights-360-v1"
+      ],
+      "legacy_refs": [
+        "phase15:lagoon-nights"
+      ]
+    }
+  ],
+  "representation_refs": [
+    "representation:lagoon-nights-360-v1"
+  ],
+  "created_event_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "WRB-001-PHASE-15-LAGOON-NIGHTS"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:lagoon-nights-360-v1",
+  "place_ref": "place:lagoon-nights",
+  "space_ref": "space:arrival",
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "assets/360/explore-brevard-lagoon-nights-360-8k.webp",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "PILOT_PUBLIC",
+  "integrity_digest": "sha256:a1e37775c9e3b6314bf4ffdf41183a2e4464c22c9ac295dd62d76dcdd26609df",
+  "legacy_refs": [
+    "generated-source:1774x887",
+    "runtime-upscale:8192x4096",
+    "phase15:moonlit-waterfront-locked-look"
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": 0,
+      "yaw": 0,
+      "hfov": 92,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-lagoon-nights-back-to-main-street",
+        "interaction_kind": "MOVE",
+        "label": "Back to Main Street",
+        "pitch": -5,
+        "yaw": 180,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:lagoon-nights-to-main-street",
+        "legacy_refs": []
+      }
+    ]
+  }
+}

@@ -5,7 +5,8 @@
     "places/hsa-arrival-hub.json",
     "places/brevard-demo-street.json",
     "places/lagoon-cuts-demo.json",
-    "places/explore-brevard-main-street.json"
+    "places/explore-brevard-main-street.json",
+    "places/lagoon-nights.json"
   ],
   "businesses": [
     "businesses/hsa-owner-pilot.json",
@@ -16,7 +17,8 @@
     "representations/street-001.json",
     "representations/lagoon-exterior.json",
     "representations/lagoon-interior.json",
-    "representations/explore-brevard-main-street.json"
+    "representations/explore-brevard-main-street.json",
+    "representations/lagoon-nights.json"
   ],
   "topology": [
     "topology/street-001-to-hsa-arrival.json",
@@ -26,6 +28,8 @@
     "topology/lagoon-exterior-to-interior.json",
     "topology/lagoon-interior-to-exterior.json",
     "topology/hsa-arrival-to-explore-brevard-main-street.json",
-    "topology/explore-brevard-main-street-to-hsa-arrival.json"
+    "topology/explore-brevard-main-street-to-hsa-arrival.json",
+    "topology/main-street-to-lagoon-nights.json",
+    "topology/lagoon-nights-to-main-street.json"
   ]
 }

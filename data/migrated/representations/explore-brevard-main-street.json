@@ -7,14 +7,15 @@
   "asset_ref": "assets/360/explore-brevard-main-street-360-8k.webp",
   "projection": "equirectangular",
   "renderer_adapter": "pannellum-360",
-  "version": 2,
+  "version": 3,
   "status": "PILOT_PUBLIC",
   "integrity_digest": "sha256:ce856b6eadfb5f1cb009b2c535fac0567cb74077800a94a069aaa4b48712b05b",
   "legacy_refs": [
     "generated-source:1774x887",
     "runtime-upscale:8192x4096",
     "seam-edge-blend:source-master",
-    "phase15:icon-only-hotspot-cleanup"
+    "phase15:icon-only-hotspot-cleanup",
+    "phase15:lagoon-nights-transition"
   ],
   "presentation": {
     "coverage": "360x180",
@@ -74,6 +75,16 @@
         "yaw": 104,
         "target_type": "BUSINESS_EXTERNAL_ACTION",
         "target_ref": "action:hsa:message",
+        "legacy_refs": []
+      },
+      {
+        "anchor_id": "move-main-street-to-lagoon-nights",
+        "interaction_kind": "MOVE",
+        "label": "Lagoon Nights",
+        "pitch": -2,
+        "yaw": 58,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:main-street-to-lagoon-nights",
         "legacy_refs": []
       }
     ]

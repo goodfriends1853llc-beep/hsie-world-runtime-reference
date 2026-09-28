@@ -35,6 +35,13 @@
       "width": 1024,
       "height": 2048,
       "sha256": "714f10a950ec1666ca8dd116297d161a951949fda02706b67214854c4e12c7db"
+    },
+    {
+      "path": "assets/360/explore-brevard-lagoon-nights-360-8k.webp",
+      "role": "LAGOON_NIGHTS_PRIMARY_BROWSER_PANORAMA",
+      "width": 8192,
+      "height": 4096,
+      "sha256": "a1e37775c9e3b6314bf4ffdf41183a2e4464c22c9ac295dd62d76dcdd26609df"
     }
   ],
   "hotspot_alignment": [

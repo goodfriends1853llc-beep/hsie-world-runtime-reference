@@ -12,6 +12,7 @@ function iconForAnchor(anchor) {
   const label = (anchor.label || '').toLowerCase();
 
   if (anchor.interaction_kind === 'MOVE' && label.includes('back')) return '↩';
+  if (label.includes('lagoon') || label.includes('moonlit')) return '☾';
   if (label.includes('about')) return 'ⓘ';
   if (label.includes('founding') || label.includes('business directory')) return '★';
   if (label.includes('book') || label.includes('appointment')) return '↗';
