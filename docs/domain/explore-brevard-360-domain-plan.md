@@ -1,59 +1,65 @@
-# Explore Brevard 360 — Public Domain & Link Architecture
+# Explore Brevard 360 — Public Link Architecture
 
 **Record ID:** EB360-DOMAIN-001  
-**Version:** v1.0.0  
+**Version:** v1.1.0  
 **Owner-selected public name:** Explore Brevard 360  
-**Selected domain:** `explorebrevard360.com`  
-**Availability check:** AVAILABLE at time of Namecheap check on 2026-09-28  
-**Observed first-year purchase price at check:** USD $11.28  
-**Registration state:** NOT YET CONFIRMED / NOT YET OWNED
+**Active hosting cost:** $0 GitHub Pages  
+**Active base URL:** `https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/`
 
-Availability is not ownership. The domain becomes controlled by the project only after successful registrar purchase and DNS configuration.
+## Canonical active links
 
-## Canonical public links after domain activation
+| Purpose | Active URL |
+|---|---|
+| Main entry | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/ |
+| Direct world | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/world/ |
+| Founding-business intake | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/join/ |
+| Founding alias | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/founding/ |
+| Business information | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/business/ |
+| About | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/about/ |
+| Contact | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/contact/ |
+| Book / request appointment | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/book/ |
+| Submission receipt | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/thanks/ |
+| Pilot status | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/status/ |
+| Public link hub | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/links/ |
+| Privacy | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/privacy/ |
+| Tommie / HSA | https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/ |
 
-| Purpose | Public URL | Current repository target |
-|---|---|---|
-| Main world / home | https://explorebrevard360.com/ | /client/ via root entry |
-| World alias | https://explorebrevard360.com/world/ | /client/ |
-| Founding business intake | https://explorebrevard360.com/join/ | /tommie/founding-intake.html |
-| Founding business alias | https://explorebrevard360.com/founding/ | /tommie/founding-intake.html |
-| Business information | https://explorebrevard360.com/business/ | /tommie/#founding-businesses |
-| General contact | https://explorebrevard360.com/contact/ | /tommie/contact.html?mode=message |
-| Book / request appointment | https://explorebrevard360.com/book/ | /tommie/contact.html?mode=book |
-| About Explore Brevard | https://explorebrevard360.com/about/ | /tommie/explore-brevard.html#about |
-| Tommie / Human Systems Architect hub | https://explorebrevard360.com/tommie/ | /tommie/ |
+These path names are now the public route contract. Legacy pages route people into the friendly paths so older links do not need to be discarded.
 
-## Routing policy
+## Selected custom domain
 
-- Public-facing messages should use the shortest human-readable route that matches the task.
-- Business outreach should use `/join/`.
-- General promotion should use the root domain.
-- Do not expose repository paths unless needed for technical evidence.
-- Existing GitHub Pages URLs remain valid fallback infrastructure until the custom domain is fully activated.
-- Do not rewrite historical receipts or evidence to pretend the custom domain existed before activation.
+`explorebrevard360.com`
 
-## Deferred until registration is confirmed
+Registrar check on 2026-09-28 returned the domain as available, with an observed first-year Namecheap purchase price of USD $11.28.
 
-Do **not** add a GitHub Pages `CNAME` file or switch public copy to the custom domain until the domain is actually purchased and DNS control is available.
+**State:** AVAILABLE AT LAST CHECK / NOT OWNED / NOT CONFIGURED
 
-After purchase:
-1. configure registrar DNS for GitHub Pages;
-2. configure `explorebrevard360.com` as the GitHub Pages custom domain;
-3. add the repository `CNAME` record if required by the Pages configuration;
-4. wait for DNS propagation / certificate provisioning;
-5. enforce HTTPS when GitHub reports the certificate ready;
-6. verify every route above on mobile;
-7. then update outreach templates and public copy from the GitHub Pages fallback URL to the custom domain.
+Availability ≠ ownership. No `CNAME` has been added because the project does not control the domain yet.
 
-## Future reserved route families
+## Zero-cost position
 
-These are naming reservations only. Do not publish them until the corresponding functionality exists.
+The active route architecture works now for $0 on the existing GitHub Pages host.
 
-- `/directory/` — business directory
-- `/events/` — public events layer
-- `/sponsor/` — sponsor/investor information
-- `/business/<slug>/` — direct business destinations
-- `/world/<place>/` — direct world-place routes if the runtime later supports stable deep links
+A shorter free hostname such as `explorebrevard360.github.io` would require a GitHub user or organization actually named `explorebrevard360` and a compatible Pages repository under that account. That hostname is **not** claimed as active until such an account/organization and repository exist.
 
-Reality ≠ Representation: reserving a route name does not mean the feature exists.
+## Future host swap
+
+When a shorter host is legitimately controlled, the path contract remains:
+
+`/`  
+`/world/`  
+`/join/`  
+`/founding/`  
+`/business/`  
+`/about/`  
+`/contact/`  
+`/book/`  
+`/thanks/`  
+`/status/`  
+`/links/`  
+`/privacy/`  
+`/tommie/`
+
+The host may change; the route meanings do not.
+
+Reality ≠ Representation: reserving or documenting a hostname does not mean it is owned, configured, or enforced.

@@ -31,7 +31,8 @@ assert(build.semantic_snapshot_id === expectedSnapshot, 'client build semantic s
 assert(build.boundaries.mia_service_hosted === false, 'client build must not claim MIA hosting');
 assert(build.boundaries.world_runtime_service_hosted === false, 'client build must not claim World Runtime hosting');
 
-assert(root.includes('url=./client/'), 'root entry does not redirect to client');
+assert(root.includes('Explore Brevard 360'), 'root entry branding missing');
+assert(root.includes('./client/src/app.js'), 'root entry does not load the world application');
 assert(client.includes('./src/app.js'), 'client entry does not load reference application');
 assert(client.includes('ONE SPACE COAST. TWO WORLDS.'), 'crossover entry copy missing');
 assert(adapter.includes("setAttribute('aria-label', args.label)"), 'hotspot accessibility label missing');

@@ -1,0 +1,25 @@
+{
+  "record_id": "EB360-PUBLIC-LINKS-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "brand": "Explore Brevard 360",
+  "active_base_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+  "routes": {
+    "home": "/",
+    "world": "/world/",
+    "join": "/join/",
+    "founding": "/founding/",
+    "business": "/business/",
+    "about": "/about/",
+    "contact": "/contact/",
+    "book": "/book/",
+    "thanks": "/thanks/",
+    "status": "/status/",
+    "links": "/links/",
+    "privacy": "/privacy/",
+    "tommie": "/tommie/"
+  },
+  "selected_future_custom_domain": "explorebrevard360.com",
+  "selected_future_custom_domain_state": "AVAILABLE_AT_LAST_CHECK_NOT_OWNED",
+  "claim_ceiling": "This record governs route naming. It does not prove ownership or control of any future hostname."
+}

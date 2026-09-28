@@ -30,5 +30,23 @@
     "local_date": "2026-09-27",
     "platform": "iPhone mobile browser",
     "note": "The owner completed the live public-world test and reported that everything worked. Screenshots supplied during the verification session show successful mobile rendering across the active world flow."
+  },
+  "public_brand": "Explore Brevard 360",
+  "link_architecture": {
+    "version": "1.0.0",
+    "status": "ACTIVE",
+    "home": "/",
+    "world": "/world/",
+    "founding_business_intake": "/join/",
+    "founding_alias": "/founding/",
+    "business_information": "/business/",
+    "about": "/about/",
+    "contact": "/contact/",
+    "booking": "/book/",
+    "receipt": "/thanks/",
+    "public_status": "/status/",
+    "link_hub": "/links/",
+    "privacy": "/privacy/",
+    "owner_hub": "/tommie/"
   }
 }

@@ -63,5 +63,28 @@
       "return topology"
     ],
     "epistemic_ceiling": "Owner-confirmed field verification with screenshot evidence. This record does not claim independent automated observation of every camera angle, seam, network condition, or external third-party form delivery."
+  },
+  "public_brand": "Explore Brevard 360",
+  "public_route_architecture": {
+    "host_state": "ZERO_COST_GITHUB_PAGES_ACTIVE",
+    "active_base_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+    "routes": {
+      "home": "/",
+      "world": "/world/",
+      "join": "/join/",
+      "founding_alias": "/founding/",
+      "business": "/business/",
+      "about": "/about/",
+      "contact": "/contact/",
+      "book": "/book/",
+      "thanks": "/thanks/",
+      "status": "/status/",
+      "links": "/links/",
+      "privacy": "/privacy/",
+      "tommie": "/tommie/"
+    },
+    "selected_custom_domain": "explorebrevard360.com",
+    "custom_domain_state": "AVAILABLE_AT_LAST_REGISTRAR_CHECK_NOT_OWNED",
+    "free_vanity_hostname_state": "NOT_CREATED"
   }
 }
