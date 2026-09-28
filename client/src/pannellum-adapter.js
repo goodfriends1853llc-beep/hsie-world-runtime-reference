@@ -26,11 +26,12 @@ function iconForAnchor(anchor) {
 }
 
 export class PannellumRendererAdapter {
-  constructor({ containerId, resolveAssetUrl, onInteraction, onSceneChange, onError }) {
+  constructor({ containerId, resolveAssetUrl, onInteraction, onSceneChange, onSceneLoad, onError }) {
     this.containerId = containerId;
     this.resolveAssetUrl = resolveAssetUrl;
     this.onInteraction = onInteraction;
     this.onSceneChange = onSceneChange;
+    this.onSceneLoad = onSceneLoad;
     this.onError = onError;
     this.viewer = null;
   }
@@ -39,6 +40,7 @@ export class PannellumRendererAdapter {
     hotSpotDiv.setAttribute('role', 'button');
     hotSpotDiv.setAttribute('tabindex', '0');
     hotSpotDiv.setAttribute('aria-label', args.label);
+    hotSpotDiv.setAttribute('title', args.label);
 
     const button = document.createElement('div');
     button.className = 'hs-icon-button';
@@ -61,6 +63,7 @@ export class PannellumRendererAdapter {
 
   sceneConfig(representation) {
     const presentation = representation.presentation;
+
     return {
       type: 'equirectangular',
       panorama: this.resolveAssetUrl(representation.asset_ref),
@@ -86,6 +89,7 @@ export class PannellumRendererAdapter {
 
   initialize(representations, firstRepresentationId) {
     const scenes = {};
+
     for (const representation of representations) {
       scenes[representation.representation_id] = this.sceneConfig(representation);
     }
@@ -94,7 +98,7 @@ export class PannellumRendererAdapter {
       default: {
         firstScene: firstRepresentationId,
         autoLoad: true,
-        sceneFadeDuration: 700,
+        sceneFadeDuration: 1050,
         orientationOnByDefault: false,
         showZoomCtrl: false,
         showFullscreenCtrl: true,
@@ -106,6 +110,7 @@ export class PannellumRendererAdapter {
     });
 
     this.viewer.on('scenechange', (sceneId) => this.onSceneChange?.(sceneId));
+    this.viewer.on('load', () => this.onSceneLoad?.(this.viewer.getScene()));
     this.viewer.on('error', (message) => this.onError?.(message));
   }
 

@@ -7,30 +7,34 @@ const pageCopy = document.getElementById('pageCopy');
 const service = document.getElementById('service');
 const requestTypeField = document.getElementById('requestTypeField');
 const subjectField = document.getElementById('subjectField');
+const nextField = document.getElementById('nextField');
 const form = document.getElementById('requestForm');
 const submitButton = document.getElementById('submitButton');
 
 const presets = {
   founding: {
     label: 'FOUNDING BUSINESSES',
-    title: 'Ask about founding access.',
-    copy: 'Tell me what your business is and what you want people to be able to do when they reach you inside the spatial world. When you send this form, it is delivered to me automatically.',
+    title: 'PUT YOUR BUSINESS IN THE WORLD.',
+    copy: 'Tell me what you do, how you want to be represented, and what visitors should be able to do when they reach you.',
     service: 'Founding Business / Spatial World',
-    subject: 'Explore Brevard — New Founding Business Lead'
+    subject: 'Explore Brevard — New Founding Business Lead',
+    button: 'SEND FOUNDING REQUEST'
   },
   book: {
     label: 'BOOK / REQUEST APPOINTMENT',
-    title: 'Request an appointment.',
-    copy: 'Choose the service you are interested in and tell me what you need. Sending this creates a real request, but the appointment is not confirmed until I respond.',
+    title: 'START WITH THE PROBLEM.',
+    copy: 'Choose what you need and tell me what you are trying to build, fix, or clarify. I will respond with the next step.',
     service: 'Custom Architecture Session',
-    subject: 'Explore Brevard — New Booking Request'
+    subject: 'Explore Brevard — New Booking Request',
+    button: 'REQUEST A SESSION'
   },
   message: {
     label: 'MESSAGE / INQUIRY',
-    title: 'Send an inquiry.',
-    copy: 'Tell me what you are working on and what kind of help you are looking for. When you send this form, it is delivered to me automatically.',
+    title: 'SEND IT STRAIGHT TO ME.',
+    copy: 'Business, collaboration, question, or idea — leave the details below. Your message comes directly to me by email.',
     service: 'General Inquiry',
-    subject: 'Explore Brevard — New Message'
+    subject: 'Explore Brevard — New Message',
+    button: 'SEND MESSAGE'
   }
 };
 
@@ -42,6 +46,11 @@ pageCopy.textContent = preset.copy;
 service.value = preset.service;
 requestTypeField.value = preset.label;
 subjectField.value = preset.subject;
+submitButton.textContent = preset.button;
+
+const thanksUrl = new URL('./thanks.html', location.href);
+thanksUrl.searchParams.set('mode', mode);
+nextField.value = thanksUrl.href;
 
 form.addEventListener('submit', () => {
   submitButton.disabled = true;

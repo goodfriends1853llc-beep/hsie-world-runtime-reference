@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="./styles.css">
   <style>
     .thanks-shell{min-height:100svh;display:grid;place-items:center;padding:28px}
-    .thanks-card{width:min(100%,720px);border:1px solid var(--line);background:var(--panel);padding:36px}
-    .thanks-card h1{font-size:clamp(44px,8vw,82px);line-height:.92;letter-spacing:-.05em;margin:10px 0 20px}
-    .thanks-card p{color:var(--muted);font-size:18px;max-width:640px}
+    .thanks-card{width:min(100%,700px);border:1px solid var(--line);background:var(--panel);padding:36px}
+    .thanks-card h1{font-size:clamp(44px,8vw,78px);line-height:.92;letter-spacing:-.05em;margin:10px 0 18px}
+    .thanks-card p{color:var(--muted);font-size:17px;line-height:1.55;max-width:620px}
     .thanks-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
   </style>
 </head>
@@ -19,15 +19,23 @@
   <div class="grain" aria-hidden="true"></div>
   <main class="thanks-shell">
     <section class="thanks-card">
-      <p class="eyebrow">EXPLORE BREVARD</p>
-      <h1>REQUEST SENT.</h1>
-      <p>Your information has been submitted to Tommie. He will respond using the contact information you provided.</p>
-      <p>If you requested an appointment, it is not confirmed until you receive a response.</p>
+      <p class="eyebrow">EXPLORE BREVARD · RECEIPT</p>
+      <h1>MESSAGE RECEIVED.</h1>
+      <p id="receiptCopy">Your request was sent to Tommie. You can keep exploring or head back to the public hub.</p>
       <div class="thanks-actions">
-        <a class="button button-primary" href="../">RETURN TO THE 360 WORLD</a>
+        <a class="button button-primary" href="../">KEEP EXPLORING</a>
         <a class="button button-ghost" href="./">TOMMIE'S PUBLIC HUB</a>
       </div>
     </section>
   </main>
+  <script>
+    const mode = new URLSearchParams(location.search).get('mode');
+    const copy = document.getElementById('receiptCopy');
+    if (mode === 'book') {
+      copy.textContent = 'Your booking request was sent to Tommie. A time is confirmed only after he responds.';
+    } else if (mode === 'founding') {
+      copy.textContent = 'Your founding-business request was sent to Tommie. He will review the details and respond with the next step.';
+    }
+  </script>
 </body>
 </html>

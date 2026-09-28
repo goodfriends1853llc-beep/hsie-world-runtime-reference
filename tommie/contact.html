@@ -8,17 +8,18 @@
   <title>Contact — Tommie Bellamy</title>
   <link rel="stylesheet" href="./styles.css">
   <style>
-    .contact-shell{max-width:860px;margin:0 auto;padding:80px 20px 120px}
-    .contact-shell h1{font-size:clamp(44px,8vw,88px);line-height:.92;letter-spacing:-.055em;margin:12px 0 22px}
-    .contact-copy{max-width:700px;color:var(--muted);font-size:18px}
-    .request-form{display:grid;gap:18px;margin-top:38px;padding:26px;border:1px solid var(--line);background:var(--panel)}
+    .contact-shell{max-width:820px;margin:0 auto;padding:72px 20px 110px}
+    .contact-shell h1{font-size:clamp(44px,8vw,82px);line-height:.92;letter-spacing:-.055em;margin:12px 0 18px}
+    .contact-copy{max-width:660px;color:var(--muted);font-size:17px;line-height:1.55}
+    .delivery-note{margin-top:14px;font-size:11px;letter-spacing:.1em;color:#bdbdb7;text-transform:uppercase}
+    .request-form{display:grid;gap:17px;margin-top:34px;padding:25px;border:1px solid var(--line);background:var(--panel)}
     .field{display:grid;gap:7px}
     .field label{font-size:10px;font-weight:900;letter-spacing:.14em;color:#c9c9c4}
     .field input,.field textarea,.field select{width:100%;background:#070707;color:var(--text);border:1px solid #333;padding:14px 15px;font:inherit;border-radius:0}
-    .field textarea{min-height:150px;resize:vertical}
+    .field textarea{min-height:145px;resize:vertical}
     .request-actions{display:flex;flex-wrap:wrap;gap:10px}
     .request-actions button{cursor:pointer}
-    .notice,.privacy-note{font-size:12px;color:var(--muted);margin-top:18px}
+    .notice,.privacy-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.5}
     .privacy-note{margin-top:0}
     .back{display:inline-block;margin-top:28px;color:var(--red);font-size:11px;font-weight:900;letter-spacing:.12em}
   </style>
@@ -27,8 +28,9 @@
   <div class="grain" aria-hidden="true"></div>
   <main class="contact-shell">
     <p class="eyebrow" id="modeLabel">CONTACT</p>
-    <h1 id="pageTitle">Send an inquiry.</h1>
-    <p class="contact-copy" id="pageCopy">Send this form and it will be delivered to Tommie automatically.</p>
+    <h1 id="pageTitle">Send it straight to me.</h1>
+    <p class="contact-copy" id="pageCopy">Leave the details below. Your request is delivered directly to Tommie by email.</p>
+    <p class="delivery-note">DIRECT INQUIRY · NO ACCOUNT REQUIRED</p>
 
     <form
       class="request-form"
@@ -38,7 +40,7 @@
     >
       <input type="hidden" name="_subject" id="subjectField" value="Explore Brevard — New Inquiry">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/thanks.html">
+      <input type="hidden" name="_next" id="nextField" value="https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/thanks.html">
       <input type="hidden" name="_url" value="https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/contact.html">
       <input type="hidden" name="_autoresponse" value="Your Explore Brevard request was received. Tommie will review it and respond using the contact information you provided. Booking requests are not confirmed until Tommie replies.">
       <input type="hidden" name="source" value="Explore Brevard">
@@ -85,16 +87,16 @@
       </div>
 
       <div class="request-actions">
-        <button class="button button-primary" type="submit" id="submitButton">SEND REQUEST</button>
+        <button class="button button-primary" type="submit" id="submitButton">SEND MESSAGE</button>
       </div>
 
-      <p class="privacy-note">This form uses FormSubmit to deliver your information to Tommie by email. Do not include passwords, payment-card details, or other sensitive information.</p>
+      <p class="privacy-note">Your information is delivered to Tommie by email through a third-party form service. Do not send passwords, payment-card details, or other sensitive information.</p>
     </form>
 
-    <p class="notice">A booking request is not a confirmed appointment until Tommie responds and confirms it.</p>
+    <p class="notice">Booking requests are requests only. A time is confirmed after Tommie responds.</p>
     <a class="back" href="./">← BACK TO TOMMIE'S PUBLIC HUB</a>
   </main>
 
-  <script src="./contact.js?v=20260927-5"></script>
+  <script src="./contact.js?v=20260927-6"></script>
 </body>
 </html>

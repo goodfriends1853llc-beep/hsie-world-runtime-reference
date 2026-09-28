@@ -1,8 +1,8 @@
-import { ReferenceDataStore } from './data-store.js?v=20260927-3';
-import { TopologyResolver } from './topology-resolver.js?v=20260927-3';
-import { InteractionExecutor } from './interaction-executor.js?v=20260927-3';
-import { PannellumRendererAdapter } from './pannellum-adapter.js?v=20260927-3';
-import { resolveAssetUrl } from './config.js?v=20260927-3';
+import { ReferenceDataStore } from './data-store.js?v=20260927-6';
+import { TopologyResolver } from './topology-resolver.js?v=20260927-6';
+import { InteractionExecutor } from './interaction-executor.js?v=20260927-6';
+import { PannellumRendererAdapter } from './pannellum-adapter.js?v=20260927-6';
+import { resolveAssetUrl } from './config.js?v=20260927-6';
 
 const $ = (id) => document.getElementById(id);
 const entryOverlay = $('entryOverlay');
@@ -10,6 +10,10 @@ const enableMotionButton = $('enableMotion');
 const useTouchButton = $('useTouch');
 const motionToggle = $('motionToggle');
 const entryStatus = $('entryStatus');
+const transitionOverlay = $('transitionOverlay');
+const transitionKicker = $('transitionKicker');
+const transitionTitle = $('transitionTitle');
+const transitionSub = $('transitionSub');
 const modal = $('modal');
 const modalType = $('modalType');
 const modalTitle = $('modalTitle');
@@ -22,12 +26,32 @@ let store;
 let renderer;
 let interactionExecutor;
 let currentLocation;
+let transitionStartedAt = 0;
+let entryHintShown = false;
+
+const PLACE_TRANSITIONS = {
+  'place:hsa-arrival-hub': {
+    kicker: 'HOME BASE',
+    title: 'TOMMIE’S HUB',
+    sub: 'Back where the world begins.'
+  },
+  'place:explore-brevard-main-street': {
+    kicker: 'EXPLORE BREVARD',
+    title: 'MAIN STREET',
+    sub: 'The first corridor.'
+  },
+  'place:lagoon-nights': {
+    kicker: 'OFF MAIN STREET',
+    title: 'LAGOON NIGHTS',
+    sub: 'Moonrise on the water.'
+  }
+};
 
 function showToast(message) {
   toast.textContent = message;
   toast.hidden = false;
   window.clearTimeout(showToast.timer);
-  showToast.timer = window.setTimeout(() => { toast.hidden = true; }, 2600);
+  showToast.timer = window.setTimeout(() => { toast.hidden = true; }, 2500);
 }
 
 function closeModal() {
@@ -36,11 +60,45 @@ function closeModal() {
   modalActions.replaceChildren();
 }
 
+function showTransition(placeRef) {
+  const copy = PLACE_TRANSITIONS[placeRef] || {
+    kicker: 'EXPLORE BREVARD',
+    title: store.place(placeRef).display_name,
+    sub: ''
+  };
+
+  transitionKicker.textContent = copy.kicker;
+  transitionTitle.textContent = copy.title;
+  transitionSub.textContent = copy.sub;
+  transitionOverlay.hidden = false;
+  transitionStartedAt = performance.now();
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => transitionOverlay.classList.add('is-visible'));
+  });
+}
+
+function hideTransition() {
+  if (transitionOverlay.hidden) return;
+
+  const minimumHold = 650;
+  const elapsed = performance.now() - transitionStartedAt;
+  const wait = Math.max(0, minimumHold - elapsed);
+
+  window.setTimeout(() => {
+    transitionOverlay.classList.remove('is-visible');
+    window.setTimeout(() => {
+      transitionOverlay.hidden = true;
+    }, 290);
+  }, wait);
+}
+
 function navigate(target) {
+  closeModal();
+  showTransition(target.placeRef);
   currentLocation = { placeRef: target.placeRef, spaceRef: target.spaceRef };
   const representation = store.representationFor(currentLocation.placeRef, currentLocation.spaceRef);
   renderer.transitionRepresentation(representation.representation_id);
-  closeModal();
 }
 
 function showAbout(business) {
@@ -89,39 +147,77 @@ function openExternal(action) {
   if (!opened) window.location.assign(action.destination);
 }
 
+function syncMotionToggle(active) {
+  motionToggle.dataset.active = active ? 'true' : 'false';
+  motionToggle.setAttribute('aria-pressed', active ? 'true' : 'false');
+  motionToggle.setAttribute('aria-label', active ? 'Turn motion look off' : 'Turn motion look on');
+  motionToggle.title = active ? 'Motion look is on' : 'Motion look is off';
+}
+
 async function requestMotionLook() {
   entryStatus.textContent = 'Requesting motion access…';
+
   try {
     if (typeof window.DeviceOrientationEvent !== 'undefined' &&
         typeof window.DeviceOrientationEvent.requestPermission === 'function') {
       const result = await window.DeviceOrientationEvent.requestPermission();
       if (result !== 'granted') {
-        entryStatus.textContent = 'Motion permission was not granted. Touch controls are still available.';
+        entryStatus.textContent = 'Motion was not enabled. Touch still works.';
         return false;
       }
     }
 
     renderer.startOrientation();
-    await new Promise((resolve) => window.setTimeout(resolve, 120));
+    await new Promise((resolve) => window.setTimeout(resolve, 140));
+
     const active = renderer.isOrientationActive();
-    entryStatus.textContent = active
-      ? 'Motion look enabled.'
-      : 'Motion data was not detected. Touch controls remain available.';
+    entryStatus.textContent = active ? 'Motion ready.' : 'Touch mode is ready.';
     return active;
   } catch (error) {
     console.error('Motion permission error:', error);
-    entryStatus.textContent = 'Motion look could not start. Touch controls remain available.';
+    entryStatus.textContent = 'Touch mode is ready.';
     return false;
   }
 }
 
+function preloadPublicScenes() {
+  const ids = [
+    'representation:explore-brevard-main-street-360-v1',
+    'representation:lagoon-nights-360-v1'
+  ];
+
+  for (const id of ids) {
+    const representation = store.representations.get(id);
+    if (!representation) continue;
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = resolveAssetUrl(representation.asset_ref);
+  }
+}
+
 function setEntryComplete(mode) {
-  entryOverlay.hidden = true;
+  const active = mode === 'motion';
+  syncMotionToggle(active);
   motionToggle.hidden = false;
-  motionToggle.textContent = mode === 'motion' ? 'Motion: ON' : 'Motion: OFF';
+
+  entryOverlay.classList.add('is-leaving');
+  window.setTimeout(() => {
+    entryOverlay.hidden = true;
+  }, 360);
+
+  window.setTimeout(preloadPublicScenes, 450);
+
+  if (!entryHintShown) {
+    entryHintShown = true;
+    window.setTimeout(() => {
+      showToast('Tap the glowing icons to move through the world.');
+    }, 700);
+  }
 }
 
 enableMotionButton.addEventListener('click', async () => {
+  enableMotionButton.disabled = true;
+  useTouchButton.disabled = true;
   const active = await requestMotionLook();
   setEntryComplete(active ? 'motion' : 'touch');
 });
@@ -133,14 +229,15 @@ useTouchButton.addEventListener('click', () => {
 
 motionToggle.addEventListener('click', async () => {
   if (!renderer) return;
+
   if (renderer.isOrientationActive()) {
     renderer.stopOrientation();
-    motionToggle.textContent = 'Motion: OFF';
-    showToast('Touch look enabled.');
+    syncMotionToggle(false);
+    showToast('Touch look is on.');
   } else {
     const active = await requestMotionLook();
-    motionToggle.textContent = active ? 'Motion: ON' : 'Motion: OFF';
-    showToast(active ? 'Motion look enabled.' : 'Using touch look.');
+    syncMotionToggle(active);
+    showToast(active ? 'Motion look is on.' : 'Touch look is on.');
   }
 });
 
@@ -171,17 +268,21 @@ async function boot() {
       resolveAssetUrl,
       onInteraction: (anchor) => interactionExecutor.execute(anchor, currentLocation),
       onSceneChange: () => closeModal(),
+      onSceneLoad: hideTransition,
       onError: (message) => {
         console.error('Pannellum error:', message);
-        showToast('Viewer error. Please reload and try again.');
+        hideTransition();
+        showToast('The scene did not load. Please try again.');
       }
     });
 
     renderer.initialize([...store.representations.values()], firstRepresentation.representation_id);
-    entryStatus.textContent = 'Ready.';
+    entryStatus.textContent = 'Choose how you want to enter.';
+    enableMotionButton.disabled = false;
+    useTouchButton.disabled = false;
   } catch (error) {
     console.error(error);
-    entryStatus.textContent = 'Explore Brevard could not load. Please refresh and try again.';
+    entryStatus.textContent = 'Explore Brevard could not load. Refresh and try again.';
     enableMotionButton.disabled = true;
     useTouchButton.disabled = true;
   }
