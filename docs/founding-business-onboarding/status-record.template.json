@@ -1,0 +1,55 @@
+{
+  "schema_version": "explore-brevard/founding-onboarding/1.0",
+  "onboarding_id": "onboarding:REPLACE",
+  "business_entity": {
+    "business_id": "business:REPLACE",
+    "display_name": "REPLACE",
+    "category": "REPLACE",
+    "real_world_location_or_service_area": null
+  },
+  "authority": {
+    "submitter_name": "REPLACE",
+    "submitter_role": "REPLACE",
+    "authority_basis": "OWNER_OR_AUTHORIZED_REPRESENTATIVE_DECLARATION",
+    "evidence_refs": []
+  },
+  "current_state": "INTAKE_RECEIVED",
+  "current_state_is_projection": true,
+  "events": [
+    {
+      "event_id": "event:REPLACE:intake-received",
+      "event_type": "INTAKE_RECEIVED",
+      "occurred_at": "REPLACE_ISO8601",
+      "actor_ref": "person:REPLACE",
+      "evidence_refs": [],
+      "notes": null
+    }
+  ],
+  "relationships": [],
+  "allowed_state_vocabulary": [
+    "INTEREST_RECORDED",
+    "INTAKE_SENT",
+    "INTAKE_RECEIVED",
+    "ASSETS_PENDING",
+    "READY_FOR_BRIEF",
+    "BRIEF_READY",
+    "BRIEF_APPROVED",
+    "BUILD_IN_PROGRESS",
+    "OWNER_REVIEW",
+    "REVISION_REQUESTED",
+    "APPROVED_FOR_PUBLICATION",
+    "PUBLISH_QUEUED",
+    "PUBLISHING",
+    "LIVE",
+    "RECEIPTED",
+    "PAUSED",
+    "WITHDRAWN",
+    "DECLINED",
+    "PUBLISH_BLOCKED"
+  ],
+  "provenance": {
+    "created_from": "EB-FB-PIPELINE-001",
+    "source_refs": []
+  },
+  "claim_ceiling": "This record represents onboarding state and evidence. It does not itself create legal authority, ownership, consent, publication, or technical enforcement."
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "explore-brevard/build-brief/1.0",
+  "brief_id": "brief:REPLACE",
+  "version": 1,
+  "status": "DRAFT",
+  "business_ref": "business:REPLACE",
+  "intake_event_ref": "event:REPLACE:intake-received",
+  "authority_evidence_refs": [],
+  "placement": {
+    "place_ref": null,
+    "space_ref": null,
+    "placement_mode": "REPLACE",
+    "environment_direction": "REPLACE",
+    "representation_type": "PANORAMA_360_OR_OTHER"
+  },
+  "customer_actions": {
+    "primary": {
+      "action_type": "REPLACE",
+      "label": "REPLACE",
+      "destination": "REPLACE",
+      "verified": false
+    },
+    "secondary": []
+  },
+  "visual_direction": {
+    "approved_description": "REPLACE",
+    "must_use": [],
+    "must_not_use": [],
+    "asset_refs": [],
+    "source_resolution_notes": [],
+    "reality_representation_boundary": "The visual build is a representation unless an exact real-world capture method is explicitly documented."
+  },
+  "interaction_plan": [],
+  "owner_review": {
+    "review_required": true,
+    "review_version": null,
+    "approval_event_ref": null
+  },
+  "acceptance_criteria": [
+    "Business name matches approved wording",
+    "Primary action routes to approved destination",
+    "Visual direction matches brief",
+    "No prohibited assets or claims appear",
+    "Mobile interaction works",
+    "Return topology works when applicable"
+  ],
+  "provenance": {
+    "created_from": "EB-FB-PIPELINE-001",
+    "source_refs": []
+  }
+}
