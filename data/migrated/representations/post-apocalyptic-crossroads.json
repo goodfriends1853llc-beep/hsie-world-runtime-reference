@@ -1,0 +1,42 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:post-apocalyptic-crossroads-360-v1",
+  "place_ref": "place:post-apocalyptic-crossroads",
+  "space_ref": "space:arrival",
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "assets/360/explore-brevard-post-apocalyptic-crossroads-360-8k.webp",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "PILOT_PUBLIC",
+  "integrity_digest": "sha256:4f74b9c03bab1569db2f61a296d7c77257fd8adbf90d9fda076310b8133613b7",
+  "legacy_refs": [
+    "generated-source:1774x887",
+    "runtime-upscale:8192x4096",
+    "seam-edge-blend:periodic",
+    "source-is-not-native-8k",
+    "phase15:post-apocalyptic-public-entry"
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": 0,
+      "yaw": 18,
+      "hfov": 90,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-post-apocalyptic-crossroads-back-to-crossover",
+        "interaction_kind": "MOVE",
+        "label": "Back to the Crossover",
+        "pitch": -3,
+        "yaw": -145,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:post-apocalyptic-crossroads-to-crossover-portal",
+        "legacy_refs": []
+      }
+    ]
+  }
+}

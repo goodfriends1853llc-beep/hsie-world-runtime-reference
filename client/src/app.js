@@ -1,8 +1,8 @@
-import { ReferenceDataStore } from './data-store.js?v=20260927-6';
-import { TopologyResolver } from './topology-resolver.js?v=20260927-6';
-import { InteractionExecutor } from './interaction-executor.js?v=20260927-6';
-import { PannellumRendererAdapter } from './pannellum-adapter.js?v=20260927-6';
-import { resolveAssetUrl } from './config.js?v=20260927-6';
+import { ReferenceDataStore } from './data-store.js?v=20260927-7';
+import { TopologyResolver } from './topology-resolver.js?v=20260927-7';
+import { InteractionExecutor } from './interaction-executor.js?v=20260927-7';
+import { PannellumRendererAdapter } from './pannellum-adapter.js?v=20260927-7';
+import { resolveAssetUrl } from './config.js?v=20260927-7';
 
 const $ = (id) => document.getElementById(id);
 const entryOverlay = $('entryOverlay');
@@ -44,6 +44,16 @@ const PLACE_TRANSITIONS = {
     kicker: 'OFF MAIN STREET',
     title: 'LAGOON NIGHTS',
     sub: 'Moonrise on the water.'
+  },
+  'place:crossover-portal': {
+    kicker: 'THE CROSSOVER',
+    title: 'SAME LAND.',
+    sub: 'Different outcome.'
+  },
+  'place:post-apocalyptic-crossroads': {
+    kicker: 'ALTERNATE BREVARD',
+    title: 'THE CROSSROADS',
+    sub: 'Survive. Recover. Rebuild.'
   }
 };
 

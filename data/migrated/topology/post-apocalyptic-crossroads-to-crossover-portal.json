@@ -1,0 +1,16 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "connection_id": "connection:post-apocalyptic-crossroads-to-crossover-portal",
+  "source_place_ref": "place:post-apocalyptic-crossroads",
+  "source_space_ref": "space:arrival",
+  "target_place_ref": "place:crossover-portal",
+  "target_space_ref": "space:crossing",
+  "connection_type": "PLACE_TRANSITION",
+  "direction": "ONE_WAY",
+  "status": "ACTIVE",
+  "policy_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "phase15:alternate-brevard-return"
+  ]
+}

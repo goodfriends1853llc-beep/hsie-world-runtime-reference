@@ -1,0 +1,33 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "place_id": "place:crossover-portal",
+  "place_type": "PUBLIC_EXPERIENCE",
+  "status": "ACTIVE",
+  "display_name": "The Crossover — Same Land, Different Outcome",
+  "parent_place_ref": null,
+  "district_ref": null,
+  "public_visibility": "PUBLIC",
+  "steward_ref": null,
+  "spaces": [
+    {
+      "space_id": "space:crossing",
+      "space_type": "TRANSITION",
+      "display_name": "Crossover Portal",
+      "status": "ACTIVE",
+      "representation_refs": [
+        "representation:crossover-portal-360-v1"
+      ],
+      "legacy_refs": [
+        "phase15:post-apocalyptic-gateway"
+      ]
+    }
+  ],
+  "representation_refs": [
+    "representation:crossover-portal-360-v1"
+  ],
+  "created_event_ref": null,
+  "version": 1,
+  "legacy_refs": [
+    "WRB-001-PHASE-15-CROSSOVER-PORTAL"
+  ]
+}

@@ -7,13 +7,14 @@
   "asset_ref": "assets/360/explore-brevard-lagoon-nights-360-8k.webp",
   "projection": "equirectangular",
   "renderer_adapter": "pannellum-360",
-  "version": 1,
+  "version": 2,
   "status": "PILOT_PUBLIC",
   "integrity_digest": "sha256:a1e37775c9e3b6314bf4ffdf41183a2e4464c22c9ac295dd62d76dcdd26609df",
   "legacy_refs": [
     "generated-source:1774x887",
     "runtime-upscale:8192x4096",
-    "phase15:moonlit-waterfront-locked-look"
+    "phase15:moonlit-waterfront-locked-look",
+    "phase15:crossover-portal-entry"
   ],
   "presentation": {
     "coverage": "360x180",
@@ -34,6 +35,18 @@
         "target_type": "TOPOLOGY_CONNECTION",
         "target_ref": "connection:lagoon-nights-to-main-street",
         "legacy_refs": []
+      },
+      {
+        "anchor_id": "move-lagoon-nights-to-crossover-portal",
+        "interaction_kind": "MOVE",
+        "label": "Crossover Portal",
+        "pitch": 1,
+        "yaw": -118,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:lagoon-nights-to-crossover-portal",
+        "legacy_refs": [
+          "phase15:single-deliberate-post-apocalyptic-entry"
+        ]
       }
     ]
   }

@@ -1,0 +1,54 @@
+{
+  "schema_version": "hsie-world-reference/0.1",
+  "representation_id": "representation:crossover-portal-360-v1",
+  "place_ref": "place:crossover-portal",
+  "space_ref": "space:crossing",
+  "representation_type": "PANORAMA_360",
+  "asset_ref": "assets/360/explore-brevard-crossover-portal-360-8k.webp",
+  "projection": "equirectangular",
+  "renderer_adapter": "pannellum-360",
+  "version": 1,
+  "status": "PILOT_PUBLIC",
+  "integrity_digest": "sha256:dc4d5dcec1e8b0f076c1bcd6d1cf99a033012dc361ab17f32ab21fbb4ef8a6d2",
+  "legacy_refs": [
+    "generated-source:1774x887",
+    "runtime-upscale:8192x4096",
+    "seam-edge-blend:periodic",
+    "source-is-not-native-8k",
+    "phase15:owner-authorized-post-apocalyptic-gateway"
+  ],
+  "presentation": {
+    "coverage": "360x180",
+    "aspect_ratio": "2:1",
+    "initial_view": {
+      "pitch": 0,
+      "yaw": 0,
+      "hfov": 88,
+      "north_offset": 0
+    },
+    "interaction_anchors": [
+      {
+        "anchor_id": "move-crossover-back-to-lagoon-nights",
+        "interaction_kind": "MOVE",
+        "label": "Back to Lagoon Nights",
+        "pitch": -5,
+        "yaw": -148,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:crossover-portal-to-lagoon-nights",
+        "legacy_refs": []
+      },
+      {
+        "anchor_id": "move-crossover-into-post-apocalyptic-brevard",
+        "interaction_kind": "MOVE",
+        "label": "Cross Into Post-Apocalyptic Brevard",
+        "pitch": -2,
+        "yaw": 0,
+        "target_type": "TOPOLOGY_CONNECTION",
+        "target_ref": "connection:crossover-portal-to-post-apocalyptic-crossroads",
+        "legacy_refs": [
+          "phase15:crossing-event"
+        ]
+      }
+    ]
+  }
+}

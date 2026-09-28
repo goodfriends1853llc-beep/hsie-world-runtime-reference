@@ -12,6 +12,7 @@ function iconForAnchor(anchor) {
   const label = (anchor.label || '').toLowerCase();
 
   if (anchor.interaction_kind === 'MOVE' && label.includes('back')) return '↩';
+  if (label.includes('crossover') || label.includes('portal') || label.includes('post-apocalyptic')) return '⟡';
   if (label.includes('lagoon') || label.includes('moonlit')) return '☾';
   if (label.includes('about')) return 'ⓘ';
   if (label.includes('founding') || label.includes('business directory')) return '★';
@@ -75,7 +76,9 @@ export class PannellumRendererAdapter {
         pitch: anchor.pitch,
         yaw: anchor.yaw,
         type: 'info',
-        cssClass: 'brevard-hotspot',
+        cssClass: /crossover|portal|post-apocalyptic/i.test(anchor.label || '')
+          ? 'brevard-hotspot portal-hotspot'
+          : 'brevard-hotspot',
         createTooltipFunc: (div, args) => this.buildHotspotElement(div, args),
         createTooltipArgs: {
           anchor,

@@ -6,7 +6,9 @@
     "places/brevard-demo-street.json",
     "places/lagoon-cuts-demo.json",
     "places/explore-brevard-main-street.json",
-    "places/lagoon-nights.json"
+    "places/lagoon-nights.json",
+    "places/crossover-portal.json",
+    "places/post-apocalyptic-crossroads.json"
   ],
   "businesses": [
     "businesses/hsa-owner-pilot.json",
@@ -18,7 +20,9 @@
     "representations/lagoon-exterior.json",
     "representations/lagoon-interior.json",
     "representations/explore-brevard-main-street.json",
-    "representations/lagoon-nights.json"
+    "representations/lagoon-nights.json",
+    "representations/crossover-portal.json",
+    "representations/post-apocalyptic-crossroads.json"
   ],
   "topology": [
     "topology/street-001-to-hsa-arrival.json",
@@ -30,6 +34,10 @@
     "topology/hsa-arrival-to-explore-brevard-main-street.json",
     "topology/explore-brevard-main-street-to-hsa-arrival.json",
     "topology/main-street-to-lagoon-nights.json",
-    "topology/lagoon-nights-to-main-street.json"
+    "topology/lagoon-nights-to-main-street.json",
+    "topology/lagoon-nights-to-crossover-portal.json",
+    "topology/crossover-portal-to-lagoon-nights.json",
+    "topology/crossover-portal-to-post-apocalyptic-crossroads.json",
+    "topology/post-apocalyptic-crossroads-to-crossover-portal.json"
   ]
 }
