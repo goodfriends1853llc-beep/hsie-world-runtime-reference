@@ -30,7 +30,7 @@ from adapters.mia_execution_port import MiaExecutionPort
 from runtime.world_runtime_receipt import WorldRuntimeReceiptEngine
 
 EXPECTED_MIA_SHA256 = "ac6fecd1458c8a6596ba5998ec63d461566196792d022b7d19db021b9d71405a"
-EXPECTED_SNAPSHOT = "snapshot:sha256:9813c2667dcb92ff7b594e07a18b9c64a53d24035e633f8dd0d9a7c739d13c93"
+EXPECTED_SNAPSHOT = "snapshot:sha256:d7cfc357bdc4b888108ffb0a3f0929881c7e6daf88ff3eb8b83f8046ee694653"
 
 
 def sha256_file(path: Path) -> str:
