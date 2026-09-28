@@ -32,7 +32,7 @@ Trigger: a business asks to join, replies to a post, messages Tommie, or is invi
 Action:
 1. Send the standard founding-business message from \`message-templates.md\`.
 2. Give the business the public intake URL:
-   \`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/founding-intake.html\`
+   \`https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/join/\`
 3. Create an internal onboarding record only when there is enough information to identify the business without guessing.
 
 State: \`INTAKE_SENT\`

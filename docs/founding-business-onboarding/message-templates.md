@@ -6,7 +6,7 @@ You're in the right place. I built one intake so every founding business goes th
 
 Fill this out:
 
-https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/tommie/founding-intake.html
+https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/join/
 
 It asks for your business, what you want visitors to be able to do, the kind of environment you want, and what assets you already have. This is still the public pilot stage, so the world will keep growing, but I am standardizing the process now.
 
@@ -67,3 +67,22 @@ Published version: [VERSION / COMMIT]
 I verified the public route and the customer actions listed in the build record. Save this message as your publication receipt.
 
 If you later want the environment, actions, links, or business information changed, that becomes a new governed change instead of silently replacing the version you approved.
+
+
+## H. Business reached out before intake existed
+
+You reached out to me earlier about being part of Explore Brevard 360, and I’m circling back now that the first working world and the business onboarding process are ready.
+
+Fill this out so I can get your business record started from the right information:
+
+https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/join/
+
+It asks what your business does, what you want visitors to be able to do inside the world, the environment direction you want, and what assets you already have. Nothing gets published as your approved business representation until you review it first.
+
+## I. Public comment reply when direct message is unavailable
+
+Hey, I’m circling back because you had already said you wanted your business involved before I finished the first version of Explore Brevard 360. The business intake is ready now:
+
+https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/join/
+
+Fill that out so I can get your business record started. You’ll review your representation before anything is approved to go live.

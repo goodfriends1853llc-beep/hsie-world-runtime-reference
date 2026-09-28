@@ -42,11 +42,14 @@
       <h2>Businesses are added with permission.</h2>
       <p>Main Street is a founding-pilot preview. A business appearing here does not mean Explore Brevard owns, operates, endorses, or guarantees that business. Real businesses are added only after authorization and approval of the public information and actions being represented.</p>
       <div class="actions">
-        <a class="button button-primary" href="./contact.html?mode=founding">ASK ABOUT FOUNDING ACCESS</a>
-        <a class="button button-ghost" href="./contact.html?mode=message">MESSAGE TOMMIE</a>
-        <a class="button button-ghost" href="../">RETURN TO THE 360 WORLD</a>
+        <a class="button button-primary" href="../join/">START FOUNDING BUSINESS INTAKE</a>
+        <a class="button button-ghost" href="../contact/">MESSAGE TOMMIE</a>
+        <a class="button button-ghost" href="../world/">RETURN TO THE 360 WORLD</a>
       </div>
     </section>
   </main>
-</body>
+<script>
+const h=location.hash;const m={"#about":"../about/","#shop":"../business/#shop","#dine":"../business/#dine","#services":"../business/#services","#events":"../business/#events","#directory":"../business/"};
+if(m[h]){const u=new URL(m[h],location.href);history.replaceState(null,"",u.pathname+u.hash);}
+</script></body>
 </html>
