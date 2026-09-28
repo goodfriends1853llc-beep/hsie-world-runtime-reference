@@ -13,7 +13,8 @@ const migratedManifest = JSON.parse(fs.readFileSync('data/migrated/manifest.json
 
 assert(deployment.deployment_id === 'WRB-001-STATIC-DEPLOYMENT-001', 'deployment id mismatch');
 assert(deployment.deployment_class === 'STATIC_REFERENCE_ONLY', 'deployment class mismatch');
-assert(deployment.status === 'DEPLOYED_PUBLIC_PILOT', 'deployment status mismatch');
+assert(deployment.status === 'OWNER_DEVICE_VERIFIED_PUBLIC_PILOT', 'deployment status mismatch');
+assert(deployment.device_verification?.state === 'OWNER_CONFIRMED_PASS', 'device verification state mismatch');
 assert(deployment.public_url === 'https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/', 'public URL mismatch');
 assert(deployment.semantic_state.snapshot_id === expectedSnapshot, 'snapshot mismatch');
 assert(deployment.semantic_state.content_digest === expectedSnapshot.replace('snapshot:', ''), 'content digest mismatch');
@@ -24,7 +25,8 @@ for (const key of ['mia_service_hosted','world_runtime_service_hosted','local_ru
 assert(deployment.boundaries.static_reference_only === true, 'static_reference_only must be true');
 
 assert(build.phase === 15, 'client build phase mismatch');
-assert(build.status === 'DEPLOYED_PUBLIC_PILOT', 'client build status mismatch');
+assert(build.status === 'OWNER_DEVICE_VERIFIED_PUBLIC_PILOT', 'client build status mismatch');
+assert(build.verification?.state === 'OWNER_CONFIRMED_PASS', 'client build verification state mismatch');
 assert(build.semantic_snapshot_id === expectedSnapshot, 'client build semantic snapshot mismatch');
 assert(build.boundaries.mia_service_hosted === false, 'client build must not claim MIA hosting');
 assert(build.boundaries.world_runtime_service_hosted === false, 'client build must not claim World Runtime hosting');

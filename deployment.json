@@ -1,7 +1,7 @@
 {
   "deployment_id": "WRB-001-STATIC-DEPLOYMENT-001",
   "phase": "WRB-001 / PHASE 15",
-  "status": "DEPLOYED_PUBLIC_PILOT",
+  "status": "OWNER_DEVICE_VERIFIED_PUBLIC_PILOT",
   "deployment_class": "STATIC_REFERENCE_ONLY",
   "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
   "source_repository": "goodfriends1853llc-beep/hsie-world-runtime-reference",
@@ -42,5 +42,26 @@
     "dynamic_write_api_hosted": false,
     "production_ready": false
   },
-  "claim_ceiling": "This deployment exposes the static Explore Brevard public pilot, repository-hosted static world data, and the crossover into the alternate post-apocalyptic narrative layer. GitHub Pages is not running MIA, the local World Runtime, a dynamic write API, or a production backend."
+  "claim_ceiling": "This deployment exposes the static Explore Brevard public pilot, repository-hosted static world data, and the crossover into the alternate post-apocalyptic narrative layer. GitHub Pages is not running MIA, the local World Runtime, a dynamic write API, or a production backend.",
+  "device_verification": {
+    "state": "OWNER_CONFIRMED_PASS",
+    "verified_local_date": "2026-09-27",
+    "environment": "iPhone mobile browser",
+    "evidence_basis": [
+      "Owner reported that the complete public world test worked.",
+      "Owner supplied mobile screenshots showing the public entry screen, multiple 360 scenes, icon-only hotspots, Lagoon Nights, and the crossover portal."
+    ],
+    "verified_scope": [
+      "public entry renders on mobile",
+      "touch navigation",
+      "360 panorama interaction",
+      "icon-only hotspot visibility",
+      "Main Street traversal",
+      "Lagoon Nights traversal",
+      "crossover portal traversal",
+      "post-apocalyptic alternate-world traversal",
+      "return topology"
+    ],
+    "epistemic_ceiling": "Owner-confirmed field verification with screenshot evidence. This record does not claim independent automated observation of every camera angle, seam, network condition, or external third-party form delivery."
+  }
 }

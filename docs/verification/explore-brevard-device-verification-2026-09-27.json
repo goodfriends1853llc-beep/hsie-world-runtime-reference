@@ -1,0 +1,33 @@
+{
+  "record_id": "EXPLORE-BREVARD-DEVICE-VERIFICATION-2026-09-27",
+  "status": "OWNER_CONFIRMED_PASS",
+  "local_date": "2026-09-27",
+  "project": "Explore Brevard spatial world",
+  "public_url": "https://goodfriends1853llc-beep.github.io/hsie-world-runtime-reference/",
+  "repository": "goodfriends1853llc-beep/hsie-world-runtime-reference",
+  "tested_head": "4dfc6ee2b70f1e843a94d293db81b13545c455cc",
+  "device_class": "iPhone",
+  "browser_context": "mobile browser",
+  "evidence": {
+    "owner_statement": "Everything works",
+    "screenshot_count": 8,
+    "screenshot_observations": [
+      "entry experience renders on mobile",
+      "panoramas render full-screen",
+      "icon-only hotspots are visible",
+      "Main Street is reachable",
+      "Lagoon Nights is reachable",
+      "crossover portal is reachable",
+      "alternate-world visual domain renders"
+    ]
+  },
+  "claim_boundary": "This is an owner-confirmed field verification record supported by screenshots supplied in the verification session. It is not an independent laboratory test and does not convert the static public pilot into a production backend.",
+  "architecture_distinctions_preserved": [
+    "Reality != Representation",
+    "Place != Panorama",
+    "MOVE Event != Camera Rotation",
+    "Business Entity != Business Image",
+    "Hotspot != Painted Graphic",
+    "Commercial Action != Visual Representation of Action"
+  ]
+}
