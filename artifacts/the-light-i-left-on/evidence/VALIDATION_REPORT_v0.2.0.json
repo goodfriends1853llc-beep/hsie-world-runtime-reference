@@ -1,0 +1,13 @@
+{
+  "recordId": "TLILO-VALIDATION-003",
+  "version": "0.2.0",
+  "recordedAt": "2026-10-02T19:15:17.849389+00:00",
+  "testsPassed": 26,
+  "testsFailed": 0,
+  "manifestFiles": 16,
+  "manifestSHA256": "4b74ce0520b7c1659a1593ac0b35f18c65f95f891c48c589ada41e757980aedd",
+  "status": "PASS_WITH_LIMITATIONS",
+  "physicalPhoneVerification": "NOT_PERFORMED",
+  "departureEvent": null,
+  "returnEvent": null
+}

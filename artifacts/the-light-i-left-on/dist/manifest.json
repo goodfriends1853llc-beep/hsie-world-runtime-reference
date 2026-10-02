@@ -1,7 +1,7 @@
 {
   "schema": "TLILO-MANIFEST-001/0.1.0",
   "artifactId": "TLILO-001",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "CANDIDATE",
   "hashAlgorithm": "SHA-256",
   "selfExcluded": true,
@@ -49,23 +49,28 @@
     },
     {
       "path": "app.js",
-      "bytes": 5970,
-      "sha256": "60ed9560cda384eb579c623df0aec6eea5984940c79f17b65e0a888751245bbe"
+      "bytes": 6160,
+      "sha256": "3eb392bfc80741e3ee0afa860d225e312996e89161b769f5baa951f1cb84c8ee"
     },
     {
       "path": "index.html",
-      "bytes": 2979,
-      "sha256": "611de6579dc8abacd014d705ccdb2c0c97bc21ae096b06c3abcf0fd6471daf59"
+      "bytes": 3192,
+      "sha256": "c0305fdcf005a648bc1cac12d6a7aeafe74a6ec88c58a73b3c7610f17d76e5ee"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 4538,
+      "sha256": "9cc3211102c58d4b7b0a19272e969b74b137c63d2633e0ce3c6009d3136c24de"
     },
     {
       "path": "release.json",
       "bytes": 1348,
-      "sha256": "eaef0f77f4e04871b6af85af515178ef15f2828ccf44378f27b5e064d5f62d54"
+      "sha256": "7c9a0836d2c3b6a5a7e698ee40cfca2fb215108b6a4eca58602623ad4d52ed12"
     },
     {
       "path": "review.html",
-      "bytes": 2660,
-      "sha256": "163eb89dd78e01877d90dd7f5f6e0765de91a26317766a1f46f080e80f0dbd96"
+      "bytes": 3040,
+      "sha256": "95c7cee65c3feb4002858f84c2eaa92b29dfa7683e3d1333eb001e6224df2f9d"
     },
     {
       "path": "state.js",
@@ -74,13 +79,13 @@
     },
     {
       "path": "style.css",
-      "bytes": 4231,
-      "sha256": "f1956bbe97de2aac7286f05ac82012f08aa2248a39d813b0765f9bc5a3fb63a4"
+      "bytes": 4707,
+      "sha256": "538bd3ef12d3dcd56b96f47e3bf9423415e0d63045b5caeb4895c193e2de8685"
     },
     {
       "path": "viewer.js",
-      "bytes": 4903,
-      "sha256": "60e59380fe33e486510e33982067483da9bd7a6514f2b1a375985a57445f96b0"
+      "bytes": 4970,
+      "sha256": "52c600b646c1c029359f933d56d6a6edb8e3f566c3d7997688758c3599a0446e"
     }
   ]
 }
