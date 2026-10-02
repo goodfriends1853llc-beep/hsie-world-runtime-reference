@@ -1,0 +1,97 @@
+{
+  "recordId": "TLILO-ASSET-PROVENANCE-001",
+  "recordedAt": "2026-10-02T13:07:14.760295+00:00",
+  "files": [
+    {
+      "state": "STATE-00",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "40ba9b45772b90605636106cbc2c8c0ca32175fda4c8cae434103f48b73a71f1",
+      "packagedPath": "360/state-00.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 428921
+    },
+    {
+      "state": "STATE-01",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "d7df301d0afda2687663f9e67435124735ff6f75cb87306c777afa69c05e9d40",
+      "packagedPath": "360/state-01.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 429836
+    },
+    {
+      "state": "STATE-02",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "1cfb5ed458111a695148fb099e7518116d32ef41ed17ae89fb5a0787eec7942f",
+      "packagedPath": "360/state-02.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 450556
+    },
+    {
+      "state": "STATE-03",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "96de62639a834b0a8c092d2a730edef444193c7a358c13eefe7c072910ef014d",
+      "packagedPath": "360/state-03.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 501833
+    },
+    {
+      "state": "STATE-04",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "7ce5b0c5086eec1b73518be6df5ac8178c1a13b3242a282fca2853c6490b86fd",
+      "packagedPath": "360/state-04.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 478480
+    },
+    {
+      "state": "STATE-05",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "513a6f3ad64c6a2cde26c82d329c3e054ca5d18e7630aa4fc5711806df332106",
+      "packagedPath": "360/state-05.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 471565
+    },
+    {
+      "state": "STATE-06",
+      "source": "Built-in image generation; fictional artwork",
+      "sourceSHA256": "b7ea547ce28ccaccc3fe361ff7500fc4389f7817ebe0fa040d626549c4ac3685",
+      "packagedPath": "360/state-06.jpg",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "encoding": "JPEG 91; no artistic edits or enlargement",
+      "bytes": 525930
+    }
+  ],
+  "qualityNotes": [
+    "Requested 4096x2048; observed 1774x887. Not native 8K.",
+    "Perceptual landmark continuity reviewed by asset agent; formal owner review open.",
+    "Shelter approx u=.445; hotspot requires calibrated artwork bearing.",
+    "Lamp warmer than prompt; deliberate production decision remains open.",
+    "True full-sphere projection, seam and poles unverified."
+  ]
+}

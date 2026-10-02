@@ -1,0 +1,126 @@
+{
+  "schema": "TLILO-MANIFEST-001/0.1.0",
+  "artifactId": "TLILO-001",
+  "version": "0.3.2",
+  "status": "CANDIDATE",
+  "hashAlgorithm": "SHA-256",
+  "selfExcluded": true,
+  "evidenceCeiling": "File consistency against this manifest; not independent timestamp or proof of immutability.",
+  "files": [
+    {
+      "path": "360/community-wall.jpg",
+      "bytes": 400069,
+      "sha256": "69e723c84681fcad49e872647b9e22847056ffb628c7ddfcfe512025326b46ef"
+    },
+    {
+      "path": "360/state-00.jpg",
+      "bytes": 428921,
+      "sha256": "81a877f0e6a35405f404bf7a0d08851708d0e71d774da26ba20378656cf42c38"
+    },
+    {
+      "path": "360/state-01.jpg",
+      "bytes": 429836,
+      "sha256": "f39d2ce329c26b8df373590910c04dd17cb8dc21824436074a4ed65f8ed127ac"
+    },
+    {
+      "path": "360/state-02.jpg",
+      "bytes": 450556,
+      "sha256": "50f60a0cf814aa67d645c903751d72153bed05e1508d0c2ff66fc681b7bdf8c1"
+    },
+    {
+      "path": "360/state-03.jpg",
+      "bytes": 501833,
+      "sha256": "a473665f67c82553e1a015252356144d801eaf1b339e5a0e746320d8641ffd6c"
+    },
+    {
+      "path": "360/state-04.jpg",
+      "bytes": 478480,
+      "sha256": "8e80962587acc0e1b5cf87363d8414d80dabc3463676db1e948bce6a45127bc2"
+    },
+    {
+      "path": "360/state-05.jpg",
+      "bytes": 471565,
+      "sha256": "724bc570a9f3a060b4b8b35efd240721359bf1ceda590ac97a9c8b6537a9f802"
+    },
+    {
+      "path": "360/state-06.jpg",
+      "bytes": 525930,
+      "sha256": "5f777c28b2cd639142a917805329b574fb4d53f19addf842d3cf2e8c2aaab334"
+    },
+    {
+      "path": "ambient.js",
+      "bytes": 1160,
+      "sha256": "1c34f88bc8a31de06e4b47ee3ccde9c03254379773e356748720b41bae09fca4"
+    },
+    {
+      "path": "app.js",
+      "bytes": 6333,
+      "sha256": "d975bb210aab55e9128bdff7be2d8d689ca57fd0db95663cc9a098004a4a0315"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3390,
+      "sha256": "03f9aa09050b9ccd20447cf7e4d3305cae70db6603141d25901d8881e7774399"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 4870,
+      "sha256": "5de6bb05917ba420a404c93d6de4a8d0c863bd87795f607c5096a63ea644c362"
+    },
+    {
+      "path": "north.css",
+      "bytes": 3428,
+      "sha256": "20993a981ab987e6984793c5e34b6850f6d08e17c6c2ba563ff3cc8e18bba898"
+    },
+    {
+      "path": "north.html",
+      "bytes": 1159,
+      "sha256": "d0f7d7eada69bd101a5b648524007eef89264311a4ce2e385e06779f84727b42"
+    },
+    {
+      "path": "north.js",
+      "bytes": 6767,
+      "sha256": "02243dac85098f2159d9350e19b25616f1da1e8a872554ca26e8a5f8dfa911b5"
+    },
+    {
+      "path": "release.json",
+      "bytes": 1692,
+      "sha256": "d9839bd631783fe1a1810ce7f9c36ff457838d316fe43fb20e9502bdbe0852e0"
+    },
+    {
+      "path": "review.html",
+      "bytes": 3040,
+      "sha256": "95c7cee65c3feb4002858f84c2eaa92b29dfa7683e3d1333eb001e6224df2f9d"
+    },
+    {
+      "path": "state.js",
+      "bytes": 3097,
+      "sha256": "e0b5b0c9b91bf61820be113c7d5c8642b59486df197ffb5ff8fa7733231e8b5d"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5566,
+      "sha256": "a931db8086b533a853d53e8562f83d5f83aa5739b0c0c1b0ec3089ac91703318"
+    },
+    {
+      "path": "viewer.js",
+      "bytes": 4970,
+      "sha256": "52c600b646c1c029359f933d56d6a6edb8e3f566c3d7997688758c3599a0446e"
+    },
+    {
+      "path": "wall.css",
+      "bytes": 5404,
+      "sha256": "d7e5e526554ded13fc1df980d9ac57da4e032c10bb67f23f8ec49a53d769b8cd"
+    },
+    {
+      "path": "wall.html",
+      "bytes": 3928,
+      "sha256": "ad093f26211217fab189328c1194a9484233350b36747aefbe0beae8e997ecdc"
+    },
+    {
+      "path": "wall.js",
+      "bytes": 6022,
+      "sha256": "723226525ac78f585a1fa6a0de7fe328c19cf8feaed5a569c921e2889fdebce4"
+    }
+  ]
+}

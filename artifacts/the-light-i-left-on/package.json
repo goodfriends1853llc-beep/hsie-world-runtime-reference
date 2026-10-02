@@ -1,0 +1,17 @@
+{
+  "name": "the-light-i-left-on",
+  "version": "0.3.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "verify": "node tools/verify.mjs public",
+    "serve": "python3 -m http.server 8080 --directory public",
+    "build": "node tools/build-worker.mjs",
+    "db:generate": "drizzle-kit generate"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.4",
+    "drizzle-orm": "^0.44.5"
+  }
+}

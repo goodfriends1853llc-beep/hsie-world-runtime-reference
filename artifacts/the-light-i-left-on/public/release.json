@@ -1,0 +1,72 @@
+{
+  "artifactId": "TLILO-001",
+  "title": "THE LIGHT I LEFT ON",
+  "version": "0.3.2",
+  "status": "CANDIDATE",
+  "foundation": "TB-SUB-001 v1.0.0 \u2014 unchanged",
+  "createdAt": "2026-10-02T13:06:53Z",
+  "sealedAt": null,
+  "departureEvent": null,
+  "returnEvent": null,
+  "reviewAccepted": false,
+  "clockSource": "Visitor device UTC clock; unverified; calendar-month anniversaries",
+  "north": {
+    "status": "READY",
+    "destination": "north.html",
+    "kind": "FIND_YOUR_NORTH",
+    "conceptVersion": "1.0.0",
+    "authority": "OWNER_FROZEN",
+    "verification": "Owner accepted concept in conversation 2026-10-02T16:34:03-04:00"
+  },
+  "states": [
+    {
+      "id": "STATE-00",
+      "name": "DEPARTURE",
+      "month": 0,
+      "asset": "360/state-00.jpg"
+    },
+    {
+      "id": "STATE-01",
+      "name": "TRACE",
+      "month": 2,
+      "asset": "360/state-01.jpg"
+    },
+    {
+      "id": "STATE-02",
+      "name": "WEATHERING",
+      "month": 4,
+      "asset": "360/state-02.jpg"
+    },
+    {
+      "id": "STATE-03",
+      "name": "RECLAMATION",
+      "month": 6,
+      "asset": "360/state-03.jpg"
+    },
+    {
+      "id": "STATE-04",
+      "name": "FOUNDATION",
+      "month": 8,
+      "asset": "360/state-04.jpg"
+    },
+    {
+      "id": "STATE-05",
+      "name": "RECONSTRUCTION",
+      "month": 10,
+      "asset": "360/state-05.jpg"
+    },
+    {
+      "id": "STATE-06",
+      "name": "DAWN",
+      "month": 12,
+      "asset": "360/state-06.jpg"
+    }
+  ],
+  "realityStatus": "UNKNOWN BEYOND RECORDED EVENTS",
+  "communityWall": {
+    "status": "LIVE_SERVICE",
+    "destination": "wall.html",
+    "contentAuthority": "VISITORS",
+    "excludedFromDepartureSeal": true
+  }
+}

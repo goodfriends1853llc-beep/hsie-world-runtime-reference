@@ -1,0 +1,5 @@
+export class Ambient {
+  constructor(){this.context=null;this.on=false;this.phase=0;this.humGain=null;}
+  setPhase(index){this.phase=index;if(this.humGain)this.humGain.gain.setValueAtTime(index===6?0:.007,this.context.currentTime);}
+  async toggle(){if(!this.context){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw new Error('Audio unavailable');this.context=new AC();const c=this.context,buffer=c.createBuffer(1,c.sampleRate*8,c.sampleRate),data=buffer.getChannelData(0);let last=0;for(let i=0;i<data.length;i++){last=(last+(Math.random()*2-1)*.025)/1.025;data[i]=last*2;}const wind=c.createBufferSource();wind.buffer=buffer;wind.loop=true;const filter=c.createBiquadFilter();filter.type='lowpass';filter.frequency.value=800;this.gain=c.createGain();this.gain.gain.value=.14;wind.connect(filter).connect(this.gain).connect(c.destination);wind.start();const hum=c.createOscillator(),hg=c.createGain();hum.frequency.value=60;this.humGain=hg;hg.gain.value=this.phase===6?0:.007;hum.connect(hg).connect(this.gain);hum.start();await c.suspend();}this.on=!this.on;await(this.on?this.context.resume():this.context.suspend());return this.on;}
+}

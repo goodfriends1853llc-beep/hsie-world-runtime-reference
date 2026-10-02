@@ -1,0 +1,21 @@
+{
+  "recordId": "TLILO-PROVENANCE-001",
+  "recordedAt": "2026-10-02T13:06:53Z",
+  "basis": "Owner supplied concept and build request; canonical TB-SUB files read locally",
+  "foundation": "TB-SUB-001 v1.0.0",
+  "filesRead": [
+    {
+      "path": "README.md",
+      "sha256": "7baae0667980274fe35a10bd705c0cd38ae0ac51e4b60f63be0bfc58347845c5"
+    },
+    {
+      "path": "governance/CHANGE_CONTROL.md",
+      "sha256": "1d2afaa30225f01586c04681ae7c888e01df33eeeb705fd330c81d1a423dabe4"
+    },
+    {
+      "path": "specification/PROFILE_CRITICAL_INVARIANTS.md",
+      "sha256": "dac5ceffed823fc1aa95221535a91b278e6078a4c022bab2f3ed6a369771d065"
+    }
+  ],
+  "claim": "Subordinate implementation design; canonical source unchanged; no full conformance assessment"
+}

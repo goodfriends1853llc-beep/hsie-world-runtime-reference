@@ -1,0 +1,26 @@
+{
+  "recordId": "TLILO-VALIDATION-002",
+  "version": "0.1.1",
+  "recordedAt": "2026-10-02T15:11:04.276439+00:00",
+  "predecessor": "TLILO-VALIDATION-001",
+  "result": "PASS_WITH_LIMITATIONS",
+  "tests": {
+    "passed": 21,
+    "failed": 0,
+    "command": "node --test --test-isolation=none tests/*.test.mjs"
+  },
+  "fixes": [
+    "Reject impossible UTC dates, unsafe NORTH URLs and repeated phase asset paths",
+    "Stage release privately and rename only after verification; refuse concurrent preparation and overwrite",
+    "Preserve fallback NORTH and plate actions after entry",
+    "Stop electrical hum during DAWN",
+    "Show temporal scene-load failure and retain earlier scene until retry"
+  ],
+  "manifestSHA256": "48a0837a880c27d9af460da2f637d2352cf3567aba523caf96675b5802b0ee1e",
+  "limitations": [
+    "Synthetic local tests only; not owner event evidence",
+    "Browser/device review remains OPEN",
+    "Spherical seam/pole quality and working resolution unchanged",
+    "NORTH asset, actual departure and independent timestamp evidence still missing"
+  ]
+}

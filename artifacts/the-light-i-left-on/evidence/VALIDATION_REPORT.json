@@ -1,0 +1,47 @@
+{
+  "recordId": "TLILO-VALIDATION-001",
+  "recordedAt": "2026-10-02T13:08:46.651351+00:00",
+  "baseline": "0.1.0 CANDIDATE",
+  "result": "PASS_WITH_LIMITATIONS",
+  "localAutomatedTests": {
+    "passed": 15,
+    "failed": 0,
+    "scope": [
+      "Seven exact temporal boundaries",
+      "Unrecorded departure",
+      "Leap years and month ends",
+      "Clock rollback and invalid/future clocks",
+      "Return separation",
+      "Missing seal preconditions",
+      "Unsafe NORTH destination",
+      "Altered image detected",
+      "Unlisted payload detected",
+      "Duplicate manifest rejected"
+    ]
+  },
+  "integrity": {
+    "filesVerified": 15,
+    "manifestSHA256": "e518fa19528a58699fc78a5366b9213b3474a95323ceb139c1e717f4ab7b0aeb"
+  },
+  "syntaxChecks": [
+    "app.js",
+    "viewer.js",
+    "prepare-release.mjs"
+  ],
+  "visualObservation": [
+    "Base and Dawn full sources inspected by owner agent",
+    "Seven separate images reviewed by asset agent",
+    "Lamp off in Dawn; chair remains empty",
+    "Authored north recalibrated to source u=.435"
+  ],
+  "limitations": [
+    "No cloud-browser QA: plain static package has no compatible supervised preview; control-browser skill not surfaced",
+    "Actual iPhone/desktop acceptance OPEN",
+    "1774x887 working assets, no native 8K claim",
+    "Seam and pole quality not formally accepted",
+    "Actual departure and finished NORTH missing",
+    "No independent external timestamp/signature",
+    "Static host administrators retain mutation capability"
+  ],
+  "foundationClaim": "TB-SUB unchanged; no full substrate conformance or MIA execution claim"
+}
