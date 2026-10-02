@@ -1,6 +1,6 @@
 # THE LIGHT I LEFT ON
 
-TLILO-001 · 0.1.0 · WORKING CANDIDATE / UNSEALED
+TLILO-001 · 0.1.1 · WORKING CANDIDATE / UNSEALED
 
 A static, authored 360 departure artifact. Seven pre-authored phases unfold over twelve calendar months after an actual recorded departure. No human return is inferred.
 

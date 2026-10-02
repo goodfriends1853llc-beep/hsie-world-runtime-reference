@@ -1,7 +1,7 @@
 {
   "schema": "TLILO-MANIFEST-001/0.1.0",
   "artifactId": "TLILO-001",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "CANDIDATE",
   "hashAlgorithm": "SHA-256",
   "selfExcluded": true,
@@ -44,13 +44,13 @@
     },
     {
       "path": "ambient.js",
-      "bytes": 967,
-      "sha256": "343281f0394b3b41c42ea3b3bcdee873e5eafb05732862a7d52dacbc09abc3eb"
+      "bytes": 1160,
+      "sha256": "1c34f88bc8a31de06e4b47ee3ccde9c03254379773e356748720b41bae09fca4"
     },
     {
       "path": "app.js",
-      "bytes": 5815,
-      "sha256": "c850460d91efec4d7d9a3e007b3ac8b040f10985e4d46720a1732231c5ada0f3"
+      "bytes": 5970,
+      "sha256": "60ed9560cda384eb579c623df0aec6eea5984940c79f17b65e0a888751245bbe"
     },
     {
       "path": "index.html",
@@ -60,7 +60,7 @@
     {
       "path": "release.json",
       "bytes": 1348,
-      "sha256": "28e285df5a6979daff9431ddb50163c3d4c094166348e0db58291330d9cff0da"
+      "sha256": "eaef0f77f4e04871b6af85af515178ef15f2828ccf44378f27b5e064d5f62d54"
     },
     {
       "path": "review.html",
@@ -69,8 +69,8 @@
     },
     {
       "path": "state.js",
-      "bytes": 2584,
-      "sha256": "d8019eb3a5dbf9971be2f0c4856742d380fd7014ea0c5f725c6c59ac87b0cf2b"
+      "bytes": 3075,
+      "sha256": "51c66875e58331907cae0e94f6ef3a9121c4baa25c695d047c0d3f8354575e37"
     },
     {
       "path": "style.css",
