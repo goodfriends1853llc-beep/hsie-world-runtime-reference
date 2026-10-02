@@ -13,7 +13,7 @@ export function validateNote(body,direction){
 }
 async function actor(request,env){if(!env.WALL_HASH_SECRET)throw new Error('Wall configuration unavailable');const key=await crypto.subtle.importKey('raw',encoder.encode(env.WALL_HASH_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign']);const input=`${Math.floor(Date.now()/86400000)}:${request.headers.get('cf-connecting-ip')||'unknown'}`;return [...new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(input)))].map(x=>x.toString(16).padStart(2,'0')).join('');}
 async function rateLimit(db,who,max=12){const hour=Math.floor(Date.now()/3600000);const r=await db.prepare('INSERT INTO wall_rate(actor,bucket,count) VALUES(?,?,1) ON CONFLICT(actor,bucket) DO UPDATE SET count=count+1 RETURNING count').bind(who,hour).first();return r.count<=max;}
-async function bodyJSON(request){if(!request.headers.get('content-type')?.includes('application/json'))throw new Error('Use JSON');const text=await request.text();if(text.length>3000)throw new Error('Request is too large');return JSON.parse(text);}
+async function bodyJSON(request){if(!request.headers.get('content-type')?.includes('application/json'))throw new Error('Use JSON');if(Number(request.headers.get('content-length'))>3000)throw new Error('Request is too large');const text=await request.text();if(text.length>3000)throw new Error('Request is too large');const value=JSON.parse(text);if(!value||typeof value!=='object'||Array.isArray(value))throw new Error('Use JSON object');return value;}
 const validId=id=>typeof id==='string'&&/^[0-9a-f-]{36}$/.test(id);
 export async function api(request,env,ctx){
  const url=new URL(request.url);if(!env.DB)return json({error:'The wall is temporarily unavailable. Please try again later.'},503);
