@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#070a0b"><title>THE LIGHT I LEFT ON</title><meta name="description" content="I left the light on."><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070a0b'/%3E%3Cpath d='M11 25V8h10v17' fill='none' stroke='%23e8ddb8' stroke-width='2'/%3E%3Ccircle cx='16' cy='12' r='2' fill='%23fff6cf'/%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"></head>
+<body>
+<main id="world" aria-label="THE LIGHT I LEFT ON"><canvas id="panorama" tabindex="0" aria-label="360 degree landscape. Drag or use arrow keys to look around. Plus and minus change magnification. N turns toward north; D looks down."></canvas><img id="fallback" alt="An empty chair beside a fictional Space Coast lagoon, facing an unfinished shelter with a light burning." hidden>
+<div id="veil" aria-hidden="true"></div>
+<section id="intro" aria-labelledby="opening"><p class="location">BREVARD COUNTY, FLORIDA<br>OCTOBER 2026</p><h1 id="opening">I left<br>the light on.</h1><button id="enter" class="enter">ENTER <span aria-hidden="true">⊙</span></button><p class="work-title">THE LIGHT I LEFT ON</p></section>
+<p id="loading" role="status" hidden>Entering…</p>
+<div id="experience" hidden><button id="north" class="hotspot" hidden aria-label="Open NORTH">NORTH <span aria-hidden="true">▯</span></button><button id="plate" class="plate" hidden aria-label="Read the plate in the earth">YOU WERE NEVER SUPPOSED TO FOLLOW ME.<small>Find your north.</small></button><p id="cycle" hidden>THE CYCLE IS COMPLETE.</p><div class="tools"><button id="sound" aria-label="Turn sound on" aria-pressed="false">◌</button><button id="full" aria-label="Enter full screen">⛶</button></div><button id="seal" class="seal">⊙ SEAL</button></div>
+<p id="failure" hidden role="alert"></p>
+</main>
+<dialog id="seal-dialog"><button class="close" data-close aria-label="Close seal">×</button><p class="eyebrow">DEPARTURE ARTIFACT</p><h2>THE LIGHT<br>I LEFT ON</h2><dl id="seal-fields"></dl><p class="ceiling">Matching hashes establish consistency with this manifest. They do not independently establish authorship, publication time, or absence of later changes.</p><button id="verify">Verify file hashes</button><p id="verification" role="status"></p><a href="manifest.json" download>Release manifest</a></dialog>
+<dialog id="north-dialog"><button class="close" data-close aria-label="Close NORTH">×</button><p class="eyebrow">NORTH</p><p id="north-message">The NORTH film has not been attached to this working build.</p><video id="north-video" controls playsinline hidden></video></dialog>
+<noscript><p class="noscript">This place needs JavaScript to open.</p></noscript><script type="module" src="app.js"></script>
+</body></html>

@@ -1,0 +1,12 @@
+import {readFile,writeFile,mkdir,cp,rm,stat} from 'node:fs/promises';import {resolve} from 'node:path';import {createManifest} from './manifest.mjs';import {verify} from './verify.mjs';import {validateRelease} from '../dist/state.js';
+// This local tool validates a supplied owner record. It does not authenticate the human.
+const recordPath=process.argv[2];if(!recordPath)throw new Error('Pass an owner departure record JSON. No event is inferred.');
+const record=JSON.parse(await readFile(recordPath,'utf8'));
+if(record.authority!=='Tommie Bellamy'||record.decision!=='AUTHORIZE_DEPARTURE_RELEASE'||record.visualReview!=='ACCEPTED'||record.mobileReview!=='ACCEPTED'||!record.recordedAt||!record.departureOccurredAt||!record.northDestination||!record.northVerification)throw new Error('Incomplete owner release record');
+if(Date.parse(record.departureOccurredAt)>Date.now()||!Number.isFinite(Date.parse(record.departureOccurredAt)))throw new Error('Departure must be a recorded past/present event');
+if(!Number.isFinite(Date.parse(record.recordedAt))||Date.parse(record.recordedAt)>Date.now())throw new Error('Invalid owner record time');
+const root=resolve('releases/v1.0.0');try{await stat(root);throw new Error('Release output already exists; use an explicit successor, never overwrite.');}catch(e){if(e.code!=='ENOENT')throw e;}
+await mkdir(root,{recursive:true});await cp(resolve('dist'),root,{recursive:true});await rm(resolve(root,'review.html'));
+const config=JSON.parse(await readFile(resolve(root,'release.json'),'utf8'));config.version='1.0.0';config.status='SEALED';config.sealedAt=new Date().toISOString();config.departureEvent={eventId:record.departureEventId||'TLILO-EV-DEPARTURE-001',occurredAt:record.departureOccurredAt,recordedAt:record.recordedAt,authority:record.authority,basis:'HUMAN_CONFIRMED'};config.reviewAccepted=true;config.north={status:'READY',destination:record.northDestination,verification:record.northVerification};validateRelease(config);
+if(config.north.destination==='north/north.mp4'&&!(await stat(resolve(root,'north/north.mp4'))).size)throw new Error('Missing NORTH film');
+await writeFile(resolve(root,'release.json'),JSON.stringify(config,null,2)+'\n');await createManifest(root);console.log(JSON.stringify({root,...await verify(root),next:'Commit this exact release, publish it, retain deployment receipt and an independently retained manifest digest. SEALED is a release policy, not storage write protection.'},null,2));

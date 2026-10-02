@@ -1,0 +1,15 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {representedState,anniversary,validateRelease} from '../dist/state.js';
+const candidate=JSON.parse(await readFile(new URL('../dist/release.json',import.meta.url),'utf8'));
+const cfg=()=>({...structuredClone(candidate),departureEvent:{eventId:'SYNTHETIC-ONLY',authority:'Tommie Bellamy',basis:'HUMAN_CONFIRMED',occurredAt:'2026-10-03T14:30:00.000Z'}});
+test('unrecorded departure stays unstarted even after twelve years',()=>{const s=representedState(candidate,Date.parse('2038-10-03T14:30:00Z'));assert.equal(s.index,0);assert.equal(s.clockStatus,'UNSTARTED');assert.equal(s.complete,false);});
+test('all seven boundaries choose the new state exactly on the UTC anniversary',()=>{const c=cfg();for(let i=1;i<7;i++){const t=anniversary(c.departureEvent.occurredAt,i*2);assert.equal(representedState(c,t-1).index,i-1);assert.equal(representedState(c,t).index,i);}});
+test('cycle completion remains distinct from human return',()=>{const c=cfg(),s=representedState(c,Date.parse('2031-01-01T00:00:00Z'));assert.equal(s.complete,true);assert.equal(s.index,6);assert.equal(c.returnEvent,null);});
+test('clock rollback recalculates represented state and makes no event',()=>{const c=cfg();assert.equal(representedState(c,anniversary(c.departureEvent.occurredAt,8)).index,4);assert.equal(representedState(c,anniversary(c.departureEvent.occurredAt,2)).index,1);assert.equal(c.returnEvent,null);});
+test('future departure cannot prematurely progress',()=>assert.equal(representedState(cfg(),Date.parse('2026-10-01T00:00:00Z')).clockStatus,'BEFORE_DEPARTURE'));
+test('invalid visitor clock is bounded',()=>assert.equal(representedState(cfg(),NaN).clockStatus,'INVALID_CLOCK'));
+test('month ends clamp, preserving UTC wall time and leap years',()=>{assert.equal(new Date(anniversary('2028-01-31T03:00:00Z',1)).toISOString(),'2028-02-29T03:00:00.000Z');assert.equal(new Date(anniversary('2026-12-31T03:00:00Z',2)).toISOString(),'2027-02-28T03:00:00.000Z');});
+test('malformed schedule is rejected',()=>{const c=cfg();c.states[3].month=5;assert.throws(()=>validateRelease(c),/schedule/);});
+test('missing release evidence blocks SEALED',()=>assert.throws(()=>validateRelease({...candidate,status:'SEALED'}),/preconditions/));
+test('a return claim is rejected in the departure artifact',()=>assert.throws(()=>validateRelease({...candidate,returnEvent:{occurred:true}}),/return/));
+test('non-UTC or missing authority departure records are rejected',()=>{const c=cfg();c.departureEvent.occurredAt='2026-10-03';assert.throws(()=>validateRelease(c),/evidence/);const d=cfg();d.departureEvent.authority='Browser';assert.throws(()=>validateRelease(d),/evidence/);});
+test('unsafe NORTH schemes are rejected',()=>{const c=cfg();c.north={status:'READY',destination:'javascript:alert(1)'};assert.throws(()=>validateRelease(c),/destination/);});
