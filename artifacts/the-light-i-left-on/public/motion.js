@@ -20,7 +20,7 @@ export class PhoneMotion {
     this.visibility=()=>{if(document.hidden){clearTimeout(this.timer);this.last=null;this.offset=null;cancelAnimationFrame(this.frame);this.frame=0;}else if(this.enabled)this.waitForSensor();};
     document.addEventListener('visibilitychange',this.visibility);
   }
-  message(text){this.status.textContent=text;this.status.hidden=!text;}
+  message(text){this.status.textContent=text;this.status.hidden=!text;if(text){const close=document.createElement('button');close.type='button';close.className='motion-dismiss';close.textContent='Dismiss';close.setAttribute('aria-label','Dismiss motion message');close.addEventListener('click',()=>this.message(''));this.status.append(close);}}
   rebase(){this.offset=this.last?{yaw:wrap(this.viewer.yaw-this.last.yaw),pitch:this.viewer.pitch-this.last.pitch}:null;}
   waitForSensor(){clearTimeout(this.timer);this.timer=setTimeout(()=>{if(this.enabled&&!this.last){this.stop();this.message('No motion data. Open this link in Safari or your phone browser, then tap Enable motion. You can still drag.');}},4500);}
   async toggle(){
@@ -30,7 +30,7 @@ export class PhoneMotion {
     try{
       // Called directly from the button click: retain iPhone transient user activation.
       const permission=typeof window.DeviceOrientationEvent.requestPermission==='function'?await window.DeviceOrientationEvent.requestPermission():'granted';
-      if(permission!=='granted'){this.message('Motion permission was not allowed. You can still drag to look around.');return;}
+      if(permission!=='granted'){this.message('Motion permission was not allowed here. Open this site in Safari, then tap Enable motion and allow access. Dragging still works.');return;}
       this.enabled=true;this.last=null;this.offset=null;this.button.textContent='Motion on';this.button.setAttribute('aria-pressed','true');this.center.hidden=false;
       window.addEventListener('deviceorientation',this.read);this.message('Move your phone to look around.');this.waitForSensor();
     }catch{this.message('Motion could not start. Open this link in Safari or your phone browser and try again. Drag still works.');}
