@@ -3,19 +3,19 @@ import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createManifest} from './manifest.mjs';
 import {verify} from './verify.mjs';
-import {validateRelease,isUtcTimestamp} from '../dist/state.js';
+import {validateRelease,isUtcTimestamp} from '../public/state.js';
 
 // Field validation is not human authentication. This tool records supplied owner evidence.
 export async function prepareRelease(record,projectRoot=process.cwd(),now=Date.now()) {
   if(record.authority!=='Tommie Bellamy'||record.decision!=='AUTHORIZE_DEPARTURE_RELEASE'||record.visualReview!=='ACCEPTED'||record.mobileReview!=='ACCEPTED'||!record.northDestination||!record.northVerification) throw new Error('Incomplete owner release record');
   if(!isUtcTimestamp(record.departureOccurredAt)||Date.parse(record.departureOccurredAt)>now)throw new Error('Departure must be a recorded past/present UTC event');
   if(!isUtcTimestamp(record.recordedAt)||Date.parse(record.recordedAt)>now||Date.parse(record.recordedAt)<Date.parse(record.departureOccurredAt))throw new Error('Invalid owner record time');
-  const source=resolve(projectRoot,'dist');
+  const source=resolve(projectRoot,'public');
   await verify(source);
   const config=JSON.parse(await readFile(resolve(source,'release.json'),'utf8'));
   config.version='1.0.0';config.status='SEALED';config.sealedAt=new Date(now).toISOString();
   config.departureEvent={eventId:record.departureEventId||'TLILO-EV-DEPARTURE-001',occurredAt:record.departureOccurredAt,recordedAt:record.recordedAt,authority:record.authority,basis:'HUMAN_CONFIRMED'};
-  config.reviewAccepted=true;config.north={status:'READY',destination:record.northDestination,verification:record.northVerification};
+  config.reviewAccepted=true;config.north={...config.north,status:'READY',destination:record.northDestination,verification:record.northVerification};
   validateRelease(config);
   if(config.north.destination==='north/north.mp4'&&!(await stat(resolve(source,'north/north.mp4'))).size)throw new Error('Missing NORTH film');
   const parent=resolve(projectRoot,'releases'),root=resolve(parent,'v1.0.0');

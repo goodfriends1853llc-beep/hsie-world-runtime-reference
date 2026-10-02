@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {orientationView,wrap,PhoneMotion} from '../dist/motion.js';
+import test from 'node:test';import assert from 'node:assert/strict';import {orientationView,wrap,PhoneMotion} from '../public/motion.js';
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 test('phone forward direction preserves portrait/landscape pointing',()=>{const p=orientationView({alpha:0,beta:90,gamma:0});const l=orientationView({alpha:270,beta:0,gamma:90});close(p.yaw,0);close(p.pitch,0);close(l.yaw,0);close(l.pitch,0);});
 test('turning right and tilting upward move the viewing ray correctly',()=>{close(orientationView({alpha:270,beta:90,gamma:0}).yaw,Math.PI/2);close(orientationView({alpha:0,beta:120,gamma:0}).pitch,Math.PI/6);});

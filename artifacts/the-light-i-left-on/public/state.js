@@ -19,7 +19,7 @@ export function validateRelease(config) {
   if (config.departureEvent !== null && (!config.departureEvent.eventId || config.departureEvent.authority !== 'Tommie Bellamy' || config.departureEvent.basis !== 'HUMAN_CONFIRMED' || !isUtcTimestamp(config.departureEvent.occurredAt))) throw new Error('Invalid departure evidence');
   if (config.status === 'SEALED' && (!config.departureEvent || !isUtcTimestamp(config.sealedAt) || !config.north || config.north.status!=='READY' || !config.reviewAccepted)) throw new Error('Missing release preconditions');
   if (!config.north || !['AWAITING_ASSET','READY'].includes(config.north.status)) throw new Error('Invalid NORTH status');
-  if (config.north.status === 'READY' && config.north.destination !== 'north/north.mp4') {
+  if (config.north.status === 'READY' && !['north/north.mp4','north.html'].includes(config.north.destination)) {
     try { const url=new URL(config.north.destination); if(url.protocol!=='https:' || !url.hostname || url.username || url.password || /\s/.test(config.north.destination)) throw new Error(); }
     catch { throw new Error('Invalid NORTH destination'); }
   }

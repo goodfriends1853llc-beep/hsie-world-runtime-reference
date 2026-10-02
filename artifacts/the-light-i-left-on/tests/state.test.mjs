@@ -1,5 +1,5 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {representedState,anniversary,validateRelease} from '../dist/state.js';
-const candidate=JSON.parse(await readFile(new URL('../dist/release.json',import.meta.url),'utf8'));
+import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {representedState,anniversary,validateRelease} from '../public/state.js';
+const candidate=JSON.parse(await readFile(new URL('../public/release.json',import.meta.url),'utf8'));
 const cfg=()=>({...structuredClone(candidate),departureEvent:{eventId:'SYNTHETIC-ONLY',authority:'Tommie Bellamy',basis:'HUMAN_CONFIRMED',occurredAt:'2026-10-03T14:30:00.000Z'}});
 test('unrecorded departure stays unstarted even after twelve years',()=>{const s=representedState(candidate,Date.parse('2038-10-03T14:30:00Z'));assert.equal(s.index,0);assert.equal(s.clockStatus,'UNSTARTED');assert.equal(s.complete,false);});
 test('all seven boundaries choose the new state exactly on the UTC anniversary',()=>{const c=cfg();for(let i=1;i<7;i++){const t=anniversary(c.departureEvent.occurredAt,i*2);assert.equal(representedState(c,t-1).index,i-1);assert.equal(representedState(c,t).index,i);}});

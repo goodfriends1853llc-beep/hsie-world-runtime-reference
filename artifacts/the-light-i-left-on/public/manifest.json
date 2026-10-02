@@ -1,12 +1,17 @@
 {
   "schema": "TLILO-MANIFEST-001/0.1.0",
   "artifactId": "TLILO-001",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "CANDIDATE",
   "hashAlgorithm": "SHA-256",
   "selfExcluded": true,
   "evidenceCeiling": "File consistency against this manifest; not independent timestamp or proof of immutability.",
   "files": [
+    {
+      "path": "360/community-wall.jpg",
+      "bytes": 400069,
+      "sha256": "69e723c84681fcad49e872647b9e22847056ffb628c7ddfcfe512025326b46ef"
+    },
     {
       "path": "360/state-00.jpg",
       "bytes": 428921,
@@ -49,13 +54,13 @@
     },
     {
       "path": "app.js",
-      "bytes": 6160,
-      "sha256": "3eb392bfc80741e3ee0afa860d225e312996e89161b769f5baa951f1cb84c8ee"
+      "bytes": 6333,
+      "sha256": "d975bb210aab55e9128bdff7be2d8d689ca57fd0db95663cc9a098004a4a0315"
     },
     {
       "path": "index.html",
-      "bytes": 3192,
-      "sha256": "c0305fdcf005a648bc1cac12d6a7aeafe74a6ec88c58a73b3c7610f17d76e5ee"
+      "bytes": 3250,
+      "sha256": "d983e9dfcf115ab881b52bb35b83eb60f3ca5e93a6de2787365d26a8703e3bf1"
     },
     {
       "path": "motion.js",
@@ -63,9 +68,24 @@
       "sha256": "9cc3211102c58d4b7b0a19272e969b74b137c63d2633e0ce3c6009d3136c24de"
     },
     {
+      "path": "north.css",
+      "bytes": 3156,
+      "sha256": "52581371dd118f658941d80644159d28e7bcc7680268891f28149df256437b81"
+    },
+    {
+      "path": "north.html",
+      "bytes": 587,
+      "sha256": "004280ca04bc638c1ded9e0df513158c2979483ad23b1e26207a44dc5a09b537"
+    },
+    {
+      "path": "north.js",
+      "bytes": 6670,
+      "sha256": "b2796353c3a9a97c15f19cf98839f35ac3a00f8aa6ac9474cecc77a4d3ec9751"
+    },
+    {
       "path": "release.json",
-      "bytes": 1348,
-      "sha256": "7c9a0836d2c3b6a5a7e698ee40cfca2fb215108b6a4eca58602623ad4d52ed12"
+      "bytes": 1692,
+      "sha256": "8a736965ad4855625e58223ee3a7a770da8642794c6206cdc1ee1c26b913d40e"
     },
     {
       "path": "review.html",
@@ -74,8 +94,8 @@
     },
     {
       "path": "state.js",
-      "bytes": 3075,
-      "sha256": "51c66875e58331907cae0e94f6ef3a9121c4baa25c695d047c0d3f8354575e37"
+      "bytes": 3097,
+      "sha256": "e0b5b0c9b91bf61820be113c7d5c8642b59486df197ffb5ff8fa7733231e8b5d"
     },
     {
       "path": "style.css",
@@ -86,6 +106,21 @@
       "path": "viewer.js",
       "bytes": 4970,
       "sha256": "52c600b646c1c029359f933d56d6a6edb8e3f566c3d7997688758c3599a0446e"
+    },
+    {
+      "path": "wall.css",
+      "bytes": 3977,
+      "sha256": "626a8bf483132dea032521424cb4a653ba689374e0f022903c98dc6ab8a020bd"
+    },
+    {
+      "path": "wall.html",
+      "bytes": 3132,
+      "sha256": "3433bd99b3fc0acf21dd846be63907df6df7020ae91cfbea5c5a7c660b3f27ba"
+    },
+    {
+      "path": "wall.js",
+      "bytes": 5268,
+      "sha256": "cdd73cbf7abfa1b90f66c2fd2a35f5dc7ab5646db9a1c1d5cd0bc0b8617c0509"
     }
   ]
 }
